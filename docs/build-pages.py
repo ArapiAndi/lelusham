@@ -8,13 +8,13 @@ HEAD = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="canonical" href="https://lelusham.com/{file}">
+<link rel="canonical" href="https://arapiandi.github.io/lelusham/{file}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LELUSHAM">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:url" content="https://lelusham.com/{file}">
-<meta property="og:image" content="https://lelusham.com/assets/img/og.jpg">
+<meta property="og:url" content="https://arapiandi.github.io/lelusham/{file}">
+<meta property="og:image" content="https://arapiandi.github.io/lelusham/assets/img/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#EDE8E1">
@@ -107,7 +107,7 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
   <a class="btn btn-primary" href="connect.html">Connect</a>
 </section>
 """, scripts='<script src="assets/js/slider.js"></script>\n<script src="assets/js/main.js"></script>',
-extra='<link rel="preload" as="image" href="assets/img/reels/attico-croc-bag.jpg" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
+extra='<link rel="preload" as="image" href="assets/img/reels/attico-croc-bag.jpg" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://arapiandi.github.io/lelusham/","sameAs":["https://www.instagram.com/lelusham/"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
 
 # ---------------- SOCIAL KIT ----------------
 page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: reels organised by try-on & boutique, street style, events & travel. Every item links to the original Instagram reel.",f"""
