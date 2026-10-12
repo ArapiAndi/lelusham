@@ -112,7 +112,7 @@ Done
 To do before launch
 - [ ] Replace 360×640 reel covers with 1080×1920 originals (and WebP/AVIF versions) — the current frames include Instagram's baked-in play icon
 - [ ] Replace placeholder wordmark with the official logo (brand.html + header)
-- [ ] Replace `https://arapiandi.github.io/lelusham/` in canonical/OG URLs with the real domain
+- [ ] Replace `https://lelusham.com/` in canonical/OG URLs with the real domain
 - [ ] Make a real OG image (current one is a letterboxed cover)
 - [ ] Self-host fonts if GDPR requires it
 - [ ] Run Lighthouse on the deployed URL

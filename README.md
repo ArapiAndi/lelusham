@@ -33,7 +33,7 @@ docs/build-pages.py   Optional: regenerates the 5 HTML pages (shared header/foot
 
 **Logo** → replace the inline SVG `<text>` in the header of each HTML page (search `wordmark`) and `assets/img/lelusham-wordmark.svg`, plus the two boxes on `brand.html`.
 
-**Domain** → search and replace `https://arapiandi.github.io/lelusham/` in the HTML `<head>` sections.
+**Domain** → search and replace `https://lelusham.com/` in the HTML `<head>` sections.
 
 **Header/footer changes across all pages** → edit `docs/build-pages.py` and run `python3 docs/build-pages.py` from the project root, or edit the 5 files by hand.
 
