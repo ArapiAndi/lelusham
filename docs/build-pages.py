@@ -87,7 +87,7 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
 </section>
 
 <section class="section intro">
-  <p class="lead fade-up">Lelia M is a fashion &amp; lifestyle creator based in Milan. Her reels are short, candid and shot in daylight: try-ons in boutiques, fashion week from the inside, the city as a set.</p>
+  <p class="lead fade-up">Based in Italy, I&#39;m a fashion &amp; lifestyle creator with a passion for personal style, statement pieces, and the art of everyday living. My content blends modern femininity with a confident, playful edge, capturing fashion, travel, and curated lifestyle moments through my own distinctive lens. I love bringing brands to life through visually compelling storytelling that feels both aspirational and authentic.</p>
   <dl class="meta fade-up">
     <div><dt>@lelusham</dt><dd><a class="link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a class="link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a></dd></div>
     <div><dt>Based in</dt><dd>Milan, Italy</dd></div>
