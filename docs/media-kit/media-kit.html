@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>LELUSHAM — Media Kit 2026</title>
+<!--
+  MEDIA KIT · A4 portrait, 4 pagine. Esporta in PDF:
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
+    --print-to-pdf=docs/media-kit/LELUSHAM-media-kit.pdf docs/media-kit/media-kit.html
+  I campi con bordo tratteggiato magenta (.ph) sono SEGNAPOSTO: vanno compilati con i dati di Instagram Insights
+  prima di inviare il kit. Nessun numero è stato stimato.
+  Griglia: 12 colonne, margini 14 mm, gutter 5 mm, baseline 4 mm.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;700&display=swap">
+<style>
+:root {
+  --stone: #EDE8E1; --ivory: #F7F4EF; --travertine: #D8CEC0; --marble: #C9C4BC;
+  --taupe: #7A6F63; --ink: #1E1C1A; --magenta: #E8307F;
+  --display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --m: 14mm; --g: 5mm;
+}
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { background: #8f877d; font-family: var(--body); color: var(--ink); font-size: 9.5pt; line-height: 1.5; }
+.page { width: 210mm; height: 297mm; margin: 10mm auto; background: var(--stone); position: relative; overflow: hidden; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+@media print { body { background: none; } .page { margin: 0; } }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* Elementi ricorrenti */
+.run { position: absolute; left: var(--m); right: var(--m); display: flex; justify-content: space-between; font-size: 7pt; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; color: var(--taupe); }
+.run.top { top: 10mm; } .run.bot { bottom: 9mm; }
+.label { font-size: 7pt; letter-spacing: .22em; text-transform: uppercase; font-weight: 700; color: var(--taupe); }
+.display { font-family: var(--display); font-weight: 400; text-transform: uppercase; line-height: .86; letter-spacing: .01em; }
+.serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
+.ph { border: 1px dashed var(--magenta); color: var(--magenta); padding: .6mm 1.6mm; border-radius: 1mm; font-weight: 600; font-size: 7.5pt; letter-spacing: .02em; display: inline-block; line-height: 1.35; }
+.rule { height: 1px; background: var(--ink); opacity: .9; }
+
+/* P1 — Cover */
+.p1 .photo { position: absolute; left: 0; right: 0; top: 0; height: 196mm; }
+.p1 .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,28,26,.35), transparent 22%); }
+.p1 .run.top { color: rgba(255,255,255,.9); z-index: 2; }
+.p1 .name { position: absolute; left: var(--m); right: var(--m); top: 181mm; font-size: 116pt; color: var(--ink); letter-spacing: .015em; }
+.p1 .name span { color: var(--stone); }
+.p1 .claim { position: absolute; left: var(--m); top: 225mm; width: 110mm; }
+.p1 .claim .serif { font-size: 24pt; line-height: 1.05; display: block; }
+.p1 .claim p { margin-top: 3mm; max-width: 92mm; color: #3a3633; }
+.p1 .contacts { position: absolute; right: var(--m); top: 226mm; width: 62mm; display: grid; gap: 2.2mm; font-size: 8.5pt; }
+.p1 .contacts div { display: grid; grid-template-columns: 19mm 1fr; border-top: 1px solid var(--marble); padding-top: 1.6mm; }
+
+/* P2 — Profilo e numeri */
+.p2 .head { position: absolute; left: var(--m); right: var(--m); top: 22mm; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--g); }
+.p2 h2 { grid-column: 1 / span 7; font-size: 64pt; }
+.p2 h2 .serif { text-transform: none; font-size: .62em; color: var(--magenta); letter-spacing: 0; }
+.p2 .intro { grid-column: 8 / span 5; align-self: end; font-size: 9.5pt; }
+.p2 .portrait { position: absolute; left: var(--m); top: 62mm; width: 66mm; height: 117mm; }
+.p2 .portrait figcaption { position: absolute; left: 0; bottom: -6mm; font-size: 7pt; color: var(--taupe); }
+.p2 .stats { position: absolute; left: 89mm; right: var(--m); top: 62mm; display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--g); }
+.stat { border-top: 1px solid var(--ink); padding: 2.2mm 0 4mm; min-height: 27mm; }
+.stat .v { font-family: var(--display); font-size: 40pt; line-height: 1; margin-top: 1mm; font-variant-numeric: tabular-nums; }
+.stat .n { font-size: 7pt; color: var(--taupe); margin-top: 1mm; }
+.p2 .lower { position: absolute; left: var(--m); right: var(--m); top: 192mm; display: grid; grid-template-columns: 1fr 1fr; gap: var(--g) 10mm; }
+.pillars { display: grid; gap: 2mm; margin-top: 3mm; }
+.pillar { display: grid; grid-template-columns: 1fr auto; align-items: baseline; border-bottom: 1px solid var(--marble); padding-bottom: 1.6mm; }
+.pillar b { font-weight: 700; }
+.pillar small { color: var(--taupe); font-size: 7.5pt; display: block; font-weight: 400; }
+.aud { display: grid; gap: 2.6mm; margin-top: 3mm; }
+.aud div { display: grid; grid-template-columns: 26mm 1fr; align-items: center; }
+
+/* P3 — Portfolio */
+.p3 h2 { position: absolute; left: var(--m); top: 22mm; font-size: 64pt; }
+.p3 .sub { position: absolute; right: var(--m); top: 30mm; width: 78mm; font-size: 9pt; }
+.p3 .grid { position: absolute; left: var(--m); right: var(--m); top: 70mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: 7mm var(--g); }
+.p3 figure .img { aspect-ratio: 9 / 16; height: 82mm; width: 100%; overflow: hidden; background: var(--marble); }
+.p3 figcaption { margin-top: 2mm; display: grid; gap: .4mm; }
+.p3 figcaption b { font-family: var(--display); font-size: 14pt; font-weight: 400; letter-spacing: .03em; line-height: 1; }
+.p3 figcaption span { font-size: 7.5pt; color: var(--taupe); }
+.p3 .note { position: absolute; left: var(--m); right: var(--m); bottom: 16mm; border-top: 1px solid var(--marble); padding-top: 2mm; font-size: 7.5pt; color: var(--taupe); }
+
+/* P4 — Partnership e contatti */
+.p4 { background: var(--ink); color: var(--stone); }
+.p4 .run { color: #a39a8f; }
+.p4 h2 { position: absolute; left: var(--m); top: 22mm; font-size: 64pt; }
+.p4 h2 .serif { text-transform: none; color: var(--magenta); font-size: .62em; letter-spacing: 0; }
+.p4 .services { position: absolute; left: var(--m); right: var(--m); top: 56mm; display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; }
+.svc { border-top: 1px solid #4a4541; padding: 2.6mm 0 3.4mm; display: grid; grid-template-columns: 1fr auto; gap: 1mm 4mm; }
+.svc b { font-family: var(--display); font-size: 15pt; font-weight: 400; letter-spacing: .03em; line-height: 1.05; }
+.svc p { grid-column: 1 / -1; font-size: 8pt; color: #cfc7bd; }
+.p4 .ph { border-color: var(--magenta); color: #ff7fb4; }
+.p4 .why { position: absolute; left: var(--m); right: var(--m); top: 124mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--g); }
+.p4 .why div { border-top: 2px solid var(--magenta); padding-top: 2.4mm; font-size: 8.5pt; color: #e7e1d9; }
+.p4 .why b { display: block; color: var(--stone); font-size: 9.5pt; margin-bottom: 1mm; }
+.p4 .cta { position: absolute; left: var(--m); right: var(--m); top: 158mm; display: grid; grid-template-columns: 62mm 1fr; gap: 10mm; align-items: end; }
+.p4 .cta .img { height: 110mm; overflow: hidden; }
+.p4 .cta .txt { display: grid; gap: 10mm; }
+.p4 .cta .display { font-size: 84pt; }
+.p4 .cta .display .serif { text-transform: none; color: var(--magenta); letter-spacing: 0; }
+.p4 .cta dl { display: grid; gap: 2.4mm; font-size: 9pt; }
+.p4 .cta dl div { display: grid; grid-template-columns: 20mm 1fr; border-top: 1px solid #4a4541; padding-top: 1.6mm; }
+.p4 .cta dt { color: #a39a8f; font-size: 7pt; letter-spacing: .2em; text-transform: uppercase; font-weight: 700; padding-top: .6mm; }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGINA 1 · COVER ============ -->
+<section class="page p1">
+  <div class="photo"><img src="../../assets/img/reels/stone-columns.jpg" alt="Lelia in a grey hooded dress and white sunglasses leaning on a stone column" style="object-position: 50% 30%"></div>
+  <div class="run top"><span>Media Kit 2026</span><span>Milan, Italy</span></div>
+  <h1 class="name display">LELUSHAM</h1>
+  <div class="claim">
+    <span class="serif">A Life Styled My Way</span>
+    <p>Fashion &amp; lifestyle reels from Milan: boutique try-ons, fashion week from the inside, the city as a set. Short, candid, shot in daylight, written in Italian and English.</p>
+  </div>
+  <div class="contacts">
+    <div><span class="label">Creator</span><span>Lelia M</span></div>
+    <div><span class="label">Instagram</span><span>@lelusham</span></div>
+    <div><span class="label">Email</span><span>leliamoroz.pr@gmail.com</span></div>
+    <div><span class="label">Web</span><span>lelusham.com</span></div>
+  </div>
+  <div class="run bot"><span>01 / 04</span><span>Fashion &amp; lifestyle creator</span></div>
+</section>
+
+<!-- ============ PAGINA 2 · PROFILO E NUMERI ============ -->
+<section class="page p2">
+  <div class="run top"><span>LELUSHAM</span><span>Profile &amp; numbers</span></div>
+  <div class="head">
+    <h2 class="display">The <span class="serif">profile</span></h2>
+    <p class="intro">Lelia M publishes as @lelusham from Milan. The feed is built on vertical video: outfit try-ons in boutiques, unboxings, fashion week showrooms and walks through the city. Colour comes from the clothes; the backdrop is stone, marble and daylight.</p>
+  </div>
+  <figure class="portrait"><img src="../../assets/video/lelusham-hero-poster.jpg" alt="Lelia in a grey hooded dress with a black bag under a cloudy sky in Milan" style="object-position: 50% 40%"><figcaption>Still from a 2026 reel</figcaption></figure>
+  <div class="stats">
+    <div class="stat"><span class="label">Followers</span><div class="v">3,014</div><div class="n">Instagram, public count, 13 Oct 2026</div></div>
+    <div class="stat"><span class="label">Posts</span><div class="v">338</div><div class="n">Instagram, public count, 13 Oct 2026</div></div>
+    <div class="stat"><span class="label">Avg. reel views</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">Median of the last 20 reels, from Insights</div></div>
+    <div class="stat"><span class="label">Engagement rate</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">(likes + comments + saves + shares) ÷ reach, last 30 days</div></div>
+    <div class="stat"><span class="label">Accounts reached</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">Last 30 days, from Insights</div></div>
+    <div class="stat"><span class="label">Non-follower reach</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">Share of reach from non-followers, last 30 days</div></div>
+  </div>
+  <div class="lower">
+    <div>
+      <span class="label">Content pillars</span>
+      <div class="pillars">
+        <div class="pillar"><span><b>Try-on &amp; boutique</b><small>Wishlist try-ons, “which bag?” questions</small></span><span class="label">Core</span></div>
+        <div class="pillar"><span><b>Fashion week &amp; events</b><small>Shows and showrooms during MFW</small></span><span class="label">Seasonal</span></div>
+        <div class="pillar"><span><b>Unboxing &amp; first look</b><small>Shoes and accessories, product in hand</small></span><span class="label">Product</span></div>
+        <div class="pillar"><span><b>Milan street &amp; travel</b><small>The city as a set, trips and hotels</small></span><span class="label">Lifestyle</span></div>
+      </div>
+    </div>
+    <div>
+      <span class="label">Audience · from Instagram Insights</span>
+      <div class="aud">
+        <div><span>Top cities</span><span class="ph">[TO ADD: top 3 cities, %]</span></div>
+        <div><span>Top countries</span><span class="ph">[TO ADD: top 3 countries, %]</span></div>
+        <div><span>Age range</span><span class="ph">[TO ADD: main age band, %]</span></div>
+        <div><span>Gender</span><span class="ph">[TO ADD: women / men, %]</span></div>
+        <div><span>Languages</span><span>Content in Italian &amp; English</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="run bot"><span>02 / 04</span><span>Figures marked [TO ADD] are filled from Insights before sending</span></div>
+</section>
+
+<!-- ============ PAGINA 3 · PORTFOLIO ============ -->
+<section class="page p3">
+  <div class="run top"><span>LELUSHAM</span><span>Portfolio</span></div>
+  <h2 class="display">Selected<br>reels</h2>
+  <p class="sub">Six reels from July–September 2026. Each one opens on Instagram from lelusham.com/social-kit.html.</p>
+  <div class="grid">
+    <figure><div class="img"><img src="../../assets/img/reels/attico-croc-bag.jpg" alt="Lelia holds up a blue crocodile-embossed bag in a boutique"></div><figcaption><b>Wishlist try-on</b><span>Boutique try-on · The Attico · 26 Sep 2026</span></figcaption></figure>
+    <figure><div class="img"><img src="../../assets/img/reels/mfw-attico-show.jpg" alt="Lelia in an orange knit in a showroom during Milan Fashion Week"></div><figcaption><b>MFW, remotely</b><span>Event coverage · The Attico · 27 Sep 2026</span></figcaption></figure>
+    <figure><div class="img"><img src="../../assets/img/reels/coperni-box.jpg" alt="Hands open a Coperni shoe box"></div><figcaption><b>Shoes make the fit</b><span>Unboxing · Coperni · 17 Sep 2026</span></figcaption></figure>
+    <figure><div class="img"><img src="../../assets/img/reels/attico-passeggiata.jpg" alt="Lelia in a violet dress in front of shelves of bags"></div><figcaption><b>Which Passeggiata bag?</b><span>Audience question · The Attico · 25 Sep 2026</span></figcaption></figure>
+    <figure><div class="img"><img src="../../assets/img/reels/suede-bag.jpg" alt="A tan suede bag held low in a boutique"></div><figcaption><b>Lo ascolto sempre</b><span>Boutique, Italian caption · 5 Sep 2026</span></figcaption></figure>
+    <figure><div class="img"><img src="../../assets/img/reels/yacht.jpg" alt="Lelia in a cabin with wood panelling"></div><figcaption><b>Is it better?</b><span>Travel · 18 Jul 2026</span></figcaption></figure>
+  </div>
+  <p class="note">Brands shown are featured in organic content; they are not paid partnerships. <span class="ph">[TO ADD: confirmed collaborations with brand, date and deliverable, if any]</span></p>
+  <div class="run bot"><span>03 / 04</span><span>Reel views per piece: <span class="ph" style="font-size:6.5pt;padding:.2mm 1mm">[TO ADD]</span></span></div>
+</section>
+
+<!-- ============ PAGINA 4 · PARTNERSHIP E CONTATTI ============ -->
+<section class="page p4">
+  <div class="run top"><span>LELUSHAM</span><span>Partnerships</span></div>
+  <h2 class="display">Work <span class="serif">together</span></h2>
+  <div class="services">
+    <div class="svc"><b>Boutique try-on reel</b><span class="ph">[RATE]</span><p>One 9:16 reel filmed on location in your store: try-on, styling, an honest question to the audience. Three stories on the day.</p></div>
+    <div class="svc"><b>Fashion week coverage</b><span class="ph">[RATE]</span><p>Show or showroom visit during MFW: one reel plus a story sequence posted in real time.</p></div>
+    <div class="svc"><b>Unboxing &amp; first look</b><span class="ph">[RATE]</span><p>Product received, opened and worn on camera. One reel, one carousel or three stories.</p></div>
+    <div class="svc"><b>Content for your channels</b><span class="ph">[RATE]</span><p>Vertical videos and stills delivered for your own feed and ads. Usage rights by period, agreed per project.</p></div>
+    <div class="svc"><b>Hotel &amp; restaurant stay</b><span class="ph">[RATE]</span><p>A Milan or travel location as the set: one reel and stories, with location tag and link sticker.</p></div>
+    <div class="svc"><b>Affiliate &amp; launch</b><span class="ph">[TERMS]</span><p>Tracked link or code in stories and bio during a launch or sale period.</p></div>
+  </div>
+  <div class="why">
+    <div><b>On location in Milan</b>Boutiques, showrooms and the city's stone and marble are already the setting of the feed.</div>
+    <div><b>Native to the reel</b>Vertical, handheld, daylight. Content reads as a creator's own post, not as an ad.</div>
+    <div><b>Two languages</b>Captions in Italian and English, for a Milan and an international audience.</div>
+  </div>
+  <div class="cta">
+    <div class="img"><img src="../../assets/img/reels/suede-bag.jpg" alt="A tan suede bag held low in a boutique"></div>
+    <div class="txt">
+    <p class="display">Let's<br><span class="serif">talk</span></p>
+    <dl>
+      <div><dt>Email</dt><dd>leliamoroz.pr@gmail.com</dd></div>
+      <div><dt>Instagram</dt><dd>@lelusham</dd></div>
+      <div><dt>Web</dt><dd>lelusham.com/connect.html</dd></div>
+      <div><dt>Based in</dt><dd>Milan, Italy</dd></div>
+    </dl>
+    </div>
+  </div>
+  <div class="run bot"><span>04 / 04</span><span>Rates and availability on request</span></div>
+</section>
+
+</body>
+</html>

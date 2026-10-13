@@ -10,11 +10,40 @@ window.LELUSHAM = {
     fullName: "Lelia M",
     handle: "@lelusham",
     instagram: "https://www.instagram.com/lelusham/",
+    tiktok: "https://www.tiktok.com/@lelusham",
     email: "leliamoroz.pr@gmail.com",
     tagline: "Full-time diva",
     descriptor: "Fashion & lifestyle",
-    city: "Milan, Italy"
+    city: "Milan, Italy",
+    mediaKit: "docs/media-kit/LELUSHAM-media-kit.pdf"
   },
+
+  /* AUDIENCE — numeri reali. value: null = non ancora disponibile (da Instagram Insights), la voce non viene mostrata. */
+  stats: [
+    { label: "Followers", value: "3,014", note: "Instagram · 13 Oct 2026" },
+    { label: "Avg. reel views", value: null, note: "Median of the last 20 reels" },
+    { label: "Engagement rate", value: null, note: "Last 30 days" },
+    { label: "Audience", value: null, note: "Top cities, age range" }
+  ],
+  statsNote: "Full Insights data (reach, views, audience split) in the media kit, on request.",
+
+  /* WHAT I OFFER — formati proposti (stessa lista del media kit). Da confermare con Lelia. */
+  services: [
+    { title: "Boutique try-on reel", text: "One 9:16 reel filmed on location in your store: try-on, styling, an honest question to the audience. Three stories on the day." },
+    { title: "Fashion week coverage", text: "Show or showroom visit during MFW: one reel plus a story sequence posted in real time." },
+    { title: "Unboxing & first look", text: "Product received, opened and worn on camera. One reel, one carousel or three stories." },
+    { title: "UGC for your channels", text: "Vertical videos and stills delivered for your own feed and ads, without posting on @lelusham. Usage rights agreed per project." },
+    { title: "Hotel & restaurant stay", text: "A Milan or travel location as the set: one reel and stories, with location tag and link sticker." },
+    { title: "Affiliate & launch", text: "Tracked link or code in stories and bio during a launch or sale period." }
+  ],
+
+  /* MY VALUE — vantaggi concreti per il brand */
+  value: [
+    { title: "On location in Milan", text: "Boutiques, showrooms and the city's stone and marble are already the setting of the feed. No studio, no set-up cost." },
+    { title: "Native to the reel", text: "Vertical, handheld, daylight. Content reads as a creator's own post, not as an ad." },
+    { title: "Two languages", text: "Captions in Italian and English, for a Milan and an international audience." },
+    { title: "A concept for each brand", text: "Every piece starts from a question to the audience: Which bag? Is it better? The product is the answer, not a banner." }
+  ],
 
   /* HOME — slide del fullscreen slider (ordine = ordine di visualizzazione) */
   slides: [

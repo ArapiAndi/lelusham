@@ -26,7 +26,18 @@
 
   /* --- Link dinamici dal contenuto (email, instagram) --- */
   $$("[data-ig]").forEach(a => a.href = C.brand.instagram);
-  $$("[data-email]").forEach(a => { a.href = "mailto:" + C.brand.email; if (!a.dataset.keep) a.textContent = C.brand.email; });
+  $$("[data-tt]").forEach(a => a.href = C.brand.tiktok);
+  $$("[data-email]").forEach(a => { a.href = "mailto:" + C.brand.email; if (!("keep" in a.dataset)) a.textContent = C.brand.email; });
+
+  /* --- Audience, What I offer, My value (da content.js) --- */
+  const stats = $("[data-stats]");
+  if (stats) stats.innerHTML = C.stats.filter(x => x.value).map((x, i) => `<div class="stat fade-up" style="transition-delay:${i * 70}ms"><dt>${x.label}</dt><dd class="display">${x.value}</dd><small>${x.note}</small></div>`).join("");
+  const statsNote = $("[data-stats-note]");
+  if (statsNote) statsNote.textContent = C.statsNote;
+  const list = (sel, items, cls) => { const el = $(sel); if (el) el.innerHTML = items.map((x, i) => `<li class="${cls} fade-up" style="transition-delay:${(i % 3) * 70}ms"><h3>${x.title}</h3><p>${x.text}</p></li>`).join(""); };
+  list("[data-services]", C.services, "offer");
+  list("[data-value]", C.value, "val");
+  $$("[data-media-kit]").forEach(a => a.href = C.brand.mediaKit);
 
   /* --- Card helper --- */
   const playIcon = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>';
@@ -69,6 +80,8 @@
         const it = C.kit.find(k => k.id === id);
         $("[data-d-img]", dlg).src = it.image;
         $("[data-d-img]", dlg).alt = it.alt;
+        const fr = $("[data-d-frame]", dlg);
+        if (fr) { fr.classList.remove("is-ready"); fr.src = it.reel.replace(/\/?$/, "/") + "embed/"; }
         $("[data-d-eyebrow]", dlg).textContent = [it.brand, C.categories.find(c => c.id === it.cat).label, it.date].filter(Boolean).join(" · ");
         $("[data-d-title]", dlg).textContent = it.title;
         $("[data-d-caption]", dlg).textContent = it.caption ? "“" + it.caption + "”" : "";
@@ -80,6 +93,9 @@
         const a = e.target.closest(".card"); if (!a) return;
         e.preventDefault(); render(a.dataset.id); dlg.showModal();
       });
+      const fr = $("[data-d-frame]", dlg);
+      if (fr) fr.addEventListener("load", () => { if (fr.src) fr.classList.add("is-ready"); });
+      dlg.addEventListener("close", () => { if (fr) { fr.classList.remove("is-ready"); fr.removeAttribute("src"); } });
       $("[data-d-close]", dlg).addEventListener("click", () => dlg.close());
       $("[data-d-prev]", dlg).addEventListener("click", () => { const l = visible(); render(l[(cur - 1 + l.length) % l.length]); });
       $("[data-d-next]", dlg).addEventListener("click", () => { const l = visible(); render(l[(cur + 1) % l.length]); });

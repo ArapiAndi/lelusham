@@ -30,8 +30,8 @@
 
   const actions = `
     <div class="slide-actions reveal on-dark">
-      <a class="btn btn-primary" href="social-kit.html">Explore the Social Kit</a>
-      <a class="btn btn-ghost" href="${C.brand.instagram}" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn btn-primary" href="connect.html">Work with me</a>
+      <a class="btn btn-ghost" href="social-kit.html">Explore the Social Kit</a>
     </div>`;
 
   /* --- Template --- */
