@@ -40,6 +40,8 @@
       <div class="slide-bg" style="background-image:url('${s.image}')" aria-hidden="true"></div>
       <figure class="intro-media">
         <video muted playsinline loop preload="auto" poster="${s.image}" aria-label="${s.alt}" width="720" height="1280">
+          ${s.video.webmHD ? `<source src="${s.video.webmHD}" type="video/webm" media="(min-width: 769px)">` : ""}
+          ${s.video.mp4HD ? `<source src="${s.video.mp4HD}" type="video/mp4" media="(min-width: 769px)">` : ""}
           <source src="${s.video.webm}" type="video/webm">
           <source src="${s.video.mp4}" type="video/mp4">
         </video>
@@ -60,7 +62,10 @@
           <span class="eyebrow reveal">${s.eyebrow}</span>
           <${h} class="slide-title display reveal">${s.title}</${h}>
           <p class="slide-text reveal">${s.text}</p>
-          ${actions}
+          <div class="slide-actions reveal on-dark">
+            <a class="btn btn-primary" href="${s.reel}" target="_blank" rel="noopener">Watch the reel ↗</a>
+            <a class="btn btn-ghost" href="social-kit.html">Social Kit</a>
+          </div>
         </div>
         <figure class="slide-figure">
           <img src="${s.image}" alt="${s.alt}" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" width="720" height="1280">
@@ -184,6 +189,7 @@
   root.setAttribute("aria-label", "Highlights");
   root.tabIndex = 0;
   if (reduceMotion) root.classList.add("no-autoplay");
-  go(0);
+  const start = slides.findIndex(el => "#" + el.id === location.hash); // deep link: index.html#slide-mfw
+  go(start > 0 ? start : 0);
   update();
 })();

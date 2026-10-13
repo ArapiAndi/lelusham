@@ -22,7 +22,7 @@ window.LELUSHAM = {
       /* Slide d'apertura: video full-bleed + wordmark gigante */
       id: "intro",
       type: "video",
-      video: { mp4: "assets/video/lelusham-hero.mp4", webm: "assets/video/lelusham-hero.webm" },
+      video: { mp4: "assets/video/lelusham-hero.mp4", webm: "assets/video/lelusham-hero.webm", mp4HD: "assets/video/lelusham-hero-1080.mp4", webmHD: "assets/video/lelusham-hero-1080.webm" },
       image: "assets/video/lelusham-hero-poster.jpg",
       alt: "Lelia in a grey hooded dress with a black bag, posing by a stone statue under a cloudy blue sky in Milan",
       eyebrow: "Fashion & lifestyle · Milan",
