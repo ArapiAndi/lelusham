@@ -227,6 +227,9 @@ body.menu-open { overflow: hidden; }
 .card .card-meta { position: absolute; inset: auto 0 0 0; padding: 1rem; color: var(--white); background: linear-gradient(to top, rgba(0,0,0,.7), transparent); display: flex; flex-direction: column; gap: .15rem; }
 .card .card-meta strong { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: .04em; line-height: 1; }
 .card .card-meta span { font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; opacity: .8; }
+.card .badge { position: absolute; top: 14px; left: 14px; padding: .3rem .55rem; border-radius: 999px; background: rgba(0,0,0,.45); backdrop-filter: blur(6px); color: var(--white); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+.filters + .filters { margin-top: -1.2rem; }
+.filters-platform .chip[aria-pressed="true"] { background: var(--magenta); border-color: var(--magenta); color: var(--white); }
 .card .play { position: absolute; top: 14px; right: 14px; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.18); backdrop-filter: blur(6px); color: var(--white); }
 .card .play svg { width: 12px; height: 12px; }
 .grid.staggered .card:nth-child(4n+2), .grid.staggered .card:nth-child(4n+4) { margin-top: clamp(20px, 5vw, 60px); }

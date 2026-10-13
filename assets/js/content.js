@@ -19,13 +19,14 @@ window.LELUSHAM = {
   },
 
   /* AUDIENCE — numeri reali. value: null = non ancora disponibile (da Instagram Insights), la voce non viene mostrata. */
+  /* Numeri pubblici letti dai profili il 13 Oct 2026 (Instagram: og:description; TikTok: creator embed). */
   stats: [
-    { label: "Followers", value: "3,014", note: "Instagram · 13 Oct 2026" },
-    { label: "Avg. reel views", value: null, note: "Median of the last 20 reels" },
-    { label: "Engagement rate", value: null, note: "Last 30 days" },
-    { label: "Audience", value: null, note: "Top cities, age range" }
+    { label: "TikTok followers", value: "7.7K", note: "@lelusham · 7,688" },
+    { label: "TikTok likes", value: "2.2M", note: "Total likes on the profile" },
+    { label: "Top video", value: "660K", note: "Views, single TikTok" },
+    { label: "Instagram followers", value: "3.0K", note: "@lelusham · 3,014 · 337 posts" }
   ],
-  statsNote: "Full Insights data (reach, views, audience split) in the media kit, on request.",
+  statsNote: "Public profile figures as of 13 Oct 2026. Full Insights data (reach, audience split) in the media kit, on request.",
 
   /* WHAT I OFFER — formati proposti (stessa lista del media kit). Da confermare con Lelia. */
   services: [
@@ -117,18 +118,37 @@ window.LELUSHAM = {
     { id: "all", label: "All" },
     { id: "tryon", label: "Try-on & boutique" },
     { id: "street", label: "Street style" },
-    { id: "events", label: "Events & travel" }
+    { id: "events", label: "Events & travel" },
+    { id: "lifestyle", label: "Lifestyle" }
+  ],
+  platforms: [
+    { id: "all", label: "Instagram + TikTok" },
+    { id: "instagram", label: "Instagram" },
+    { id: "tiktok", label: "TikTok" }
   ],
 
   /* SOCIAL KIT — elementi della galleria */
   kit: [
-    { id: "DdwkQOXqUhA", cat: "tryon", image: "assets/img/reels/attico-croc-bag.jpg", title: "Wishlist try-on", brand: "The Attico", caption: "Trying on my wishlist items from @theattico boutique 💜", alt: "Lelia lifts a glossy blue crocodile-embossed bag in front of a green marble wall", reel: "https://www.instagram.com/reel/DdwkQOXqUhA/", date: "2026" },
-    { id: "DdtyOCAKPlI", cat: "tryon", image: "assets/img/reels/attico-passeggiata.jpg", title: "Which Passeggiata bag?", brand: "The Attico", caption: "Which Passeggiata bag? @theattico", alt: "Lelia in a long violet dress beside shelves of handbags in a boutique", reel: "https://www.instagram.com/reel/DdtyOCAKPlI/", date: "25 Sep 2026" },
-    { id: "DdZKq1Eqd7r", cat: "tryon", image: "assets/img/reels/coperni-box.jpg", title: "Shoes make the fit", brand: "Coperni", caption: "@coperni 🩰", alt: "Hands lift a Coperni dust bag out of a white shoe box on a grey sofa", reel: "https://www.instagram.com/reel/DdZKq1Eqd7r/", date: "2026" },
-    { id: "DdyPiRkthjy", cat: "events", image: "assets/img/reels/mfw-attico-show.jpg", title: "MFW, remotely", brand: "The Attico", caption: "Come with me to @theattico new show during MFW… remotely :)", alt: "Lelia in a fluffy orange top in a bright showroom", reel: "https://www.instagram.com/reel/DdyPiRkthjy/", date: "2026" },
-    { id: "Dc6XpeTNbOf", cat: "tryon", image: "assets/img/reels/suede-bag.jpg", title: "Lo ascolto sempre", brand: "", caption: "Lo ascolto sempre 🥰", alt: "A large tan suede bag held low, fur-trimmed black mules on a green carpet", reel: "https://www.instagram.com/reel/Dc6XpeTNbOf/", date: "2026" },
-    { id: "Dc6wd6wNgIu", cat: "street", image: "assets/img/reels/stone-columns.jpg", title: "Grey hood, white bag", brand: "Giuseppe Di Morabito", caption: "dress @giuseppedimorabito_official", alt: "Lelia in a grey hooded dress and white sunglasses leans on a stone column with a white bag", reel: "https://www.instagram.com/reel/Dc6wd6wNgIu/", date: "2026" },
-    { id: "DdFE2pdq_JR", cat: "street", image: "assets/img/reels/street-night.jpg", title: "Street, low light", brand: "", caption: "", alt: "Lelia in black sunglasses and a pearl necklace walks along a city street at dusk", reel: "https://www.instagram.com/reel/DdFE2pdq_JR/", date: "2026" },
-    { id: "Da7a-I3NSek", cat: "events", image: "assets/img/reels/yacht.jpg", title: "Is it better?", brand: "", caption: "Is it better?", alt: "Lelia in a white t-shirt and grey skirt in a mirror inside a wood-panelled cabin", reel: "https://www.instagram.com/reel/Da7a-I3NSek/", date: "2026" }
+    { id: "DdwkQOXqUhA", platform: "instagram", cat: "tryon", image: "assets/img/reels/attico-croc-bag.jpg", title: "Wishlist try-on", brand: "The Attico", caption: "Trying on my wishlist items from @theattico boutique 💜", alt: "Lelia lifts a glossy blue crocodile-embossed bag in front of a green marble wall", reel: "https://www.instagram.com/reel/DdwkQOXqUhA/", date: "2026" },
+    { id: "DdtyOCAKPlI", platform: "instagram", cat: "tryon", image: "assets/img/reels/attico-passeggiata.jpg", title: "Which Passeggiata bag?", brand: "The Attico", caption: "Which Passeggiata bag? @theattico", alt: "Lelia in a long violet dress beside shelves of handbags in a boutique", reel: "https://www.instagram.com/reel/DdtyOCAKPlI/", date: "25 Sep 2026" },
+    { id: "DdZKq1Eqd7r", platform: "instagram", cat: "tryon", image: "assets/img/reels/coperni-box.jpg", title: "Shoes make the fit", brand: "Coperni", caption: "@coperni 🩰", alt: "Hands lift a Coperni dust bag out of a white shoe box on a grey sofa", reel: "https://www.instagram.com/reel/DdZKq1Eqd7r/", date: "2026" },
+    { id: "DdyPiRkthjy", platform: "instagram", cat: "events", image: "assets/img/reels/mfw-attico-show.jpg", title: "MFW, remotely", brand: "The Attico", caption: "Come with me to @theattico new show during MFW… remotely :)", alt: "Lelia in a fluffy orange top in a bright showroom", reel: "https://www.instagram.com/reel/DdyPiRkthjy/", date: "2026" },
+    { id: "Dc6XpeTNbOf", platform: "instagram", cat: "tryon", image: "assets/img/reels/suede-bag.jpg", title: "Lo ascolto sempre", brand: "", caption: "Lo ascolto sempre 🥰", alt: "A large tan suede bag held low, fur-trimmed black mules on a green carpet", reel: "https://www.instagram.com/reel/Dc6XpeTNbOf/", date: "2026" },
+    { id: "Dc6wd6wNgIu", platform: "instagram", cat: "street", image: "assets/img/reels/stone-columns.jpg", title: "Grey hood, white bag", brand: "Giuseppe Di Morabito", caption: "dress @giuseppedimorabito_official", alt: "Lelia in a grey hooded dress and white sunglasses leans on a stone column with a white bag", reel: "https://www.instagram.com/reel/Dc6wd6wNgIu/", date: "2026" },
+    { id: "DdFE2pdq_JR", platform: "instagram", cat: "street", image: "assets/img/reels/street-night.jpg", title: "Street, low light", brand: "", caption: "", alt: "Lelia in black sunglasses and a pearl necklace walks along a city street at dusk", reel: "https://www.instagram.com/reel/DdFE2pdq_JR/", date: "2026" },
+    { id: "Da7a-I3NSek", platform: "instagram", cat: "events", image: "assets/img/reels/yacht.jpg", title: "Is it better?", brand: "", caption: "Is it better?", alt: "Lelia in a white t-shirt and grey skirt in a mirror inside a wood-panelled cabin", reel: "https://www.instagram.com/reel/Da7a-I3NSek/", date: "2026" },
+    /* TikTok — cover originali, views pubbliche al 13 Oct 2026 */
+    { id: "tt-7592984230288706838", platform: "tiktok", cat: "tryon", image: "assets/img/tiktok/7592984230288706838.jpg", title: "Con questo addosso", brand: "", caption: "🧔🏻‍♂️: oggi voglio vederti con questo addosso 😍", alt: "Lelia in a long black backless dress in a hotel corridor", reel: "https://www.tiktok.com/@lelusham/video/7592984230288706838", date: "2026", views: 660600 },
+    { id: "tt-7518712856477601046", platform: "tiktok", cat: "tryon", image: "assets/img/tiktok/7518712856477601046.jpg", title: "La Passeggiata, unboxed", brand: "The Attico", caption: "La passeggiata @The Attico 🤍 #unboxingvideo", alt: "Lelia holds a black The Attico shopping bag on a bridge in Venice", reel: "https://www.tiktok.com/@lelusham/video/7518712856477601046", date: "2025", views: 11900 },
+    { id: "tt-7690337965490408737", platform: "tiktok", cat: "events", image: "assets/img/tiktok/7690337965490408737.jpg", title: "Best friend photoshoot", brand: "", caption: "The difference between a fake friend and a best friend 😂📸 Good dress = serious photoshoot", alt: "Lelia in a long black dress poses by the sea while a friend takes photos", reel: "https://www.tiktok.com/@lelusham/video/7690337965490408737", date: "2026", views: 1951 },
+    { id: "tt-7690142031728954657", platform: "tiktok", cat: "events", image: "assets/img/tiktok/7690142031728954657.jpg", title: "MFW, remotely", brand: "The Attico", caption: "Come with me to @The Attico new show during MFW… remotely :)", alt: "A screen in a showroom shows the words Come with me to The Attico's new show during MFW", reel: "https://www.tiktok.com/@lelusham/video/7690142031728954657", date: "2026", views: 653 },
+    { id: "tt-7689895624593902881", platform: "tiktok", cat: "tryon", image: "assets/img/tiktok/7689895624593902881.jpg", title: "Wishlist try-on, Ibiza", brand: "The Attico", caption: "Trying on my wishlist items from @The Attico boutique in Ibz 💜", alt: "Lelia in a violet dress beside the window of a boutique", reel: "https://www.tiktok.com/@lelusham/video/7689895624593902881", date: "2026", views: 535 },
+    { id: "tt-7690305161398471969", platform: "tiktok", cat: "events", image: "assets/img/tiktok/7690305161398471969.jpg", title: "Dinner plans", brand: "", caption: "What are we gonna make for dinner: @Miss_zalata", alt: "Lelia and a friend in evening dresses on a terrace by the sea", reel: "https://www.tiktok.com/@lelusham/video/7690305161398471969", date: "2026", views: 491 },
+    { id: "tt-7691043070686547232", platform: "tiktok", cat: "lifestyle", image: "assets/img/tiktok/7691043070686547232.jpg", title: "Sweet 18", brand: "", caption: "Sweet 18 🎂", alt: "Lelia at a table with a stack of pancakes and a birthday candle", reel: "https://www.tiktok.com/@lelusham/video/7691043070686547232", date: "2026", views: 444 },
+    { id: "tt-7693176747478502689", platform: "tiktok", cat: "events", image: "assets/img/tiktok/7693176747478502689.jpg", title: "No matching bags", brand: "", caption: "POV: we said no matching bags today", alt: "Lelia in a black evening outfit in a lantern-lit courtyard at night", reel: "https://www.tiktok.com/@lelusham/video/7693176747478502689", date: "2026", views: 431 },
+    { id: "tt-7694372234218982688", platform: "tiktok", cat: "lifestyle", image: "assets/img/tiktok/7694372234218982688.jpg", title: "Get up, diva", brand: "", caption: "", alt: "Lelia in a strapless top wrapped in a sheet, with the words get up diva overlaid", reel: "https://www.tiktok.com/@lelusham/video/7694372234218982688", date: "2026", views: 419 },
+    { id: "tt-7692833514055634209", platform: "tiktok", cat: "events", image: "assets/img/tiktok/7692833514055634209.jpg", title: "Riad, pink and pink", brand: "", caption: "", alt: "Lelia and a friend in pink outfits walk through a riad courtyard", reel: "https://www.tiktok.com/@lelusham/video/7692833514055634209", date: "2026", views: 418 },
+    { id: "tt-7692832292498181409", platform: "tiktok", cat: "lifestyle", image: "assets/img/tiktok/7692832292498181409.jpg", title: "My biggest problem", brand: "", caption: "my biggest problem", alt: "Lelia lying down wearing a glowing LED face mask", reel: "https://www.tiktok.com/@lelusham/video/7692832292498181409", date: "2026", views: 397 },
+    { id: "tt-7692131854585023777", platform: "tiktok", cat: "lifestyle", image: "assets/img/tiktok/7692131854585023777.jpg", title: "Flowers", brand: "", caption: "", alt: "Lelia in a pink top surrounded by bouquets of pink and lilac flowers", reel: "https://www.tiktok.com/@lelusham/video/7692131854585023777", date: "2026", views: 299 }
   ]
 };

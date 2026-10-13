@@ -1,0 +1,538 @@
+<title>LELUSHAM Brand Project 2026</title>
+<meta name="description" content="Analisi, strategia, restyling, Instagram, media kit e piano operativo per LELUSHAM">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;700&display=swap">
+<style>
+/* Layout: documento editoriale a colonna singola (68ch), con sezioni numerate perché il brief è una sequenza di 8 punti.
+   Palette = design system del sito (stone/ink/magenta/violet) così il documento è esso stesso un esempio del sistema. */
+:root {
+  --bg: #EDE8E1; --surface: #F7F4EF; --line: #C9C4BC; --muted: #7A6F63; --fg: #1E1C1A; --fg-soft: #3A3633;
+  --accent: #E8307F; --accent-2: #5E2B7A; --ok: #2F6B4F; --warn: #B4621C; --bad: #B4262E;
+  --display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
+  --serif: "Instrument Serif", Georgia, serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #1E1C1A; --surface: #272421; --line: #44403B; --muted: #A39A8F; --fg: #EDE8E1; --fg-soft: #CFC7BD; --accent: #F2559A; --accent-2: #B48AD1; --ok: #7CC29F; --warn: #E9A25B; --bad: #F08A8F; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #1E1C1A; --surface: #272421; --line: #44403B; --muted: #A39A8F; --fg: #EDE8E1; --fg-soft: #CFC7BD; --accent: #F2559A; --accent-2: #B48AD1; --ok: #7CC29F; --warn: #E9A25B; --bad: #F08A8F; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; padding-block: 0 80px; padding-inline: clamp(16px, 4vw, 48px); }
+.wrap { max-width: 920px; margin: 0 auto; }
+h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
+h1 { font-family: var(--display); font-weight: 400; font-size: clamp(3.6rem, 10vw, 7.5rem); line-height: .9; letter-spacing: .01em; }
+h1 .i, h2 .i { font-family: var(--serif); font-style: italic; font-weight: 400; text-transform: none; color: var(--accent); letter-spacing: 0; }
+h2 { font-family: var(--display); font-weight: 400; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: .95; letter-spacing: .01em; text-transform: uppercase; }
+h3 { font-size: 1.15rem; font-weight: 700; margin-top: 2.2rem; }
+h4 { font-size: .95rem; font-weight: 700; margin-top: 1.4rem; }
+p { max-width: 68ch; margin: .7rem 0; color: var(--fg-soft); }
+p.lead { font-family: var(--serif); font-style: italic; font-size: 1.5rem; line-height: 1.3; color: var(--fg); max-width: 34ch; }
+.eyebrow { font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+header.hero { padding-block: 56px 32px; border-bottom: 1px solid var(--fg); display: grid; gap: 1rem; }
+header .meta { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; font-size: .8rem; color: var(--muted); }
+nav.toc { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .4rem 1.2rem; padding-block: 1.4rem; border-bottom: 1px solid var(--line); font-size: .9rem; }
+nav.toc a { color: var(--fg); text-decoration: none; display: grid; grid-template-columns: 2.2ch 1fr; gap: .6ch; }
+nav.toc a:hover { color: var(--accent); }
+nav.toc small { color: var(--muted); font-variant-numeric: tabular-nums; }
+section { padding-block: 3.4rem 1rem; border-bottom: 1px solid var(--line); }
+section > .eyebrow { display: block; margin-bottom: .6rem; }
+a { color: var(--accent-2); }
+ul, ol { padding-left: 1.2rem; max-width: 72ch; color: var(--fg-soft); } li { margin: .3rem 0; } li::marker { color: var(--muted); }
+strong { color: var(--fg); }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 1rem 0; }
+th, td { text-align: left; vertical-align: top; padding: .55rem .6rem .55rem 0; border-bottom: 1px solid var(--line); }
+th { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+td:first-child { font-weight: 700; color: var(--fg); }
+.scroll { overflow-x: auto; }
+.tag { display: inline-block; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; border: 1px solid currentColor; line-height: 1.4; white-space: nowrap; }
+.ok { color: var(--ok); } .warn { color: var(--warn); } .bad { color: var(--bad); } .acc { color: var(--accent); }
+.cols { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem 2rem; }
+.card { background: var(--surface); border: 1px solid var(--line); padding: 1.1rem 1.2rem; }
+.card h4 { margin-top: 0; }
+.card p, .card ul { font-size: .92rem; }
+.quote { font-family: var(--serif); font-style: italic; font-size: 1.35rem; line-height: 1.3; border-left: 2px solid var(--accent); padding-left: 1rem; margin: 1.4rem 0; color: var(--fg); max-width: 40ch; }
+pre.copy { background: var(--surface); border: 1px solid var(--line); padding: 1rem 1.1rem; font-family: var(--body); font-size: .95rem; white-space: pre-wrap; margin: .8rem 0; color: var(--fg); max-width: 60ch; line-height: 1.5; }
+pre.copy small { color: var(--muted); display: block; margin-bottom: .4rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
+figure { margin: 1.2rem 0; } figcaption { font-size: .8rem; color: var(--muted); margin-top: .5rem; }
+img { max-width: 100%; display: block; }
+
+/* Palette */
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: .8rem; margin: 1rem 0; }
+.sw { border: 1px solid var(--line); }
+.sw i { display: block; height: 56px; }
+.sw div { padding: .5rem .6rem; font-size: .78rem; } .sw b { display: block; } .sw code { font-size: .78rem; color: var(--muted); }
+/* Specimen */
+.spec { display: grid; gap: .6rem; margin: 1rem 0; }
+.spec .d { font-family: var(--display); font-size: clamp(3rem, 8vw, 5.5rem); line-height: .9; text-transform: uppercase; }
+.spec .s { font-family: var(--serif); font-style: italic; font-size: 2rem; line-height: 1.1; }
+.spec .b { font-size: 1rem; max-width: 60ch; }
+
+/* Mock profilo Instagram */
+.phones { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.6rem; margin: 1.2rem 0; }
+.phone { max-width: 390px; width: 100%; margin: 0 auto; background: #fff; color: #111; border: 1px solid var(--line); border-radius: 22px; padding: 14px 14px 10px; font-family: -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 13px; line-height: 1.35; box-shadow: 0 30px 60px -40px rgba(0,0,0,.5); }
+.phone .bar { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; padding: 2px 2px 10px; }
+.phone .top { display: grid; grid-template-columns: 78px 1fr; gap: 14px; align-items: center; }
+.phone .av { width: 78px; height: 78px; border-radius: 50%; overflow: hidden; border: 2px solid #E8307F; padding: 2px; background: #fff; }
+.phone .av img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.phone .nums { display: flex; justify-content: space-around; text-align: center; }
+.phone .nums b { display: block; font-size: 15px; } .phone .nums span { font-size: 12px; color: #555; }
+.phone .name { font-weight: 700; margin-top: 10px; font-size: 14px; }
+.phone .cat { color: #666; font-size: 12px; }
+.phone .bio { white-space: pre-line; margin-top: 2px; }
+.phone .link { color: #00376b; font-weight: 600; margin-top: 2px; }
+.phone .btns { display: grid; grid-template-columns: 1fr 1fr auto; gap: 6px; margin: 10px 0; }
+.phone .btns span { background: #efefef; border-radius: 8px; text-align: center; padding: 6px; font-weight: 600; font-size: 13px; }
+.phone .btns span:first-child { background: #0095f6; color: #fff; }
+.phone .hl { display: flex; gap: 12px; overflow-x: auto; padding: 4px 0 10px; }
+.phone .hl div { text-align: center; font-size: 11px; flex: 0 0 auto; width: 64px; }
+.phone .hl i { display: block; width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 4px; border: 1px solid #ddd; overflow: hidden; background: #EDE8E1; font-family: var(--display); font-style: normal; font-size: 14px; letter-spacing: .05em; line-height: 60px; color: #1E1C1A; }
+.phone .hl i img { width: 100%; height: 100%; object-fit: cover; }
+.phone .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 6px; }
+.phone .grid div { aspect-ratio: 3 / 4; overflow: hidden; background: #ddd; position: relative; }
+.phone .grid img { width: 100%; height: 100%; object-fit: cover; }
+.phone .grid .pin { position: absolute; top: 5px; right: 5px; width: 16px; height: 16px; border-radius: 50%; background: rgba(0,0,0,.55); }
+.phone .grid .pin::after { content: ""; position: absolute; left: 5px; top: 4px; width: 0; height: 0; border-left: 6px solid #fff; border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
+.phone .grid .cov { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 6px 5px; background: linear-gradient(to top, rgba(0,0,0,.7), transparent); color: #fff; font-family: var(--display); font-size: 13px; letter-spacing: .04em; line-height: 1; }
+.phones > div { display: grid; justify-items: center; }
+.phone .label { text-align: center; font-size: 11px; color: #666; margin-top: 8px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
+
+/* Media kit pagine */
+.kit { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1rem; margin: 1rem 0; }
+.kit figure { margin: 0; } .kit img { border: 1px solid var(--line); width: 100%; }
+.kit figcaption { font-size: .8rem; }
+/* Piano */
+.plan { display: grid; gap: .6rem; margin: 1rem 0; }
+.step { display: grid; grid-template-columns: 2.6rem 1fr; gap: .8rem; border-top: 1px solid var(--line); padding-top: .8rem; }
+.step .n { font-family: var(--display); font-size: 1.8rem; line-height: 1; color: var(--muted); }
+.step h4 { margin-top: 0; display: flex; gap: .6rem; align-items: center; flex-wrap: wrap; }
+.step p { margin: .3rem 0; font-size: .92rem; }
+footer { padding-top: 2rem; font-size: .8rem; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+
+<div class="wrap">
+<header class="hero">
+  <span class="eyebrow">Brand project · 13 ottobre 2026</span>
+  <h1>LELUSHAM<br><span class="i">a life styled my way</span></h1>
+  <p class="lead">Analisi, posizionamento, restyling, Instagram, media kit e piano operativo. Dati verificati separati dalle ipotesi.</p>
+  <div class="meta"><span>Per: Lelia M e chi lavora al progetto</span><span>Fonti: profilo pubblico @lelusham, 8 reel, sito lelusham.com, repository del sito</span></div>
+</header>
+
+<nav class="toc" aria-label="Sezioni">
+  <a href="#s1"><small>01</small>Stato attuale</a>
+  <a href="#s2"><small>02</small>Posizionamento</a>
+  <a href="#s3"><small>03</small>Restyling e sistema visivo</a>
+  <a href="#s4"><small>04</small>Profilo Instagram</a>
+  <a href="#s5"><small>05</small>Media kit</a>
+  <a href="#s6"><small>06</small>Partner e opportunità</a>
+  <a href="#s7"><small>07</small>Piano operativo</a>
+  <a href="#s8"><small>08</small>Prima e dopo</a>
+</nav>
+
+<!-- ============ 01 ============ -->
+<section id="s1">
+  <span class="eyebrow">01</span>
+  <h2>Stato <span class="i">attuale</span></h2>
+  <p>Instagram senza login mostra solo i metadati pubblici. Tutto ciò che segue è diviso in tre livelli: verificato, ipotesi, non accessibile.</p>
+
+  <h3>Dati verificati</h3>
+  <div class="scroll"><table>
+    <tr><th>Elemento</th><th>Valore</th><th>Fonte</th></tr>
+    <tr><td>Nome visualizzato</td><td>LELIA M</td><td>Metadati pubblici Instagram, 13 ott 2026</td></tr>
+    <tr><td>Follower / seguiti / post</td><td>3.014 / 688 / 338</td><td>Metadati pubblici Instagram, 13 ott 2026</td></tr>
+    <tr><td>Bio</td><td>"Full-time diva 💅🏻 · [Fashion &amp; lifestyle] · 📍Milan, Italy · Collab: leliamoroz.pr@gmail.com"</td><td>Rilevata il 12 ott 2026 (docs/BRAND-ANALYSIS.md)</td></tr>
+    <tr><td>Foto profilo</td><td>Ritratto su fondo magenta, 100×100 px la versione pubblica</td><td>og:image del profilo</td></tr>
+    <tr><td>Reel analizzati</td><td>8, pubblicati tra il 18 lug e il 27 set 2026. Brand taggati: The Attico (3), Coperni (1), Giuseppe Di Morabito (1)</td><td>Pagine pubbliche dei reel</td></tr>
+    <tr><td>Sito</td><td>lelusham.com online su GitHub Pages, 5 pagine, hero video, Social Kit con 8 reel, pagina Brand</td><td>Repository e richiesta HTTP</td></tr>
+    <tr><td>HTTPS</td><td><span class="bad">Non funziona</span>: il certificato servito è quello generico di GitHub (*.github.io). Chrome e Safari mostrano un avviso di sicurezza su https://lelusham.com</td><td>Verifica TLS, 13 ott 2026</td></tr>
+  </table></div>
+
+  <h3>Non accessibile senza login</h3>
+  <ul>
+    <li>Stories in evidenza, post fissati, link in bio attuale, like e commenti dei reel.</li>
+    <li>Insights: reach, visualizzazioni, engagement, demografia. Vanno esportati da Lelia e inseriti nei segnaposto del media kit.</li>
+    <li>Collaborazioni retribuite: nessuna evidenza pubblica. I brand compaiono solo come tag in contenuti organici.</li>
+  </ul>
+
+  <h3>Lettura del feed (dagli 8 reel)</h3>
+  <div class="cols">
+    <div class="card"><h4 class="ok">Punti di forza</h4><ul>
+      <li><strong>Accesso reale ai luoghi</strong>: boutique The Attico, showroom durante MFW. È il contenuto più difficile da produrre per un brand e il più facile da vendere.</li>
+      <li><strong>Un formato riconoscibile</strong>: domanda diretta al pubblico ("Which bag?", "Is it better?"). Funziona come meccanica di engagement e come template.</li>
+      <li><strong>Luce naturale, Milano come set</strong>: pietra, marmo, travertino. Estetica coerente senza sforzo di produzione.</li>
+      <li><strong>Bilingue IT/EN</strong>: apre a brand internazionali con sede a Milano.</li>
+      <li><strong>Rapporto follower/seguiti sano</strong> (3.014 / 688): nessun segnale di crescita artificiale.</li>
+    </ul></div>
+    <div class="card"><h4 class="bad">Criticità</h4><ul>
+      <li><strong>Nome e handle non coincidono</strong>: il profilo dice "LELIA M", il brand si chiama Lelusham. Un brand che cerca "Lelusham" non trova il nome.</li>
+      <li><strong>"Full-time diva"</strong> è una voce, non un posizionamento. Un responsabile marketing non capisce cosa può comprare.</li>
+      <li><strong>Didascalie troppo corte</strong> ("@coperni 🩰", un reel senza testo): niente contesto, niente parole chiave, niente invito all'azione.</li>
+      <li><strong>Copertine dei reel non controllate</strong>: testo sovrapposto in posizioni casuali ("these are my ladies" al centro), un reel in letterbox.</li>
+      <li><strong>Nessun media kit, nessun dato</strong>: a 3.000 follower un brand decide sui numeri di reach e salvataggi, che oggi non sono presentati da nessuna parte.</li>
+      <li><strong>Email Gmail</strong> come unico contatto professionale e HTTPS rotto sul sito: due segnali di poca cura per chi fa due diligence.</li>
+    </ul></div>
+  </div>
+  <h3>Percezione da parte di un brand</h3>
+  <p>Un buyer o un PR vede una nano-creator milanese con buon gusto e accesso alle boutique, ma senza una proposta chiara. La decisione di gifting è facile, quella di pagamento è impossibile senza numeri. L'obiettivo del progetto è spostare la percezione da "ragazza con stile" a "creator con un formato, un luogo e un pubblico misurato".</p>
+</section>
+
+<!-- ============ 02 ============ -->
+<section id="s2">
+  <span class="eyebrow">02</span>
+  <h2>Posizionamento</h2>
+  <div class="quote">La boutique insider di Milano. Try-on veri, in negozio, in luce naturale, con una domanda al pubblico.</div>
+  <p>Il posizionamento prende ciò che Lelia già fa meglio e lo rende vendibile. Non si inventa una nicchia: si nomina quella esistente.</p>
+  <div class="cols">
+    <div class="card"><h4>Mercati di riferimento</h4><ul>
+      <li><strong>Brand contemporary italiani</strong> con boutique o showroom a Milano (fascia The Attico, Coperni, Giuseppe Di Morabito): try-on e copertura eventi.</li>
+      <li><strong>Boutique multimarca e resale di lusso</strong>: il formato "which bag?" è nato lì.</li>
+      <li><strong>Hospitality milanese e viaggi</strong>: hotel, rooftop, beach club. Il reel in cabina e lo yacht mostrano che il contenuto esiste già.</li>
+      <li><strong>Beauty e nails</strong>: la bio lo suggerisce, il feed ancora no. Mercato secondario.</li>
+    </ul></div>
+    <div class="card"><h4>Differenziazione</h4><ul>
+      <li>Sul posto, non in studio. Il brand ottiene contenuto girato nel proprio negozio.</li>
+      <li>Formato domanda: ogni reel genera commenti, quindi dati che il brand può leggere.</li>
+      <li>Due lingue nello stesso post.</li>
+      <li>Un'estetica di luce e pietra che non compete con il prodotto: il colore arriva dai capi.</li>
+    </ul></div>
+    <div class="card"><h4>Monetizzazione realistica a 3.000 follower</h4><ul>
+      <li><strong>Contenuti per i canali del brand</strong> (UGC): il reel viene consegnato al brand, che lo usa su feed e ads. Si vende la produzione, non la reach. È la voce più redditizia a questa scala.</li>
+      <li><strong>Gifting strutturato</strong> con consegna definita (1 reel + 3 stories), non "se ti va".</li>
+      <li><strong>Reel retribuito sul posto</strong> per boutique e hospitality.</li>
+      <li><strong>Affiliazione</strong> in stories durante lanci e saldi.</li>
+      <li>Da non proporre ora: sponsorizzazioni a tariffa di reach, pacchetti mensili. Servono prima i numeri.</li>
+    </ul></div>
+  </div>
+  <p><strong>Cosa resta autentico:</strong> la voce ("Lo ascolto sempre", "Full-time diva" come firma, non come bio), il telefono in mano, le domande, il mix di lingue. Cambia solo la presentazione.</p>
+</section>
+
+<!-- ============ 03 ============ -->
+<section id="s3">
+  <span class="eyebrow">03</span>
+  <h2>Restyling e <span class="i">sistema visivo</span></h2>
+  <p>Il sistema è già implementato sul sito e in questa pagina. Qui viene esteso a Instagram, al media kit e ai documenti commerciali con regole precise.</p>
+
+  <h3>Palette</h3>
+  <div class="swatches">
+    <div class="sw"><i style="background:#EDE8E1"></i><div><b>Stone</b><code>#EDE8E1</code> sfondo</div></div>
+    <div class="sw"><i style="background:#F7F4EF"></i><div><b>Ivory</b><code>#F7F4EF</code> superfici</div></div>
+    <div class="sw"><i style="background:#C9C4BC"></i><div><b>Marble</b><code>#C9C4BC</code> linee</div></div>
+    <div class="sw"><i style="background:#8A7F72"></i><div><b>Taupe</b><code>#8A7F72</code> testo secondario</div></div>
+    <div class="sw"><i style="background:#1E1C1A"></i><div><b>Ink</b><code>#1E1C1A</code> testo, fondi scuri</div></div>
+    <div class="sw"><i style="background:#E8307F"></i><div><b>Magenta</b><code>#E8307F</code> accento, una volta per pagina</div></div>
+    <div class="sw"><i style="background:#5E2B7A"></i><div><b>Violet</b><code>#5E2B7A</code> accento secondario</div></div>
+  </div>
+  <p>Regola: il magenta compare una volta per superficie (una parola, un bottone, un bordo). Mai come sfondo pieno, mai su foto. Il colore nelle immagini arriva dai capi.</p>
+
+  <h3>Tipografia</h3>
+  <div class="spec">
+    <div class="d">Which Passeggiata bag?</div>
+    <div class="s">A Life Styled My Way</div>
+    <div class="b">Manrope per il corpo: 16–18 px, interlinea 1.5. Etichette in maiuscolo, 11–12 px, spaziatura .2em.</div>
+  </div>
+  <ul>
+    <li><strong>Bebas Neue</strong> per titoli, copertine dei reel, numeri. Sempre maiuscolo, interlinea .9.</li>
+    <li><strong>Instrument Serif Italic</strong> per una parola o una frase per pagina. È la voce "diva".</li>
+    <li><strong>Manrope</strong> per testo e didascalie. Su Instagram, dove i font non si scelgono, le copertine usano Bebas via template e le caption restano in testo semplice.</li>
+  </ul>
+
+  <h3>Direzione fotografica</h3>
+  <ul>
+    <li>Verticale 9:16, luce naturale, telefono in mano. Nessun filtro caldo, nessun contrasto spinto: la pietra deve restare grigia, non arancione.</li>
+    <li>Soggetto nel terzo inferiore o centrale, cielo o parete sopra: lo spazio in alto serve a titoli e copertine.</li>
+    <li>Un colore saturo per inquadratura (il capo o la borsa), tutto il resto neutro.</li>
+    <li>Testo in video: solo in basso a sinistra o centrato nel terzo inferiore, Bebas bianco, mai al centro del volto.</li>
+    <li>Da eliminare: letterbox, riprese controluce senza esposizione sul volto, overlay rosa pieno.</li>
+  </ul>
+
+  <h3>Griglie e proporzioni</h3>
+  <div class="scroll"><table>
+    <tr><th>Superficie</th><th>Formato</th><th>Griglia</th><th>Margini e zone sicure</th></tr>
+    <tr><td>Sito desktop</td><td>1440 px</td><td>12 colonne, gutter 4vw (max 56 px)</td><td>Hero: testo colonne 1–6, media 9:16 colonne 8–12</td></tr>
+    <tr><td>Sito mobile</td><td>390 px</td><td>1 colonna</td><td>Gutter 16 px, titolo in alto sul cielo, testo nel terzo inferiore</td></tr>
+    <tr><td>Reel e copertina</td><td>1080×1920</td><td>Terzi orizzontali</td><td>Zona sicura: 250 px in alto, 420 px in basso, 60 px ai lati. Titolo copertina nel terzo inferiore, anteprima feed ritagliata a 1080×1350 centrata</td></tr>
+    <tr><td>Carosello</td><td>1080×1350</td><td>8 colonne, gutter 24 px</td><td>Margine 72 px. Titolo Bebas a 120 px in alto a sinistra, foto a sangue</td></tr>
+    <tr><td>Stories</td><td>1080×1920</td><td>Terzi</td><td>Testo e sticker tra 250 e 1500 px di altezza</td></tr>
+    <tr><td>Media kit e documenti</td><td>A4 verticale</td><td>12 colonne, gutter 5 mm</td><td>Margini 14 mm, baseline 4 mm, testata e piè di pagina a 10 e 9 mm</td></tr>
+  </table></div>
+
+  <h3>Gerarchia</h3>
+  <ol>
+    <li>Un titolo Bebas, grande, mai più di 3 righe.</li>
+    <li>Una riga in Instrument Serif italic come sottotitolo o firma.</li>
+    <li>Una foto o un video, sempre 9:16 o 4:5, mai quadrato.</li>
+    <li>Numeri in Bebas con etichetta maiuscola sopra e fonte sotto.</li>
+    <li>Un solo bottone primario (Ink, hover Magenta) e un bottone secondario a contorno.</li>
+  </ol>
+
+  <h3>Template coordinati</h3>
+  <div class="cols">
+    <div class="card"><h4>Copertina reel</h4><p>Fotogramma pulito del reel, titolo Bebas bianco di 2–3 parole nel terzo inferiore con sfumatura scura al 60%. Nessun logo. Esempi: "WISHLIST TRY-ON", "MFW · REMOTELY", "WHICH BAG?".</p></div>
+    <div class="card"><h4>Copertina Stories in evidenza</h4><p>Cerchio Stone #EDE8E1, una parola Bebas Ink al centro, 44 px su 1080. Niente icone. Cinque copertine, vedi sezione 04.</p></div>
+    <div class="card"><h4>Carosello "which?"</h4><p>Slide 1: foto a sangue, titolo Bebas in alto a sinistra con il numero di opzioni ("3 BAGS. ONE ANSWER."). Slide 2–4: una opzione per slide con etichetta. Ultima slide: Stone con la domanda in Instrument Serif e l'invito a commentare.</p></div>
+    <div class="card"><h4>Presentazione e documenti</h4><p>Stesse pagine del media kit: Stone per le pagine chiare, Ink per l'ultima. Titolo Bebas a 64 pt, corpo Manrope 9,5 pt, tabelle con riga superiore Ink da 1 px. Il file HTML del kit è il master riutilizzabile.</p></div>
+  </div>
+
+  <h3>Regole di coerenza tra sito, Instagram e kit</h3>
+  <ul>
+    <li>Stesso nome ovunque: <strong>LELUSHAM</strong> in Bebas, "Lelia M" come autrice.</li>
+    <li>Stesse 4 categorie ovunque: Try-on &amp; boutique, Fashion week &amp; events, Unboxing, Milan street &amp; travel. Sul sito sono i filtri del Social Kit, su Instagram le Stories in evidenza, nel kit i pillar.</li>
+    <li>Stessa foto profilo sul sito, su Instagram e nel kit, su fondo Stone (non magenta).</li>
+    <li>Ogni reel del sito punta al reel su Instagram; ogni Story in evidenza "Collab" punta a lelusham.com/connect.html.</li>
+  </ul>
+</section>
+
+<!-- ============ 04 ============ -->
+<section id="s4">
+  <span class="eyebrow">04</span>
+  <h2>Profilo <span class="i">Instagram</span></h2>
+  <p>Il mockup "dopo" usa foto e numeri reali. Le Stories in evidenza "prima" non sono visibili senza login e sono mostrate vuote.</p>
+
+  <div class="phones">
+    <div>
+      <div class="phone" aria-label="Profilo attuale">
+        <div class="bar"><span>lelusham</span><span>≡</span></div>
+        <div class="top"><div class="av"><img src="img/profile.jpg" alt=""></div>
+          <div class="nums"><div><b>338</b><span>post</span></div><div><b>3.014</b><span>follower</span></div><div><b>688</b><span>seguiti</span></div></div></div>
+        <div class="name">LELIA M</div>
+        <div class="bio">Full-time diva 💅🏻
+[Fashion &amp; lifestyle]
+📍Milan, Italy
+Collab: leliamoroz.pr@gmail.com</div>
+        <div class="link" style="color:#999">link in bio: non verificabile</div>
+        <div class="btns"><span>Segui</span><span>Messaggio</span><span>▾</span></div>
+        <div class="hl"><div><i style="background:#eee"></i>?</div><div><i style="background:#eee"></i>?</div><div><i style="background:#eee"></i>?</div></div>
+        <div class="grid">
+          <div><img src="img/mfw-attico-show.jpg" alt=""></div><div><img src="img/attico-croc-bag.jpg" alt=""></div><div><img src="img/attico-passeggiata.jpg" alt=""></div>
+          <div><img src="img/coperni-box.jpg" alt=""></div><div><img src="img/street-night.jpg" alt=""></div><div><img src="img/stone-columns.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="label">Prima</div>
+    </div>
+    <div>
+      <div class="phone" aria-label="Profilo proposto">
+        <div class="bar"><span>lelusham</span><span>≡</span></div>
+        <div class="top"><div class="av"><img src="img/lelusham-hero-poster.jpg" alt="" style="object-position:50% 38%"></div>
+          <div class="nums"><div><b>338</b><span>post</span></div><div><b>3.014</b><span>follower</span></div><div><b>688</b><span>seguiti</span></div></div></div>
+        <div class="name">LELUSHAM · Lelia M</div>
+        <div class="cat">Creator digitale</div>
+        <div class="bio">Fashion &amp; lifestyle, Milano 🇮🇹
+Try-on in boutique, MFW dall'interno, la città come set
+Full-time diva. A life styled my way.
+↓ Media kit &amp; collab</div>
+        <div class="link">lelusham.com/connect</div>
+        <div class="btns"><span>Segui</span><span>Email</span><span>▾</span></div>
+        <div class="hl">
+          <div><i>TRY-ON</i>Try-on</div><div><i>MFW</i>MFW</div><div><i>MILANO</i>Milano</div><div><i>TRAVEL</i>Travel</div><div><i>COLLAB</i>Collab</div>
+        </div>
+        <div class="grid">
+          <div><img src="img/attico-croc-bag.jpg" alt=""><span class="pin"></span><span class="cov">WISHLIST TRY-ON</span></div>
+          <div><img src="img/mfw-attico-show.jpg" alt=""><span class="pin"></span><span class="cov">MFW · REMOTELY</span></div>
+          <div><img src="img/coperni-box.jpg" alt=""><span class="pin"></span><span class="cov">SHOES MAKE THE FIT</span></div>
+          <div><img src="img/attico-passeggiata.jpg" alt=""><span class="cov">WHICH BAG?</span></div>
+          <div><img src="img/stone-columns.jpg" alt=""><span class="cov">GREY HOOD</span></div>
+          <div><img src="img/suede-bag.jpg" alt=""><span class="cov">LO ASCOLTO SEMPRE</span></div>
+        </div>
+      </div>
+      <div class="label">Dopo</div>
+    </div>
+  </div>
+
+  <h3>Testi</h3>
+  <pre class="copy"><small>Nome visualizzato (ricercabile)</small>LELUSHAM · Lelia M</pre>
+  <pre class="copy"><small>Bio · 4 righe, 150 caratteri max</small>Fashion &amp; lifestyle, Milano 🇮🇹
+Try-on in boutique, MFW dall'interno, la città come set
+Full-time diva. A life styled my way.
+↓ Media kit &amp; collab</pre>
+  <pre class="copy"><small>Link in bio</small>https://lelusham.com/connect.html
+(una sola destinazione, niente aggregatori: la pagina ha email, Instagram e il media kit in PDF)</pre>
+  <pre class="copy"><small>Call to action</small>Bottone "Email" attivo sul profilo (impostazioni → contatti) con leliamoroz.pr@gmail.com; quando esiste, hello@lelusham.com.</pre>
+
+  <h3>Stories in evidenza</h3>
+  <div class="scroll"><table>
+    <tr><th>Ordine</th><th>Nome</th><th>Copertina</th><th>Contenuto</th></tr>
+    <tr><td>1</td><td>TRY-ON</td><td>Stone, Bebas Ink</td><td>Le prove in boutique: Attico, Passeggiata, le domande "which?"</td></tr>
+    <tr><td>2</td><td>MFW</td><td>Stone, Bebas Ink</td><td>Show e showroom della settimana della moda, per stagione</td></tr>
+    <tr><td>3</td><td>MILANO</td><td>Stone, Bebas Ink</td><td>Street, luoghi, pietra e marmo. Il "set"</td></tr>
+    <tr><td>4</td><td>TRAVEL</td><td>Stone, Bebas Ink</td><td>Yacht, hotel, viaggi</td></tr>
+    <tr><td>5</td><td>COLLAB</td><td>Stone, Bebas <span class="acc">Magenta</span></td><td>Cosa si può fare insieme: 3 stories con i servizi del kit e il link a lelusham.com/connect.html. L'unica copertina con l'accento</td></tr>
+  </table></div>
+  <p>Da eliminare: qualsiasi Story in evidenza con nome generico o emoji come copertina. Massimo 5 cerchi: tutti visibili senza scorrere.</p>
+
+  <h3>Tre contenuti da fissare</h3>
+  <ol>
+    <li><strong>Wishlist try-on @theattico</strong> (26 set): il formato migliore, boutique riconoscibile, borsa in primo piano.</li>
+    <li><strong>MFW remotely</strong> (27 set): dimostra l'accesso agli eventi.</li>
+    <li><strong>Coperni unboxing</strong> (17 set): dimostra il formato prodotto, utile per brand che spediscono.</li>
+  </ol>
+
+  <h3>Organizzazione del feed</h3>
+  <ul>
+    <li>Ritmo per riga di 3: un try-on, un reel di città o viaggio, un prodotto o carosello. Nessuna riga con tre interni di boutique.</li>
+    <li>Ogni reel con copertina dal template (titolo nel terzo inferiore), così la griglia si legge come un indice.</li>
+    <li>Formati: reel 9:16 di 6–12 secondi con un hook nei primi 2 secondi; carosello 4:5 per i "which?" a più opzioni; stories con sondaggio per ogni domanda posta nel reel.</li>
+  </ul>
+
+  <h3>Caption: cosa cambia</h3>
+  <pre class="copy"><small>Oggi</small>@coperni 🩰</pre>
+  <pre class="copy"><small>Proposta</small>Shoes make the fit. Unboxing @coperni, le prime che indosso a MFW.
+Le tenete con il grigio o con il viola? 👇
+Shoes make the fit. Unboxing the @coperni pair I'm wearing to MFW. Grey or violet with these?
+#coperni #milanfashionweek #milanostyle</pre>
+  <p>Schema fisso: una riga di contesto, una domanda, la versione inglese, 3–5 hashtag specifici (brand, luogo, evento). Tempo di scrittura: due minuti.</p>
+
+  <h3>Mantenere, modificare, eliminare, aggiungere</h3>
+  <div class="scroll"><table>
+    <tr><th>Mantenere</th><th>Modificare</th><th>Eliminare</th><th>Aggiungere</th></tr>
+    <tr><td>Formato domanda, luce naturale, bilingue, "Full-time diva" come firma</td><td>Nome visualizzato, bio, foto profilo su fondo Stone, copertine dei reel, caption</td><td>Reel in letterbox, overlay rosa pieno, testo sul volto, emoji come copertine</td><td>5 Stories in evidenza, 3 post fissati, Story "Collab", link a lelusham.com/connect.html, bottone Email</td></tr>
+  </table></div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section id="s5">
+  <span class="eyebrow">05</span>
+  <h2>Media <span class="i">kit</span></h2>
+  <p>Quattro pagine A4, impaginate con il sistema visivo e con le foto reali. Il PDF è già esportato in docs/media-kit/LELUSHAM-media-kit.pdf e il file HTML è il master da aggiornare. I campi con bordo tratteggiato magenta sono segnaposto: nessun numero è stato stimato.</p>
+  <div class="kit">
+    <figure><img src="img/kit-1.jpg" alt="Pagina 1: foto a tutta pagina, LELUSHAM in grande, claim e contatti"><figcaption>01 Cover e identità</figcaption></figure>
+    <figure><img src="img/kit-2.jpg" alt="Pagina 2: ritratto, sei statistiche, pillar e dati pubblico"><figcaption>02 Profilo e statistiche</figcaption></figure>
+    <figure><img src="img/kit-3.jpg" alt="Pagina 3: griglia di sei reel con titolo e data"><figcaption>03 Portfolio</figcaption></figure>
+    <figure><img src="img/kit-4.jpg" alt="Pagina 4 su fondo scuro: sei servizi, tre argomenti, contatti"><figcaption>04 Partnership e contatti</figcaption></figure>
+  </div>
+  <div class="scroll"><table>
+    <tr><th>Pagina</th><th>Disposizione</th><th>Da compilare</th></tr>
+    <tr><td>01 Cover</td><td>Foto delle colonne in pietra a sangue per 196 mm; LELUSHAM a 116 pt a cavallo del bordo foto; claim e descrizione in basso a sinistra (110 mm); contatti in griglia a destra (62 mm).</td><td>Nulla</td></tr>
+    <tr><td>02 Profilo</td><td>Titolo e intro su 12 colonne; ritratto 66×117 mm a sinistra; 6 statistiche su 2 colonne con etichetta, valore Bebas 40 pt e fonte; sotto, pillar e dati del pubblico.</td><td>Visualizzazioni medie, engagement, reach, reach non follower, città, paesi, età, genere</td></tr>
+    <tr><td>03 Portfolio</td><td>6 reel su 3 colonne, 82 mm di altezza, titolo Bebas 14 pt e riga con categoria, brand e data; nota legale sui brand in basso.</td><td>Visualizzazioni per reel; collaborazioni confermate, se esistono</td></tr>
+    <tr><td>04 Partnership</td><td>Fondo Ink. 6 servizi su 2 colonne con tariffa a destra; 3 argomenti con bordo magenta; immagine 62 mm e "Let's talk" a 84 pt con contatti.</td><td>Tariffe o "su richiesta"; termini affiliazione</td></tr>
+  </table></div>
+  <p>Come compilare: Instagram → Insights → ultimi 30 giorni per reach, account raggiunti e demografia; per le visualizzazioni medie, aprire gli ultimi 20 reel e prendere il valore mediano. Aggiornare il kit ogni trimestre e indicare sempre la data.</p>
+</section>
+
+<!-- ============ 06 ============ -->
+<section id="s6">
+  <span class="eyebrow">06</span>
+  <h2>Partner e <span class="i">opportunità</span></h2>
+    <p>Ricerca su fonti pubbliche del 13 ottobre 2026. Le etichette: <span class="tag ok">programma</span> = esiste un programma pubblico per creator o affiliati; <span class="tag warn">evidenza</span> = l'azienda ha lavorato con creator ma senza programma aperto; <span class="tag">categoria</span> = compatibile per contenuto, nessun programma trovato. Le percentuali vengono da siti aggregatori e vanno confermate con il brand. Nessuna di queste aziende ha una collaborazione confermata con Lelusham: gli unici brand presenti nei contenuti sono The Attico, Coperni e Giuseppe Di Morabito, come tag organici.</p>
+
+  <h3>Cosa proporre, per settore</h3>
+  <div class="scroll"><table>
+    <tr><th>Settore</th><th>Collaborazione da proporre</th><th>Contenuto</th><th>Valore da comunicare</th></tr>
+    <tr><td>Brand contemporary e accessori</td><td>Gifting con consegna definita, poi reel retribuito e contenuti per i canali del brand</td><td>Unboxing + try-on in città, formato "which?"</td><td>Video verticale pronto per le ads, girato a Milano, due lingue</td></tr>
+    <tr><td>Boutique e resale</td><td>Reel in negozio, 1 reel + 3 stories con tag luogo</td><td>Try-on in boutique, domanda al pubblico</td><td>Il formato esiste già (Attico): prova con link</td></tr>
+    <tr><td>Beauty e nails</td><td>Codice affiliato in stories; per i saloni, barter</td><td>Dettaglio mani e borsa, "get ready" prima di MFW</td><td>Coerenza con lo stile del feed, non un salone a caso</td></tr>
+    <tr><td>Hospitality e viaggi</td><td>Soggiorno o tavolo in cambio di 1 reel + stories, con link sticker</td><td>Il luogo come set: ingresso, camera, rooftop</td><td>Il reel yacht e la cabina mostrano che il contenuto funziona</td></tr>
+    <tr><td>Piattaforme per micro-creator</td><td>Iscrizione e profilo completo con il kit</td><td>Portfolio dei 6 reel</td><td>Nano creator milanese con formato definito</td></tr>
+  </table></div>
+
+  <h3>Aziende individuate</h3>
+  <div class="cols">
+    <div class="card"><h4>Moda e accessori italiani</h4><ul>
+      <li><strong>Bronzallure</strong> (gioielli, Milano) <span class="tag ok">programma</span> affiliazione Italia su Awin. <a href="https://affi.io/m/bronzallure">fonte</a></li>
+      <li><strong>Liu Jo</strong> (Carpi) <span class="tag ok">programma</span> affiliazione circa 8%, cookie 30 giorni. <a href="https://www.flexoffers.com/affiliate-programs/liu-jo-it-affiliate-program/">fonte</a></li>
+      <li><strong>Otticanet</strong> (occhiali) <span class="tag ok">programma</span> ambassador ufficiale per creator con codice e commissione fino al 30%. <a href="https://www.otticanet.it/pages/affiliates">fonte</a></li>
+      <li><strong>Themoirè</strong> (borse, Milano) <span class="tag">categoria</span> entry-luxury milanese, adatto a unboxing e MFW. <a href="https://www.milanofinanza.it/news/oltre-impact-crea-il-polo-del-lusso-sostenibile-nasce-sustainable-platform-202501272324192983">fonte</a></li>
+      <li><strong>Rue Madam</strong> (borse, Verona) <span class="tag">categoria</span> venduto in circa 200 boutique italiane. <a href="https://www.modaes.com/global/companies/the-italian-brand-rue-madam-is-approaching-two-million-euros-and-continues-its-international-expansion">fonte</a></li>
+    </ul></div>
+    <div class="card"><h4>Boutique, e-commerce e pre-owned</h4><ul>
+      <li><strong>LuisaViaRoma</strong> <span class="tag ok">programma</span> affiliazione 4–8%, cookie 45 giorni. <a href="https://www.flexoffers.com/affiliate-programs/luisaviaroma-com-affiliate-program/">fonte</a></li>
+      <li><strong>Vestiaire Collective</strong> <span class="tag ok">programma</span> affiliazione con materiali in italiano, 5–10% secondo le fonti. <a href="https://affilimate.com/programs/vestiaire-collective-affiliate-program/">fonte</a></li>
+      <li><strong>YOOX</strong> (Milano) <span class="tag warn">da verificare</span> pagina di affiliazione via Awin, Rakuten e Partnerize. <a href="https://www.yoox.com/be/affiliation/registration">fonte</a></li>
+      <li><strong>Cavalli e Nastri</strong> (vintage, Milano) <span class="tag">categoria</span> ha ospitato un takeover Dsquared2. <a href="https://www.nssmag.com/en/fashion/45778/fashion-community-vintage-stores-dsquared2-cavalli-nastri-milan">fonte</a></li>
+      <li><strong>10 Corso Como</strong>, <strong>Antonia</strong> (Milano) <span class="tag">categoria</span> stesso formato dei reel in boutique.</li>
+    </ul></div>
+    <div class="card"><h4>Beauty e nails</h4><ul>
+      <li><strong>KIKO Milano</strong> <span class="tag ok">programma</span> affiliazione 5%, cookie 30 giorni. <a href="https://www.flexoffers.com/affiliate-programs/kiko-affiliate-program">fonte</a></li>
+      <li><strong>Rilastil</strong> (Milano) <span class="tag warn">evidenza</span> campagna con circa 200 nano e micro creator, ma in Spagna. <a href="https://www.territory-influence.com/project/whole-piramid-of-influencers-for-rilastil/">fonte</a></li>
+      <li><strong>Mulac</strong> / <strong>Diego dalla Palma</strong> <span class="tag">categoria</span> nessun programma aperto trovato.</li>
+      <li><strong>Layla Cosmetics</strong> (smalti, Milano) <span class="tag">categoria</span> unica collaborazione trovata è con una celebrità (2021).</li>
+      <li><strong>Unghie della Madonna</strong> (nail studio, Milano) <span class="tag">categoria</span> da proporre in barter.</li>
+    </ul></div>
+    <div class="card"><h4>Hospitality e viaggi</h4><ul>
+      <li><strong>Click&amp;Boat</strong> <span class="tag warn">evidenza</span> programma ambassador europeo con gifting e viaggi contenuto, descritto in un annuncio di lavoro 2025. Coerente con il reel yacht. <a href="https://clickboat.teamtailor.com/jobs/6851133-international-influence-intern-m-f-nb-barcelona-internship">fonte</a></li>
+      <li><strong>Hotel Principe di Savoia</strong> (Milano) <span class="tag warn">evidenza</span> ha ospitato i Top Creators Awards di Forbes Italia nel 2025. <a href="https://forbes.it/2025/10/21/top-creators-awards-2025-forbes-italia-e-buzzoole-celebrano-i-protagonisti-della-creator-economy">fonte</a></li>
+      <li><strong>Enterprise Hotel</strong> (Milano) <span class="tag warn">evidenza</span> tappa milanese del tour Italy Ambassador Awards 2025. <a href="https://www.qualitytravel.it/parte-italy-ambassador-awards-on-the-road-viaggio-nellitalia-dei-creator/168764">fonte</a></li>
+      <li><strong>Ceresio 7</strong>, <strong>Radio Rooftop</strong> (Milano) <span class="tag">categoria</span> nessuna policy creator trovata: contatto diretto, barter.</li>
+    </ul></div>
+    <div class="card"><h4>Piattaforme e network, a cui iscriversi subito</h4><ul>
+      <li><strong>Influee</strong> <span class="tag ok">programma</span> marketplace per micro e nano creator, sito in italiano. <a href="https://influee.co/it/influencer-marketing-platform">fonte</a></li>
+      <li><strong>Collabstr</strong> <span class="tag ok">programma</span> marketplace con pagina dedicata ai creator di Milano. <a href="https://collabstr.com/influencer-marketing/milan-italy">fonte</a></li>
+      <li><strong>Buzzoole</strong> (Milano, Napoli) <span class="tag ok">programma</span> app creator con verifica. <a href="https://help.buzzoole.com/en/types-of-creators">fonte</a></li>
+      <li><strong>Amazon Influencer Program</strong> (amazon.it) <span class="tag warn">da verificare</span> vetrina personale; requisiti di follower non chiari. <a href="https://supporthost.com/it/affiliazione-amazon/">fonte</a></li>
+      <li><strong>TikTok Shop Italia</strong> <span class="tag warn">da verificare</span> attivo dal marzo 2025; soglia affiliati non trovata per l'Italia. <a href="https://www.theretailbulletin.com/general-merchandise/tiktok-shop-to-expand-into-france-italy-and-germany-28-03-2025/">fonte</a></li>
+      <li><strong>LTK</strong> <span class="tag bad">non ora</span> soglia indicativa 5k follower. <strong>ShopMy</strong> <span class="tag bad">no</span> nessuna evidenza di accesso dall'Italia. <strong>Hoopygang</strong>, <strong>Territory</strong>: incerti.</li>
+    </ul></div>
+  </div>
+  <p><strong>Lacune:</strong> nessun programma pubblico per creator trovato tra saloni, hotel e rooftop milanesi: si lavora per contatto diretto in barter. Brand emergenti come Gia Borghini, Benedetta Bruzziches, Rosantica e Gedebe non sono stati inclusi per mancanza di risultati, non per esclusione.</p>
+
+  <h3>Portfolio, pagina collab e contatto</h3>
+  <ul>
+    <li><strong>Portfolio online</strong>: esiste già (lelusham.com/social-kit.html). Da aggiungere a ogni scheda: visualizzazioni a 7 giorni e, quando esiste, l'etichetta "collaborazione".</li>
+    <li><strong>Pagina collab</strong>: connect.html diventa la pagina con i sei servizi, il PDF e un modulo breve. È la destinazione unica del link in bio.</li>
+    <li><strong>Contatto professionale</strong>: hello@lelusham.com con inoltro a Gmail, risposta entro 48 ore, firma con link al kit.</li>
+  </ul>
+
+</section>
+
+<!-- ============ 07 ============ -->
+<section id="s7">
+  <span class="eyebrow">07</span>
+  <h2>Piano <span class="i">operativo</span></h2>
+  <p>In ordine di priorità. Ogni voce dice cosa fare, come e cosa si ottiene.</p>
+
+  <h3>A · Subito sul profilo (1 giorno)</h3>
+  <div class="plan">
+    <div class="step"><div class="n">1</div><div><h4>Nome, bio, link <span class="tag acc">0 €</span></h4><p>Copiare i testi della sezione 04. Impostare la categoria "Creator digitale" e il bottone Email.</p><p><strong>Risultato:</strong> chi cerca "Lelusham" trova il profilo e capisce in 3 secondi cosa fa Lelia.</p></div></div>
+    <div class="step"><div class="n">2</div><div><h4>Foto profilo</h4><p>Ritratto dal video dell'hero, ritagliato al volto, su fondo neutro. Stessa immagine sul sito e nel kit.</p><p><strong>Risultato:</strong> un volto riconoscibile e coerente ovunque.</p></div></div>
+    <div class="step"><div class="n">3</div><div><h4>Tre post fissati e cinque Stories in evidenza</h4><p>Fissare i tre reel indicati. Creare le copertine con il template Stone (un'ora in Canva o Figma con Bebas Neue, gratuito). Riempire "Collab" con tre stories prese dalla pagina 4 del kit.</p><p><strong>Risultato:</strong> il profilo mostra accesso, formato e offerta senza scorrere.</p></div></div>
+  </div>
+
+  <h3>B · Identità e grafica (1 settimana)</h3>
+  <div class="plan">
+    <div class="step"><div class="n">4</div><div><h4>Copertine dei reel esistenti</h4><p>Rifare la copertina degli ultimi 12 reel con il template: fotogramma pulito, titolo nel terzo inferiore. Si cambia da "Modifica" senza ripubblicare.</p><p><strong>Risultato:</strong> griglia leggibile come un indice.</p></div></div>
+    <div class="step"><div class="n">5</div><div><h4>Regole di ripresa</h4><p>Applicare le cinque regole fotografiche della sezione 03 a ogni nuovo reel. Stampare la zona sicura 1080×1920 come promemoria.</p><p><strong>Risultato:</strong> contenuti nuovi già coerenti, senza post-produzione.</p></div></div>
+    <div class="step"><div class="n">6</div><div><h4>Logo definitivo</h4><p>Il wordmark Bebas è un segnaposto. Far disegnare o approvare una versione vettoriale definitiva (anche solo lo stesso lettering con spaziatura fissata) e caricarla su brand.html.</p><p><strong>Risultato:</strong> un asset consegnabile ai brand per co-branding.</p></div></div>
+  </div>
+
+  <h3>C · Media kit (2 giorni)</h3>
+  <div class="plan">
+    <div class="step"><div class="n">7</div><div><h4>Esportare i dati da Insights</h4><p>Compilare i segnaposto delle pagine 2 e 3. Decidere le tariffe della pagina 4 oppure lasciare "su richiesta" e togliere i segnaposto.</p><p><strong>Risultato:</strong> un PDF inviabile. Senza numeri il kit non va inviato.</p></div></div>
+    <div class="step"><div class="n">8</div><div><h4>Pubblicare il PDF</h4><p>Caricare il kit su lelusham.com/connect.html come download e nella Story "Collab".</p><p><strong>Risultato:</strong> ogni richiesta di collaborazione riceve lo stesso documento.</p></div></div>
+  </div>
+
+  <h3>D · Sito (1 settimana)</h3>
+  <div class="plan">
+    <div class="step"><div class="n">9</div><div><h4>HTTPS <span class="tag bad">bloccante</span></h4><p>Su GitHub → Settings → Pages: verificare il dominio personalizzato, attendere il certificato e attivare "Enforce HTTPS". Se il DNS ha solo il record A, aggiungere anche il CNAME per www.</p><p><strong>Risultato:</strong> nessun avviso di sicurezza quando un brand apre il link in bio.</p></div></div>
+    <div class="step"><div class="n">10</div><div><h4>Email sul dominio</h4><p>Creare hello@lelusham.com (inoltro gratuito con Cloudflare Email Routing o ImprovMX) con risposta da Gmail. Aggiornare bio, sito e kit.</p><p><strong>Risultato:</strong> contatto professionale, stessa casella di sempre.</p></div></div>
+    <div class="step"><div class="n">11</div><div><h4>Pagina Collab</h4><p>Trasformare connect.html in una pagina con i sei servizi del kit, il download del PDF e un modulo con tre campi (azienda, tipo di collaborazione, messaggio) che apre l'email precompilata.</p><p><strong>Risultato:</strong> richieste già qualificate, meno scambi di email.</p></div></div>
+    <div class="step"><div class="n">12</div><div><h4>Misurare</h4><p>Collegare un contatore senza cookie (Plausible o GoatCounter) e verificare quante visite arrivano dal link in bio.</p><p><strong>Risultato:</strong> un numero in più per il kit del prossimo trimestre.</p></div></div>
+  </div>
+
+  <h3>E · Nuove collaborazioni (continuo)</h3>
+  <div class="plan">
+    <div class="step"><div class="n">13</div><div><h4>Lista di 30 contatti</h4><p>Partire dalla sezione 06: 10 brand, 10 boutique e resale, 5 hospitality, 5 beauty. Per ciascuno: nome del referente PR o marketing, canale di contatto, contenuto già realizzato che somiglia alla proposta.</p><p><strong>Risultato:</strong> una pipeline, non email sporadiche.</p></div></div>
+    <div class="step"><div class="n">14</div><div><h4>Email di proposta in 5 righe</h4><p>Chi sono, un reel simile già fatto (link), cosa propongo (un servizio del kit), cosa chiedo, il PDF in allegato. Inviarne 5 a settimana. Registrarsi sulle piattaforme per micro-creator indicate nella sezione 06.</p><p><strong>Risultato:</strong> con 5 invii a settimana e un tasso di risposta realistico del 10%, 2 conversazioni al mese.</p></div></div>
+    <div class="step"><div class="n">15</div><div><h4>Documentare ogni collaborazione</h4><p>Per ogni lavoro: reel, dati a 7 giorni, una frase del brand. Aggiornare pagina 3 del kit e la Story "Collab".</p><p><strong>Risultato:</strong> il kit cresce con prove, non con promesse.</p></div></div>
+  </div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section id="s8">
+  <span class="eyebrow">08</span>
+  <h2>Prima e <span class="i">dopo</span></h2>
+  <div class="scroll"><table>
+    <tr><th>Elemento</th><th>Oggi</th><th>Dopo</th><th>Azione</th></tr>
+    <tr><td>Nome</td><td>LELIA M</td><td>LELUSHAM · Lelia M</td><td><span class="tag warn">Riprogettare</span></td></tr>
+    <tr><td>Bio</td><td>Voce senza offerta</td><td>Cosa, dove, firma, invito</td><td><span class="tag warn">Riprogettare</span></td></tr>
+    <tr><td>Formato domanda</td><td>Presente</td><td>Presente, con sondaggio in stories</td><td><span class="tag ok">Mantenere</span></td></tr>
+    <tr><td>Luce e luoghi</td><td>Naturale, Milano</td><td>Uguale, con regole di inquadratura</td><td><span class="tag ok">Mantenere</span></td></tr>
+    <tr><td>Copertine reel</td><td>Testo casuale, letterbox</td><td>Template: titolo nel terzo inferiore</td><td><span class="tag warn">Riprogettare</span></td></tr>
+    <tr><td>Overlay rosa pieno</td><td>In un reel</td><td>Assente: il magenta vive solo nel sistema grafico</td><td><span class="tag bad">Eliminare</span></td></tr>
+    <tr><td>Stories in evidenza</td><td>Non verificabili</td><td>5, con copertine Stone</td><td><span class="tag acc">Aggiungere</span></td></tr>
+    <tr><td>Media kit</td><td>Assente</td><td>4 pagine, con dati da Insights</td><td><span class="tag acc">Aggiungere</span></td></tr>
+    <tr><td>Sito</td><td>Online, HTTPS rotto, Gmail</td><td>HTTPS attivo, hello@lelusham.com, pagina Collab con PDF</td><td><span class="tag warn">Riprogettare</span></td></tr>
+    <tr><td>Logo</td><td>Segnaposto tipografico</td><td>Lettering definitivo vettoriale</td><td><span class="tag acc">Aggiungere</span></td></tr>
+  </table></div>
+  <p>Credibilità per un brand, in una riga: un nome cercabile, un formato riconoscibile, un luogo (Milano, dentro le boutique), un documento con numeri datati e un sito che non dà errori. Tutto il resto Lelia lo fa già.</p>
+</section>
+
+<footer>LELUSHAM brand project · 13 ottobre 2026 · Le foto sono fotogrammi dei reel di @lelusham. I dati Instagram sono i conteggi pubblici del 13 ottobre 2026; tutto ciò che non era accessibile è indicato come tale.</footer>
+</div>

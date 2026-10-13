@@ -29,6 +29,12 @@ Date: 12 Oct 2026. Sources: public Instagram profile metadata of @lelusham and t
 - Overlays: large, bold, uppercase sans (white or hot pink).
 - Tone of voice: short, candid, bilingual IT/EN, often a direct question to the audience.
 
+**TikTok (public, creator embed, 13 Oct 2026)**
+- Display name: LELIA · handle @lelusham · bio: "full-time diva💅🏻 / Fashion Lifestyle Travel / 📩 leliamoroz.pr@gmail.com"
+- 7,688 followers · 137 following · 2.2M total likes · 12 public videos in the embed list
+- Top video: 660.6K views ("oggi voglio vederti con questo addosso"), then 11.9K (La Passeggiata unboxing, Venice); the rest 300–2K views.
+- Content mirrors Instagram (Attico try-ons, MFW) plus more lifestyle and travel (Ibiza, riad, birthday, friends).
+
 ## 2. Creative direction
 
 Concept: **"The city is the set, the outfit is the story."**
@@ -122,5 +128,6 @@ To do before launch
 - Logo/wordmark: placeholder (typographic).
 - Imagery: clean frames extracted from the reels Lelia sent (720×1280).
 - Brand guidelines PDF and approved photography: listed as "Pending" on brand.html, no download.
-- Reel playback happens on Instagram (link out). Embedding Instagram reels requires the oEmbed API with a Meta app token; not implemented.
+- Social Kit holds 8 Instagram reels + 12 TikTok videos (covers from TikTok's CDN, views as of 13 Oct 2026; refresh manually in content.js).
+- Reel playback happens on Instagram / TikTok (link out). Embedding Instagram reels requires the oEmbed API with a Meta app token; not implemented.
 - Domain: `lelusham.com` is assumed in metadata only.

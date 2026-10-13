@@ -134,15 +134,16 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
 extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.jpg" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
 
 # ---------------- SOCIAL KIT ----------------
-page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: reels organised by try-on & boutique, street style, events & travel. Every item links to the original Instagram reel.",f"""
+page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Instagram reels and TikTok videos organised by try-on & boutique, street style, events & travel, lifestyle. Every item links to the original.",f"""
 <section class="page-hero">
   <p class="eyebrow">02 — Social Kit</p>
   <h1 class="display">Social <span class="serif-i" style="color:var(--violet)">Kit</span></h1>
-  <p class="lead">A curated hub of reels. Pick a category, open a piece, jump to the original on Instagram.</p>
+  <p class="lead">Instagram reels and TikTok videos in one place. Pick a platform or a category, open a piece, jump to the original.</p>
 </section>
 <section class="section" style="padding-top:0" aria-label="Gallery">
+  <div class="filters filters-platform" data-kit-platforms role="group" aria-label="Filter by platform"></div>
   <div class="filters" data-kit-filters role="group" aria-label="Filter by category"></div>
-  <p class="eyebrow" style="margin-bottom:1.5rem"><span data-kit-count>8 reels</span></p>
+  <p class="eyebrow" style="margin-bottom:1.5rem"><span data-kit-count>20 videos</span></p>
   <div class="grid staggered" data-kit-grid></div>
 </section>
 <dialog class="detail" data-detail aria-label="Reel detail">
@@ -221,7 +222,8 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
   <aside class="c-side fade-up">
     <dl>
       <dt class="eyebrow">Based in</dt><dd>Milan, Italy</dd>
-      <dt class="eyebrow">Content</dt><dd>Fashion &amp; lifestyle<br>Reels · try-ons · events</dd>
+      <dt class="eyebrow">Content</dt><dd>Fashion &amp; lifestyle<br>Reels · TikTok · try-ons · events</dd>
+      <dt class="eyebrow">Audience</dt><dd>TikTok 7.7K followers · 2.2M likes<br>Instagram 3.0K followers</dd>
       <dt class="eyebrow">Collab</dt><dd><a class="link" data-email data-keep href="#">Write an email</a></dd>
     </dl>
   </aside>

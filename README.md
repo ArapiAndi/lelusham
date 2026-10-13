@@ -18,14 +18,15 @@ assets/css/style.css  Design tokens + all styles
 assets/js/content.js  ALL editable content (slides, gallery items, categories, brand data)
 assets/js/slider.js   Fullscreen slider
 assets/js/main.js     Menu, gallery, filters, dialog, scroll reveal
-assets/img/reels/     Reel frames (720×1280, extracted from the reels)
+assets/img/reels/     Instagram reel frames (720×1280)
+assets/img/tiktok/    TikTok covers (720×1280), named by video id
 docs/BRAND-ANALYSIS.md  Analysis, direction, wireframe, palette, checklist
 docs/build-pages.py   Optional: regenerates the 5 HTML pages (shared header/footer)
 ```
 
 ## How to update
 
-**Text, slides, gallery items, categories, email, Instagram URL** → edit `assets/js/content.js`. Each slide/kit item has `image`, `alt`, `title`, `caption`, `reel`. Add or remove objects freely; counters and dots update automatically.
+**Text, slides, gallery items, categories, platform stats, email, Instagram/TikTok URLs** → edit `assets/js/content.js`. Stats (`stats`) and TikTok `views` are static numbers: update them by hand. Each slide/kit item has `image`, `alt`, `title`, `caption`, `reel`. Add or remove objects freely; counters and dots update automatically.
 
 **Images** → drop files in `assets/img/reels/` and reference them in `content.js`. Recommended: 1080×1920 JPG/WebP, under 300 KB. Keep the `alt` text descriptive.
 
@@ -41,7 +42,7 @@ docs/build-pages.py   Optional: regenerates the 5 HTML pages (shared header/foot
 
 - Slider: prev/next, dots, counter, autoplay (6 s) with pause button, pause on hover/focus/hidden tab, keyboard ← → Space, swipe, reduced-motion fallback, aria-live.
 - Menu: fullscreen overlay, Esc to close, current page highlighted.
-- Social Kit: category filters (URL hash), detail dialog with prev/next and keyboard arrows, link to the original reel.
+- Social Kit: platform (Instagram/TikTok) + category filters (URL hash, e.g. #tiktok+lifestyle), detail dialog with prev/next and keyboard arrows, link to the original reel.
 - Scroll reveal via IntersectionObserver (disabled with reduced motion).
 
 ## Known placeholders
