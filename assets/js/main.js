@@ -32,7 +32,7 @@
   const playIcon = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>';
   function card(item, i, eager) {
     return `<a class="card fade-up" href="${item.reel}" data-id="${item.id}" data-cat="${item.cat}" target="_blank" rel="noopener" style="transition-delay:${(i % 4) * 70}ms">
-      <img src="${item.image}" alt="${item.alt}" width="360" height="640" ${eager ? 'decoding="async"' : 'loading="lazy" decoding="async"'}>
+      <img src="${item.image}" alt="${item.alt}" width="720" height="1280" ${eager ? 'decoding="async"' : 'loading="lazy" decoding="async"'}>
       <span class="play" aria-hidden="true">${playIcon}</span>
       <span class="card-meta"><strong>${item.title}</strong><span>${item.brand || C.categories.find(c => c.id === item.cat).label}</span></span>
     </a>`;

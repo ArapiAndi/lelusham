@@ -1,9 +1,8 @@
 /* ============================================================
    LELUSHAM — CONTENT
    Tutto il contenuto editabile del sito vive qui.
-   Le immagini sono i frame di copertina dei reel inviati da Lelia
-   (360×640). Sostituirle con export originali 1080×1920 mantenendo
-   gli stessi nomi file in assets/img/reels/.
+   Le immagini sono frame estratti dai reel inviati da Lelia (720×1280).
+   Per sostituirle: stesso nome file in assets/img/reels/ (9:16).
    ============================================================ */
 window.LELUSHAM = {
   brand: {
@@ -20,9 +19,22 @@ window.LELUSHAM = {
   /* HOME — slide del fullscreen slider (ordine = ordine di visualizzazione) */
   slides: [
     {
+      /* Slide d'apertura: video full-bleed + wordmark gigante */
+      id: "intro",
+      type: "video",
+      video: { mp4: "assets/video/lelusham-hero.mp4", webm: "assets/video/lelusham-hero.webm" },
+      image: "assets/video/lelusham-hero-poster.jpg",
+      alt: "Lelia in a grey hooded dress with a black bag, posing by a stone statue under a cloudy blue sky in Milan",
+      eyebrow: "Fashion & lifestyle · Milan",
+      title: "LELUSHAM",
+      text: "A Life Styled My Way",
+      sub: "A visual diary of fashion, elevated everyday moments, and the art of making the ordinary feel extraordinary.",
+      duration: 8400 /* due loop del video (4,2 s) */
+    },
+    {
       id: "wishlist",
       image: "assets/img/reels/attico-croc-bag.jpg",
-      alt: "Lelia in a violet printed dress holds up a glossy blue crocodile-embossed bag in front of a green marble wall",
+      alt: "Lelia in a violet velvet dress lifts a glossy blue crocodile-embossed bag by its handles in front of a green marble wall",
       eyebrow: "Milan · Try-on",
       title: "Full-time<br>diva.",
       text: "Fashion & lifestyle, filmed in Milan. Try-ons, boutique visits and the pieces worth talking about.",
@@ -32,7 +44,7 @@ window.LELUSHAM = {
     {
       id: "mfw",
       image: "assets/img/reels/mfw-attico-show.jpg",
-      alt: "Lelia in a fluffy orange top sips from a glass in a bright showroom with palm trees behind the window",
+      alt: "Lelia in a fluffy orange top sips from a glass in a bright showroom, palm trees behind the window",
       eyebrow: "Fashion Week",
       title: "Come with<br>me to MFW.",
       text: "Milan Fashion Week, shows and showrooms, told from the inside.",
@@ -42,7 +54,7 @@ window.LELUSHAM = {
     {
       id: "passeggiata",
       image: "assets/img/reels/attico-passeggiata.jpg",
-      alt: "Lelia poses in a long violet dress in a boutique lined with shelves of handbags",
+      alt: "Lelia in a long violet dress stretches an arm along shelves of handbags in a boutique",
       eyebrow: "Boutique",
       title: "Which<br>Passeggiata bag?",
       text: "The question is always the same. The answer changes every week.",
@@ -53,7 +65,7 @@ window.LELUSHAM = {
       id: "fit",
       image: "assets/img/reels/coperni-box.jpg",
       eyebrow: "Unboxing",
-      alt: "Hands open a white shoe box on a grey sofa, with the words Shoes Make The Fit overlaid",
+      alt: "Hands lift a Coperni dust bag out of a white shoe box on a grey sofa",
       title: "Shoes make<br>the fit.",
       text: "Unboxings and first looks, in the language of the reels.",
       caption: "@coperni 🩰",
@@ -61,11 +73,11 @@ window.LELUSHAM = {
     },
     {
       id: "street",
-      image: "assets/img/reels/white-bag.jpg",
-      alt: "A cream oversized bag, a grey t-shirt and black flip-flops on stone steps in Milan",
-      eyebrow: "Street · Milano",
+      image: "assets/img/reels/suede-bag.jpg",
+      alt: "A large tan suede bag held low, with fur-trimmed black mules on a green carpet",
+      eyebrow: "Boutique · Milano",
       title: "Lo ascolto<br>sempre.",
-      text: "Stone, marble and daylight. The city is the set.",
+      text: "Shopping in person, bag first. The city is the set.",
       caption: "Lo ascolto sempre 🥰",
       reel: "https://www.instagram.com/reel/Dc6XpeTNbOf/"
     }
@@ -81,13 +93,13 @@ window.LELUSHAM = {
 
   /* SOCIAL KIT — elementi della galleria */
   kit: [
-    { id: "DdwkQOXqUhA", cat: "tryon", image: "assets/img/reels/attico-croc-bag.jpg", title: "Wishlist try-on", brand: "The Attico", caption: "Trying on my wishlist items from @theattico boutique 💜", alt: "Lelia holds up a glossy blue crocodile-embossed bag in front of a green marble wall", reel: "https://www.instagram.com/reel/DdwkQOXqUhA/", date: "2026" },
-    { id: "DdtyOCAKPlI", cat: "tryon", image: "assets/img/reels/attico-passeggiata.jpg", title: "Which Passeggiata bag?", brand: "The Attico", caption: "Which Passeggiata bag? @theattico", alt: "Lelia in a long violet dress in a boutique lined with shelves of handbags", reel: "https://www.instagram.com/reel/DdtyOCAKPlI/", date: "25 Sep 2026" },
-    { id: "DdZKq1Eqd7r", cat: "tryon", image: "assets/img/reels/coperni-box.jpg", title: "Shoes make the fit", brand: "Coperni", caption: "@coperni 🩰", alt: "Hands open a white Coperni shoe box on a grey sofa", reel: "https://www.instagram.com/reel/DdZKq1Eqd7r/", date: "2026" },
+    { id: "DdwkQOXqUhA", cat: "tryon", image: "assets/img/reels/attico-croc-bag.jpg", title: "Wishlist try-on", brand: "The Attico", caption: "Trying on my wishlist items from @theattico boutique 💜", alt: "Lelia lifts a glossy blue crocodile-embossed bag in front of a green marble wall", reel: "https://www.instagram.com/reel/DdwkQOXqUhA/", date: "2026" },
+    { id: "DdtyOCAKPlI", cat: "tryon", image: "assets/img/reels/attico-passeggiata.jpg", title: "Which Passeggiata bag?", brand: "The Attico", caption: "Which Passeggiata bag? @theattico", alt: "Lelia in a long violet dress beside shelves of handbags in a boutique", reel: "https://www.instagram.com/reel/DdtyOCAKPlI/", date: "25 Sep 2026" },
+    { id: "DdZKq1Eqd7r", cat: "tryon", image: "assets/img/reels/coperni-box.jpg", title: "Shoes make the fit", brand: "Coperni", caption: "@coperni 🩰", alt: "Hands lift a Coperni dust bag out of a white shoe box on a grey sofa", reel: "https://www.instagram.com/reel/DdZKq1Eqd7r/", date: "2026" },
     { id: "DdyPiRkthjy", cat: "events", image: "assets/img/reels/mfw-attico-show.jpg", title: "MFW, remotely", brand: "The Attico", caption: "Come with me to @theattico new show during MFW… remotely :)", alt: "Lelia in a fluffy orange top in a bright showroom", reel: "https://www.instagram.com/reel/DdyPiRkthjy/", date: "2026" },
-    { id: "Dc6XpeTNbOf", cat: "street", image: "assets/img/reels/white-bag.jpg", title: "Lo ascolto sempre", brand: "", caption: "Lo ascolto sempre 🥰", alt: "A cream oversized bag and black flip-flops on stone steps", reel: "https://www.instagram.com/reel/Dc6XpeTNbOf/", date: "2026" },
-    { id: "Dc6wd6wNgIu", cat: "street", image: "assets/img/reels/marble-sunglasses.jpg", title: "Marble & sunglasses", brand: "Giuseppe Di Morabito", caption: "dress @giuseppedimorabito_official", alt: "Lelia seen from above wearing white sunglasses against a marble wall", reel: "https://www.instagram.com/reel/Dc6wd6wNgIu/", date: "2026" },
-    { id: "DdFE2pdq_JR", cat: "street", image: "assets/img/reels/street-night.jpg", title: "Street, low light", brand: "", caption: "", alt: "Lelia in sunglasses and a grey top walks along an urban street at dusk", reel: "https://www.instagram.com/reel/DdFE2pdq_JR/", date: "2026" },
-    { id: "Da7a-I3NSek", cat: "events", image: "assets/img/reels/yacht.jpg", title: "Is it better?", brand: "", caption: "Is it better?", alt: "Lelia in a sequined outfit films herself in a mirror inside a wood-panelled cabin", reel: "https://www.instagram.com/reel/Da7a-I3NSek/", date: "2026" }
+    { id: "Dc6XpeTNbOf", cat: "tryon", image: "assets/img/reels/suede-bag.jpg", title: "Lo ascolto sempre", brand: "", caption: "Lo ascolto sempre 🥰", alt: "A large tan suede bag held low, fur-trimmed black mules on a green carpet", reel: "https://www.instagram.com/reel/Dc6XpeTNbOf/", date: "2026" },
+    { id: "Dc6wd6wNgIu", cat: "street", image: "assets/img/reels/stone-columns.jpg", title: "Grey hood, white bag", brand: "Giuseppe Di Morabito", caption: "dress @giuseppedimorabito_official", alt: "Lelia in a grey hooded dress and white sunglasses leans on a stone column with a white bag", reel: "https://www.instagram.com/reel/Dc6wd6wNgIu/", date: "2026" },
+    { id: "DdFE2pdq_JR", cat: "street", image: "assets/img/reels/street-night.jpg", title: "Street, low light", brand: "", caption: "", alt: "Lelia in black sunglasses and a pearl necklace walks along a city street at dusk", reel: "https://www.instagram.com/reel/DdFE2pdq_JR/", date: "2026" },
+    { id: "Da7a-I3NSek", cat: "events", image: "assets/img/reels/yacht.jpg", title: "Is it better?", brand: "", caption: "Is it better?", alt: "Lelia in a white t-shirt and grey skirt in a mirror inside a wood-panelled cabin", reel: "https://www.instagram.com/reel/Da7a-I3NSek/", date: "2026" }
   ]
 };

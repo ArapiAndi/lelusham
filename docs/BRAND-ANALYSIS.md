@@ -110,7 +110,7 @@ Done
 - [x] Live region announces slide changes
 
 To do before launch
-- [ ] Replace 360×640 reel covers with 1080×1920 originals (and WebP/AVIF versions) — the current frames include Instagram's baked-in play icon
+- [ ] Optional: replace 720×1280 frames with 1080×1920 exports (and WebP versions)
 - [ ] Replace placeholder wordmark with the official logo (brand.html + header)
 - [ ] Replace `https://lelusham.com/` in canonical/OG URLs with the real domain
 - [ ] Make a real OG image (current one is a letterboxed cover)
@@ -120,7 +120,7 @@ To do before launch
 ## 9. Placeholders & unimplemented items
 
 - Logo/wordmark: placeholder (typographic).
-- Imagery: reel cover frames supplied by Lelia, low resolution, with play icon baked in.
+- Imagery: clean frames extracted from the reels Lelia sent (720×1280).
 - Brand guidelines PDF and approved photography: listed as "Pending" on brand.html, no download.
 - Reel playback happens on Instagram (link out). Embedding Instagram reels requires the oEmbed API with a Meta app token; not implemented.
 - Domain: `lelusham.com` is assumed in metadata only.

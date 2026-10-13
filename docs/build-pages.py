@@ -74,12 +74,12 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
   <div class="slides"></div>
   <p class="visually-hidden" aria-live="polite" data-live></p>
   <div class="slider-ui">
-    <div class="counter" aria-hidden="true">01 <span>/ 05</span></div>
+    <div class="counter" aria-hidden="true"></div>
     <div class="dots" role="tablist" aria-label="Slides"></div>
     <div class="slider-btns">
-      <button class="ctrl" type="button" data-toggle-play aria-pressed="false" aria-label="Metti in pausa autoplay">{SVG_PAUSE}{SVG_PLAY}</button>
-      <button class="ctrl" type="button" data-prev aria-label="Slide precedente">{SVG_PREV}</button>
-      <button class="ctrl" type="button" data-next aria-label="Slide successiva">{SVG_NEXT}</button>
+      <button class="ctrl" type="button" data-toggle-play aria-pressed="false" aria-label="Pause autoplay">{SVG_PAUSE}{SVG_PLAY}</button>
+      <button class="ctrl" type="button" data-prev aria-label="Previous slide">{SVG_PREV}</button>
+      <button class="ctrl" type="button" data-next aria-label="Next slide">{SVG_NEXT}</button>
     </div>
   </div>
 </section>
@@ -107,7 +107,7 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
   <a class="btn btn-primary" href="connect.html">Connect</a>
 </section>
 """, scripts='<script src="assets/js/slider.js"></script>\n<script src="assets/js/main.js"></script>',
-extra='<link rel="preload" as="image" href="assets/img/reels/attico-croc-bag.jpg" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
+extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.jpg" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
 
 # ---------------- SOCIAL KIT ----------------
 page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: reels organised by try-on & boutique, street style, events & travel. Every item links to the original Instagram reel.",f"""
@@ -123,7 +123,7 @@ page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: reels
 </section>
 <dialog class="detail" data-detail aria-label="Reel detail">
   <div class="detail-inner">
-    <div class="detail-media"><img data-d-img src="" alt="" width="360" height="640"></div>
+    <div class="detail-media"><img data-d-img src="" alt="" width="720" height="1280"></div>
     <div class="detail-body">
       <p class="eyebrow" data-d-eyebrow></p>
       <h2 class="display" data-d-title></h2>
@@ -158,7 +158,7 @@ page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, fashio
     <p>Lelia M publishes as <a class="link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>@lelusham</a>, a fashion &amp; lifestyle account based in Milan. The feed is built on short-form video: outfit try-ons in boutiques, unboxings, fashion week moments and walks through the city.</p>
     <p>The captions are brief and bilingual, Italian and English, often a single question thrown to the audience: <em>Which bag? Is it better?</em></p>
   </div>
-  <figure class="ed-figure fade-up"><img src="assets/img/reels/marble-sunglasses.jpg" alt="Lelia seen from above wearing white sunglasses against a marble wall in Milan" width="360" height="640" loading="lazy"></figure>
+  <figure class="ed-figure fade-up"><img src="assets/img/reels/stone-columns.jpg" alt="Lelia in a grey hooded dress and white sunglasses leans on a stone column in Milan" width="720" height="1280" loading="lazy"></figure>
 </section>
 
 <section class="statement">
@@ -171,7 +171,7 @@ page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, fashio
     <p>Vertical video, natural light, mostly handheld. The backdrops are Milanese: travertine steps, marble facades, boutique interiors. Against that neutral base, colour arrives through the clothes: a violet dress, a blue croc bag, an orange knit.</p>
     <p>Text overlays are big, bold and uppercase. This site borrows that voice for its headlines and keeps the stone palette as the backdrop.</p>
   </div>
-  <figure class="ed-figure fade-up"><img src="assets/img/reels/attico-passeggiata.jpg" alt="Lelia in a long violet dress in a boutique lined with handbag shelves" width="360" height="640" loading="lazy"></figure>
+  <figure class="ed-figure fade-up"><img src="assets/img/reels/attico-passeggiata.jpg" alt="Lelia in a long violet dress beside shelves of handbags in a boutique" width="720" height="1280" loading="lazy"></figure>
 </section>
 
 <section class="cta-band">

@@ -18,7 +18,7 @@ assets/css/style.css  Design tokens + all styles
 assets/js/content.js  ALL editable content (slides, gallery items, categories, brand data)
 assets/js/slider.js   Fullscreen slider
 assets/js/main.js     Menu, gallery, filters, dialog, scroll reveal
-assets/img/reels/     Images (currently placeholder reel covers, 360×640)
+assets/img/reels/     Reel frames (720×1280, extracted from the reels)
 docs/BRAND-ANALYSIS.md  Analysis, direction, wireframe, palette, checklist
 docs/build-pages.py   Optional: regenerates the 5 HTML pages (shared header/footer)
 ```
@@ -46,4 +46,4 @@ docs/build-pages.py   Optional: regenerates the 5 HTML pages (shared header/foot
 
 ## Known placeholders
 
-See the end of `docs/BRAND-ANALYSIS.md`: logo, high-res imagery (current covers carry Instagram's play icon), brand PDF, domain, OG image.
+See the end of `docs/BRAND-ANALYSIS.md`: logo, brand PDF.
