@@ -504,6 +504,7 @@ body.menu-open { overflow: hidden; }
   .slider-ui .counter { display: none; }
   .dot { width: 22px; }
   .section-head { grid-template-columns: 1fr; align-items: start; }
+  .audience, .work-sec { padding-top: 40px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .intro .lead, .intro .meta { grid-column: 1 / span 12; }
   .intro .meta { grid-template-columns: 1fr 1fr; }
