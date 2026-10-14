@@ -339,7 +339,8 @@ body.menu-open { overflow: hidden; }
 .intro { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: start; }
 .intro .lead { grid-column: 1 / span 6; }
 .intro .meta { grid-column: 8 / span 5; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-.meta dt { font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--taupe); margin-bottom: .3rem; }
+.meta dt { display: flex; align-items: center; gap: .5rem; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; color: var(--taupe); margin-bottom: .3rem; }
+.meta dt .ico { width: 16px; height: 16px; flex: none; color: var(--violet); }
 .meta dd { margin: 0; font-weight: 600; }
 
 /* Preview galleria (home) e griglia Social Kit */
