@@ -516,6 +516,9 @@ body.menu-open { overflow: hidden; }
   .type-specimen > div { grid-template-columns: 1fr; }
   .cta-band { grid-template-columns: 1fr; }
   .site-nav { padding-top: 90px; }
+  .site-nav ol { gap: .35em; }
+  .site-nav ol a { font-size: clamp(3.4rem, 18vw, 5.5rem); gap: .7rem; }
+  .site-nav ol a small { font-size: .62rem; letter-spacing: .18em; }
 }
 
 /* Telefoni bassi: descrizione più compatta, ma sempre visibile */
