@@ -34,8 +34,7 @@ HEAD = """<!doctype html>
   <ol>
     <li><a href="index.html">Home <small>01</small></a></li>
     <li><a href="social-kit.html">Social Kit <small>02</small></a></li>
-    <li><a href="about.html">About <small>03</small></a></li>
-    <li><a href="connect.html">Connect <small>04</small></a></li>
+    <li><a href="connect.html">Connect <small>03</small></a></li>
   </ol>
   <div class="nav-foot">
     <span><a href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a> &nbsp;·&nbsp; @lelusham</span>
@@ -49,7 +48,6 @@ FOOT = """</main>
   <span>© <span data-year></span> LELUSHAM </span>
   <nav aria-label="Footer">
     <a href="social-kit.html">Social Kit</a>
-    <a href="about.html">About</a>
     <a href="connect.html">Connect</a>
     <a data-media-kit href="docs/media-kit/LELUSHAM-media-kit.pdf" download>Media kit</a>
     <a href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a>
@@ -163,46 +161,10 @@ page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Insta
 </dialog>
 """)
 
-# ---------------- ABOUT ----------------
-page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, Fashion & Lifestyle creator in Milan. The tone, the visual language, the content.","""
-<section class="page-hero">
-  <p class="eyebrow">03 — About</p>
-  <h1 class="display">Full-time <span class="serif-i" style="color:var(--violet)">diva</span></h1>
-  <p class="lead">Three words from her bio. They set the tone for everything that follows.</p>
-</section>
-
-<section class="section editorial">
-  <div class="ed-text fade-up">
-    <h2 class="display">Lelia M, <span class="serif-i">Milano</span></h2>
-    <p>Lelia M publishes as <a class="link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>@lelusham</a>, a fashion &amp; lifestyle account based in Milan, with the same handle on <a class="link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a>. The feed is built on short-form video: outfit try-ons in boutiques, unboxings, fashion week moments and walks through the city.</p>
-    <p>The captions are brief and bilingual, Italian and English, often a single question thrown to the audience: <em>Which bag? Is it better?</em></p>
-  </div>
-  <figure class="ed-figure fade-up"><img src="assets/img/reels/stone-columns.webp" alt="Lelia in a grey hooded dress and white sunglasses leans on a stone column in Milan" width="720" height="1280" loading="lazy"></figure>
-</section>
-
-<section class="statement">
-  <p class="fade-up">Stone, marble and daylight. The city is the set, the <em>outfit</em> is the story.</p>
-</section>
-
-<section class="section editorial flip">
-  <div class="ed-text fade-up">
-    <h2 class="display">The visual <span class="serif-i">language</span></h2>
-    <p>Vertical video, natural light, mostly handheld. The backdrops are Milanese: travertine steps, marble facades, boutique interiors. Against that neutral base, colour arrives through the clothes: a violet dress, a blue croc bag, an orange knit.</p>
-    <p>Text overlays are big, bold and uppercase. This site borrows that voice for its headlines and keeps the stone palette as the backdrop.</p>
-  </div>
-  <figure class="ed-figure fade-up"><img src="assets/img/reels/attico-passeggiata.webp" alt="Lelia in a long violet dress beside shelves of handbags in a boutique" width="720" height="1280" loading="lazy"></figure>
-</section>
-
-<section class="cta-band">
-  <h2 class="display">See the <span class="serif-i">reels</span></h2>
-  <a class="btn btn-primary" href="social-kit.html">Social Kit</a>
-</section>
-""")
-
 # ---------------- CONNECT ----------------
 page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham) for collaborations: email, Instagram and TikTok.","""
 <section class="page-hero" style="padding-bottom:0">
-  <p class="eyebrow">04 — Connect</p>
+  <p class="eyebrow">03 — Connect</p>
 </section>
 <section class="section connect" style="padding-top:1rem">
   <div class="c-main">

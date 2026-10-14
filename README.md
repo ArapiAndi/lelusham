@@ -11,7 +11,6 @@ python3 -m http.server 8080
 ```
 index.html            Home (fullscreen slider)
 social-kit.html       Gallery with filters + detail dialog
-about.html            Editorial about page
 connect.html          Contact
 assets/css/style.css  Design tokens + all styles
 assets/js/content.js  ALL editable content (slides, gallery items, categories, brand data)
