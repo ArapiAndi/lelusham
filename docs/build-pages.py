@@ -127,7 +127,8 @@ page("index.html","LELUSHAM — Fashion & Lifestyle, Milan","Lelia M (@lelusham)
   <a class="btn btn-primary" href="connect.html">Work with me</a>
 </section>
 """, scripts='<script src="assets/js/slider.js"></script>\n<script src="assets/js/main.js"></script>',
-extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.webp" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & Lifestyle creator"}</script>')
+extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.webp" fetchpriority="high">
+<link rel="preload" as="video" href="assets/video/lelusham-hero-1080.mp4" type="video/mp4">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & Lifestyle creator"}</script>')
 
 # ---------------- SOCIAL KIT ----------------
 page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Instagram reels and TikTok videos organised by try-on & boutique, street style, events & travel, lifestyle. Every item links to the original.",f"""

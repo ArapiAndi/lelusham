@@ -40,7 +40,7 @@
       <div class="slide-bg" style="background-image:url('${s.image}')" aria-hidden="true"></div>
       <canvas class="slide-ambient" width="36" height="64" aria-hidden="true"></canvas>
       <figure class="intro-media">
-        <video muted playsinline loop preload="none" poster="${s.image}" aria-label="${s.alt}" width="720" height="1280">
+        <video muted playsinline loop preload="auto" poster="${s.image}" aria-label="${s.alt}" width="720" height="1280">
           <source src="${s.video.mp4}" type="video/mp4">
           <source src="${s.video.webm}" type="video/webm">
         </video>
