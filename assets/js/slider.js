@@ -49,7 +49,7 @@
       <div class="intro-copy">
         <span class="eyebrow reveal">${s.eyebrow}</span>
         <h1 class="intro-title display reveal">${s.title}</h1>
-        <p class="intro-text reveal"><span class="serif-i">${s.text}</span>${s.sub ? `<span class="intro-sub">${s.sub}</span>` : ""}</p>
+        <p class="intro-text reveal">${s.text ? `<span class="serif-i">${s.text}</span>` : ""}${s.sub ? `<span class="intro-sub">${s.sub}</span>` : ""}</p>
         ${actions}
       </div>`;
   }
