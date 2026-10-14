@@ -87,7 +87,8 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
 </section>
 
 <section class="section intro">
-  <p class="lead fade-up">Based in Italy, I&#39;m a fashion &amp; lifestyle creator with a passion for personal style, statement pieces, and the art of everyday living. My content blends modern femininity with a confident, playful edge, capturing fashion, travel, and curated lifestyle moments through my own distinctive lens. I love bringing brands to life through visually compelling storytelling that feels both aspirational and authentic.</p>
+  <p class="lead fade-up lead-mobile">A visual diary of fashion, elevated everyday moments, and the art of making the ordinary feel extraordinary.</p>
+  <p class="lead fade-up lead-desktop">Based in Italy, I&#39;m a fashion &amp; lifestyle creator with a passion for personal style, statement pieces, and the art of everyday living. My content blends modern femininity with a confident, playful edge, capturing fashion, travel, and curated lifestyle moments through my own distinctive lens. I love bringing brands to life through visually compelling storytelling that feels both aspirational and authentic.</p>
   <dl class="meta fade-up">
     <div><dt>@lelusham</dt><dd><a class="link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a class="link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a></dd></div>
     <div><dt>Based in</dt><dd>Milan, Italy</dd></div>
@@ -99,7 +100,6 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
 <section class="section audience" aria-labelledby="aud-h">
   <div class="section-head">
     <h2 id="aud-h" class="section-title display fade-up">Audience <span class="serif-i">&amp; insights</span></h2>
-    <a class="btn btn-ghost fade-up" data-media-kit href="docs/media-kit/LELUSHAM-media-kit.pdf" download>Media kit PDF</a>
   </div>
   <dl class="stats" data-stats></dl>
   <p class="eyebrow fade-up" data-stats-note></p>

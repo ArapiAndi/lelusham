@@ -44,7 +44,7 @@
   const platformName = (it) => it.platform === "tiktok" ? "TikTok" : "Instagram";
   const playIcon = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z" fill="currentColor"/></svg>';
   function card(item, i, eager) {
-    return `<a class="card fade-up" href="${item.reel}" data-id="${item.id}" data-cat="${item.cat}" data-platform="${item.platform || "instagram"}" target="_blank" rel="noopener" style="transition-delay:${(i % 4) * 70}ms">
+    return `<a class="card fade-up" href="${item.reel}" data-id="${item.id}" data-cat="${item.cat}" data-platform="${item.platform || "instagram"}" target="_blank" rel="noopener" style="--d:${(i % 4) * 70}ms;--i:${i}">
       <img src="${item.image}" alt="${item.alt}" width="720" height="1280" ${eager ? 'decoding="async"' : 'loading="lazy" decoding="async"'}>
       <span class="play" aria-hidden="true">${playIcon}</span>
       <span class="badge">${item.platform === "tiktok" ? "TikTok" : "Instagram"}${item.views ? " · " + fmt(item.views) : ""}</span>
