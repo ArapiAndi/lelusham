@@ -38,12 +38,12 @@
   function videoSlide(s) {
     return `
       <div class="slide-bg" style="background-image:url('${s.image}')" aria-hidden="true"></div>
+      <canvas class="slide-ambient" width="36" height="64" aria-hidden="true"></canvas>
       <figure class="intro-media">
         <video muted playsinline loop preload="none" poster="${s.image}" aria-label="${s.alt}" width="720" height="1280">
-          ${s.video.webmHD ? `<source src="${s.video.webmHD}" type="video/webm" media="(min-width: 769px)">` : ""}
           ${s.video.mp4HD ? `<source src="${s.video.mp4HD}" type="video/mp4" media="(min-width: 769px)">` : ""}
-          <source src="${s.video.webm}" type="video/webm">
           <source src="${s.video.mp4}" type="video/mp4">
+          <source src="${s.video.webm}" type="video/webm">
         </video>
       </figure>
       <div class="intro-copy">
@@ -55,9 +55,10 @@
   }
   function imageSlide(s, i) {
     const h = i === 0 ? "h1" : "h2";
-    const clip = s.clip; // clip breve del reel (4 s, 720×1280 ad alta qualità: il massimo che Instagram pubblica)
+    const clip = s.clip; // clip breve del reel (4 s): leggera su mobile, HD (720×1280) su desktop
     return `
       <div class="slide-bg" data-bg="${s.image}" aria-hidden="true"></div>
+      <canvas class="slide-ambient" width="36" height="64" aria-hidden="true"></canvas>
       <div class="slide-grid">
         <div class="slide-copy">
           <${h} class="visually-hidden">${s.title}</${h}>
@@ -68,7 +69,7 @@
         </div>
         <figure class="slide-figure">
           <img data-src="${s.image}" alt="${s.alt}" decoding="async" width="720" height="1280">
-          ${clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="720" height="1280"><source src="${clip}" type="video/mp4"></video>` : ""}
+          ${clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="720" height="1280">${s.clipHD ? `<source src="${s.clipHD}" type="video/mp4" media="(min-width: 769px)">` : ""}<source src="${clip}" type="video/mp4"></video>` : ""}
         </figure>
       </div>`;
   }
@@ -96,6 +97,7 @@
   const slides = Array.from(slidesEl.children);
   const dots = Array.from(dotsEl.children);
   const videos = slides.map(el => el.querySelector("video"));
+  videos.forEach(v => { if (v) { v.muted = true; v.playsInline = true; } }); // Safari: l'attributo muted da innerHTML non basta per l'autoplay
   videos.forEach(v => v && v.classList.contains("clip") && v.addEventListener("playing", () => v.classList.add("is-playing")));
 
   /* --- Caricamento progressivo: immagini solo per la slide attiva e la successiva;
@@ -113,14 +115,40 @@
 
   function pad(n) { return String(n).padStart(2, "0"); }
 
-  /* Il video gira solo se la sua slide è attiva e l'utente non ha messo in pausa */
+  /* Il video gira solo se la sua slide è attiva e l'utente non ha messo in pausa.
+     Safari a volte rifiuta il primo play() mentre la slide entra: riprova qualche volta, poi al primo tocco. */
+  let retries = 0, retryTimer = null;
+  function retryPlay() {
+    if (retries++ < 8) { clearTimeout(retryTimer); retryTimer = setTimeout(syncVideos, 400); }
+  }
+  ["touchstart", "pointerdown", "scroll"].forEach(ev => window.addEventListener(ev, () => syncVideos(), { once: true, passive: true }));
   function syncVideos() {
     videos.forEach((v, k) => {
       if (!v) return;
-      if (k === index && ready && !userPaused && !reduceMotion && !holds.has("hidden") && !holds.has("offscreen")) {
-        const p = v.play(); if (p) p.catch(() => {});
+      if (k === index && (ready || !v.classList.contains("clip")) && !userPaused && !reduceMotion && !holds.has("hidden") && !holds.has("offscreen")) {
+        if (!v.paused) return;
+        const p = v.play(); if (p) p.then(() => { retries = 0; }, retryPlay);
       } else v.pause();
     });
+    ambient();
+  }
+
+  /* --- Sfondo "ambient" (solo desktop): il video attivo viene copiato su un canvas 36×64
+         e sfumato via CSS, come i reel su Instagram desktop. Costo trascurabile: un drawImage
+         a bassissima risoluzione ~8 volte al secondo. Finché non parte resta lo sfondo statico. --- */
+  const desktop = window.matchMedia("(min-width: 769px)");
+  let ambientTimer = null;
+  function ambient() {
+    clearInterval(ambientTimer); ambientTimer = null;
+    const v = videos[index], c = slides[index].querySelector("canvas.slide-ambient");
+    if (!v || !c || !desktop.matches || reduceMotion) return;
+    const ctx = c.getContext("2d");
+    const tick = () => {
+      if (v.paused || v.readyState < 2) return;
+      ctx.drawImage(v, 0, 0, c.width, c.height);
+      c.classList.add("is-live");
+    };
+    tick(); ambientTimer = setInterval(tick, 120);
   }
 
   function go(i, byUser) {

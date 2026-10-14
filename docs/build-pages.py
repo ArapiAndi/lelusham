@@ -46,7 +46,7 @@ HEAD = """<!doctype html>
 """
 FOOT = """</main>
 <footer class="site-footer">
-  <span>© <span data-year></span> LELUSHAM · Milan</span>
+  <span>© <span data-year></span> LELUSHAM </span>
   <nav aria-label="Footer">
     <a href="social-kit.html">Social Kit</a>
     <a href="about.html">About</a>

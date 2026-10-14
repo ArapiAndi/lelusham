@@ -15,7 +15,7 @@
       document.body.classList.toggle("menu-open", open);
       toggle.setAttribute("aria-expanded", String(open));
       toggle.querySelector(".label").textContent = open ? "Close" : "Menu";
-      if (open) { nav.querySelector("a").focus(); } else { toggle.focus(); }
+      if (open) { nav.querySelector("a").focus({ preventScroll: true }); } else { toggle.focus({ preventScroll: true }); } // senza preventScroll Safari scorre i <li> overflow:hidden e i link spariscono
     };
     toggle.addEventListener("click", () => setOpen(!document.body.classList.contains("menu-open")));
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && document.body.classList.contains("menu-open")) setOpen(false); });
