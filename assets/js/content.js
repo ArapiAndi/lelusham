@@ -61,28 +61,9 @@ window.LELUSHAM = {
       duration: 8400 /* due loop del video (4,2 s) */
     },
     {
-      id: "wishlist",
-      image: "assets/img/reels/attico-croc-bag.webp",
-      alt: "Lelia in a violet velvet dress lifts a glossy blue crocodile-embossed bag by its handles in front of a green marble wall",
-      eyebrow: "Milan · Try-on",
-      title: "Full-time<br>diva.",
-      text: "Fashion & lifestyle, filmed in Milan. Try-ons, boutique visits and the pieces worth talking about.",
-      caption: "Trying on my wishlist items from @theattico boutique 💜",
-      reel: "https://www.instagram.com/reel/DdwkQOXqUhA/"
-    },
-    {
-      id: "mfw",
-      image: "assets/img/reels/mfw-attico-show.webp",
-      alt: "Lelia in a fluffy orange top sips from a glass in a bright showroom, palm trees behind the window",
-      eyebrow: "Fashion Week",
-      title: "Come with<br>me to MFW.",
-      text: "Milan Fashion Week, shows and showrooms, told from the inside.",
-      caption: "Come with me to @theattico new show during MFW… remotely :)",
-      reel: "https://www.instagram.com/reel/DdyPiRkthjy/"
-    },
-    {
       id: "passeggiata",
       image: "assets/img/reels/attico-passeggiata.webp",
+      clip: "assets/video/reels/DdtyOCAKPlI.mp4",
       alt: "Lelia in a long violet dress stretches an arm along shelves of handbags in a boutique",
       eyebrow: "Boutique",
       title: "Which<br>Passeggiata bag?",
@@ -91,24 +72,59 @@ window.LELUSHAM = {
       reel: "https://www.instagram.com/reel/DdtyOCAKPlI/"
     },
     {
-      id: "fit",
-      image: "assets/img/reels/coperni-box.webp",
-      eyebrow: "Unboxing",
-      alt: "Hands lift a Coperni dust bag out of a white shoe box on a grey sofa",
-      title: "Shoes make<br>the fit.",
-      text: "Unboxings and first looks, in the language of the reels.",
-      caption: "@coperni 🩰",
-      reel: "https://www.instagram.com/reel/DdZKq1Eqd7r/"
+      id: "back",
+      image: "assets/img/reels/back-says-it-all.webp",
+      clip: "assets/video/reels/Dc_BswfN6m8.mp4",
+      alt: "Lelia in a black open-back top leans on a concrete balcony in front of an industrial building, a black bag in her hand",
+      eyebrow: "Street style",
+      title: "The back<br>says it all.",
+      text: "An open back, an industrial courtyard, Milan light.",
+      caption: "The back says it all 🖤",
+      reel: "https://www.instagram.com/reel/Dc_BswfN6m8/"
     },
     {
       id: "street",
       image: "assets/img/reels/suede-bag.webp",
+      clip: "assets/video/reels/Dc6XpeTNbOf.mp4",
       alt: "A large tan suede bag held low, with fur-trimmed black mules on a green carpet",
       eyebrow: "Boutique · Milano",
       title: "Lo ascolto<br>sempre.",
       text: "Shopping in person, bag first. The city is the set.",
       caption: "Lo ascolto sempre 🥰",
       reel: "https://www.instagram.com/reel/Dc6XpeTNbOf/"
+    },
+    {
+      id: "better",
+      image: "assets/img/reels/yacht.webp",
+      clip: "assets/video/reels/Da7a-I3NSek.mp4",
+      alt: "Lelia in a white t-shirt and grey skirt in a mirror inside a wood-panelled cabin",
+      eyebrow: "Lifestyle",
+      title: "Is it<br>better?",
+      text: "Small changes, filmed on the move.",
+      caption: "Is it better?",
+      reel: "https://www.instagram.com/reel/Da7a-I3NSek/"
+    },
+    {
+      id: "morso",
+      image: "assets/img/reels/morso-gcds.webp",
+      clip: "assets/video/reels/Dcid7GvNhKq.mp4",
+      alt: "Lelia in a pink t-shirt and black sunglasses sits on a hotel bed holding up a black GCDS Morso shoe",
+      eyebrow: "Shoes",
+      title: "Morso.",
+      text: "GCDS, on a red hotel set.",
+      caption: "MORSO @gcdswear",
+      reel: "https://www.instagram.com/reel/Dcid7GvNhKq/"
+    },
+    {
+      id: "skin",
+      image: "assets/img/reels/meder-sheet-mask.webp",
+      clip: "assets/video/reels/Dc5xoWrNwL2.mp4",
+      alt: "Lelia in a black swimsuit stands in clear sea water holding up a Meder sheet mask pouch",
+      eyebrow: "Beauty",
+      title: "Post-summer<br>skin reset.",
+      text: "Hydra-Fill Sheet Mask by Meder, filmed in the sea.",
+      caption: "Hydra-Fill Sheet Mask by @meder_beauty 💦",
+      reel: "https://www.instagram.com/reel/Dc5xoWrNwL2/"
     }
   ],
 

@@ -46,7 +46,7 @@
   function card(item, i, eager) {
     return `<a class="card fade-up" href="${item.reel}" data-id="${item.id}" data-cat="${item.cat}" data-platform="${item.platform || "instagram"}" target="_blank" rel="noopener" style="--d:${(i % 4) * 70}ms;--i:${i}">
       <img src="${item.image}" alt="${item.alt}" width="720" height="1280" ${eager ? 'decoding="async"' : 'loading="lazy" decoding="async"'}>
-      ${item.clip ? `<video class="clip" muted playsinline loop preload="none" poster="${item.image}" aria-hidden="true" width="360" height="640"><source src="${item.clip}" type="video/mp4"></video>` : ""}
+      ${item.clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="360" height="640"><source src="${item.clip}" type="video/mp4"></video>` : ""}
       <span class="play" aria-hidden="true">${playIcon}</span>
       <span class="badge">${item.platform === "tiktok" ? "TikTok" : "Instagram"}${item.views ? " · " + fmt(item.views) : ""}</span>
       <span class="card-meta"><strong>${item.title}</strong><span>${item.brand || C.categories.find(c => c.id === item.cat).label}</span></span>

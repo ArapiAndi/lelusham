@@ -39,7 +39,7 @@
     return `
       <div class="slide-bg" style="background-image:url('${s.image}')" aria-hidden="true"></div>
       <figure class="intro-media">
-        <video muted playsinline loop preload="auto" poster="${s.image}" aria-label="${s.alt}" width="720" height="1280">
+        <video muted playsinline loop preload="none" poster="${s.image}" aria-label="${s.alt}" width="720" height="1280">
           ${s.video.webmHD ? `<source src="${s.video.webmHD}" type="video/webm" media="(min-width: 769px)">` : ""}
           ${s.video.mp4HD ? `<source src="${s.video.mp4HD}" type="video/mp4" media="(min-width: 769px)">` : ""}
           <source src="${s.video.webm}" type="video/webm">
@@ -55,9 +55,9 @@
   }
   function imageSlide(s, i) {
     const h = i === 0 ? "h1" : "h2";
-    const clip = (C.kit || []).find(k => k.reel === s.reel && k.clip)?.clip; // animazione breve del reel, se c'è
+    const clip = s.clip; // animazione breve del reel (4 s, 360×640), se c'è
     return `
-      <div class="slide-bg" style="background-image:url('${s.image}')" aria-hidden="true"></div>
+      <div class="slide-bg" data-bg="${s.image}" aria-hidden="true"></div>
       <div class="slide-grid">
         <div class="slide-copy">
           <${h} class="visually-hidden">${s.title}</${h}>
@@ -67,8 +67,8 @@
           </div>
         </div>
         <figure class="slide-figure">
-          <img src="${s.image}" alt="${s.alt}" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" width="720" height="1280">
-          ${clip ? `<video class="clip" muted playsinline loop preload="none" poster="${s.image}" aria-hidden="true" width="360" height="640"><source src="${clip}" type="video/mp4"></video>` : ""}
+          <img data-src="${s.image}" alt="${s.alt}" decoding="async" width="720" height="1280">
+          ${clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="360" height="640"><source src="${clip}" type="video/mp4"></video>` : ""}
         </figure>
       </div>`;
   }
@@ -98,13 +98,24 @@
   const videos = slides.map(el => el.querySelector("video"));
   videos.forEach(v => v && v.classList.contains("clip") && v.addEventListener("playing", () => v.classList.add("is-playing")));
 
+  /* --- Caricamento progressivo: immagini solo per la slide attiva e la successiva;
+         i video partono dopo il load della pagina (il poster è già l'LCP). --- */
+  let ready = document.readyState === "complete";
+  function hydrate(k) {
+    const el = slides[k]; if (!el || el.dataset.ready) return;
+    el.dataset.ready = "1";
+    const bg = el.querySelector("[data-bg]"); if (bg) bg.style.backgroundImage = `url('${bg.dataset.bg}')`;
+    const img = el.querySelector("img[data-src]"); if (img) img.src = img.dataset.src;
+  }
+  if (!ready) window.addEventListener("load", () => { ready = true; hydrate((index + 1) % data.length); syncVideos(); }, { once: true });
+
   function pad(n) { return String(n).padStart(2, "0"); }
 
   /* Il video gira solo se la sua slide è attiva e l'utente non ha messo in pausa */
   function syncVideos() {
     videos.forEach((v, k) => {
       if (!v) return;
-      if (k === index && !userPaused && !reduceMotion && !holds.has("hidden") && !holds.has("offscreen")) {
+      if (k === index && ready && !userPaused && !reduceMotion && !holds.has("hidden") && !holds.has("offscreen")) {
         const p = v.play(); if (p) p.catch(() => {});
       } else v.pause();
     });
@@ -112,6 +123,8 @@
 
   function go(i, byUser) {
     index = (i + data.length) % data.length;
+    hydrate(index);
+    if (ready) hydrate((index + 1) % data.length);
     slides.forEach((el, k) => {
       const active = k === index;
       el.classList.toggle("is-active", active);
