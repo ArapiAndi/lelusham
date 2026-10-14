@@ -55,7 +55,7 @@
   }
   function imageSlide(s, i) {
     const h = i === 0 ? "h1" : "h2";
-    const clip = s.clip; // clip breve del reel (4 s): leggera su mobile, HD (720×1280) su desktop
+    const clip = s.clip; // clip breve del reel (4 s, 720×1280: il massimo che Instagram pubblica)
     return `
       <div class="slide-bg" data-bg="${s.image}" aria-hidden="true"></div>
       <canvas class="slide-ambient" width="36" height="64" aria-hidden="true"></canvas>
@@ -69,7 +69,7 @@
         </div>
         <figure class="slide-figure">
           <img data-src="${s.image}" alt="${s.alt}" decoding="async" width="720" height="1280">
-          ${clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="720" height="1280">${s.clipHD ? `<source src="${s.clipHD}" type="video/mp4" media="(min-width: 769px)">` : ""}<source src="${clip}" type="video/mp4"></video>` : ""}
+          ${clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="720" height="1280"><source src="${clip}" type="video/mp4"></video>` : ""}
         </figure>
       </div>`;
   }

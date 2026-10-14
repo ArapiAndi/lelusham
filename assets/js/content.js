@@ -52,7 +52,7 @@ window.LELUSHAM = {
       /* Slide d'apertura: video full-bleed + wordmark gigante */
       id: "intro",
       type: "video",
-      video: { mp4: "assets/video/lelusham-hero.mp4", webm: "assets/video/lelusham-hero.webm", mp4HD: "assets/video/lelusham-hero-1080.mp4", webmHD: "assets/video/lelusham-hero-1080.webm" },
+      video: { mp4: "assets/video/lelusham-hero-1080.mp4", webm: "assets/video/lelusham-hero-1080.webm" },
       image: "assets/video/lelusham-hero-poster.webp",
       alt: "Lelia in a grey hooded dress with a black bag, posing by a stone statue under a cloudy blue sky in Milan",
       eyebrow: "Fashion & lifestyle",
@@ -63,7 +63,7 @@ window.LELUSHAM = {
     {
       id: "passeggiata",
       image: "assets/img/reels/attico-passeggiata.webp",
-      clip: "assets/video/reels/DdtyOCAKPlI.mp4", clipHD: "assets/video/reels/hd/DdtyOCAKPlI.mp4",
+      clip: "assets/video/reels/hd/DdtyOCAKPlI.mp4",
       alt: "Lelia in a long violet dress stretches an arm along shelves of handbags in a boutique",
       eyebrow: "Boutique",
       title: "Which<br>Passeggiata bag?",
@@ -74,7 +74,7 @@ window.LELUSHAM = {
     {
       id: "back",
       image: "assets/img/reels/back-says-it-all.webp",
-      clip: "assets/video/reels/Dc_BswfN6m8.mp4", clipHD: "assets/video/reels/hd/Dc_BswfN6m8.mp4",
+      clip: "assets/video/reels/hd/Dc_BswfN6m8.mp4",
       alt: "Lelia in a black open-back top leans on a concrete balcony in front of an industrial building, a black bag in her hand",
       eyebrow: "Street style",
       title: "The back<br>says it all.",
@@ -85,7 +85,7 @@ window.LELUSHAM = {
     {
       id: "street",
       image: "assets/img/reels/stone-columns.webp",
-      clip: "assets/video/reels/Dc6wd6wNgIu.mp4", clipHD: "assets/video/reels/hd/Dc6wd6wNgIu.mp4",
+      clip: "assets/video/reels/hd/Dc6wd6wNgIu.mp4",
       alt: "Lelia in a grey hooded dress and white sunglasses leans on a stone column with a white bag",
       eyebrow: "Street style",
       title: "Grey hood,<br>white bag.",
@@ -96,7 +96,7 @@ window.LELUSHAM = {
     {
       id: "better",
       image: "assets/img/reels/yacht.webp",
-      clip: "assets/video/reels/Da7a-I3NSek.mp4", clipHD: "assets/video/reels/hd/Da7a-I3NSek.mp4",
+      clip: "assets/video/reels/hd/Da7a-I3NSek.mp4",
       alt: "Lelia in a white t-shirt and grey skirt in a mirror inside a wood-panelled cabin",
       eyebrow: "Lifestyle",
       title: "Is it<br>better?",
@@ -107,7 +107,7 @@ window.LELUSHAM = {
     {
       id: "morso",
       image: "assets/img/reels/morso-gcds.webp",
-      clip: "assets/video/reels/Dcid7GvNhKq.mp4", clipHD: "assets/video/reels/hd/Dcid7GvNhKq.mp4",
+      clip: "assets/video/reels/hd/Dcid7GvNhKq.mp4",
       alt: "Lelia in a pink t-shirt and black sunglasses sits on a hotel bed holding up a black GCDS Morso shoe",
       eyebrow: "Shoes",
       title: "Morso.",
@@ -118,7 +118,7 @@ window.LELUSHAM = {
     {
       id: "skin",
       image: "assets/img/reels/meder-sheet-mask.webp",
-      clip: "assets/video/reels/Dc5xoWrNwL2.mp4", clipHD: "assets/video/reels/hd/Dc5xoWrNwL2.mp4",
+      clip: "assets/video/reels/hd/Dc5xoWrNwL2.mp4",
       alt: "Lelia in a black swimsuit stands in clear sea water holding up a Meder sheet mask pouch",
       eyebrow: "Beauty",
       title: "Post-summer<br>skin reset.",
