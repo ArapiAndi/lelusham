@@ -55,13 +55,12 @@
   }
   function imageSlide(s, i) {
     const h = i === 0 ? "h1" : "h2";
+    const clip = (C.kit || []).find(k => k.reel === s.reel && k.clip)?.clip; // animazione breve del reel, se c'è
     return `
       <div class="slide-bg" style="background-image:url('${s.image}')" aria-hidden="true"></div>
       <div class="slide-grid">
         <div class="slide-copy">
-          <span class="eyebrow reveal">${s.eyebrow}</span>
-          <${h} class="slide-title display reveal">${s.title}</${h}>
-          <p class="slide-text reveal">${s.text}</p>
+          <${h} class="visually-hidden">${s.title}</${h}>
           <div class="slide-actions reveal on-dark">
             <a class="btn btn-primary" href="${s.reel}" target="_blank" rel="noopener">Watch the reel ↗</a>
             <a class="btn btn-ghost" href="social-kit.html">Social Kit</a>
@@ -69,7 +68,7 @@
         </div>
         <figure class="slide-figure">
           <img src="${s.image}" alt="${s.alt}" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async" width="720" height="1280">
-          <figcaption><a href="${s.reel}" target="_blank" rel="noopener">${s.caption}</a></figcaption>
+          ${clip ? `<video class="clip" muted playsinline loop preload="none" poster="${s.image}" aria-hidden="true" width="360" height="640"><source src="${clip}" type="video/mp4"></video>` : ""}
         </figure>
       </div>`;
   }
@@ -77,7 +76,7 @@
   /* --- Render --- */
   data.forEach((s, i) => {
     const slide = document.createElement("article");
-    slide.className = "slide" + (s.type === "video" ? " slide--video" : "");
+    slide.className = "slide" + (s.type === "video" ? " slide--video" : " slide--clean");
     slide.setAttribute("role", "group");
     slide.setAttribute("aria-roledescription", "slide");
     slide.setAttribute("aria-label", `${i + 1} of ${data.length}`);
@@ -97,6 +96,7 @@
   const slides = Array.from(slidesEl.children);
   const dots = Array.from(dotsEl.children);
   const videos = slides.map(el => el.querySelector("video"));
+  videos.forEach(v => v && v.classList.contains("clip") && v.addEventListener("playing", () => v.classList.add("is-playing")));
 
   function pad(n) { return String(n).padStart(2, "0"); }
 

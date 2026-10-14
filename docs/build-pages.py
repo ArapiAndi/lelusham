@@ -19,8 +19,8 @@ HEAD = """<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#EDE8E1">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;700&display=swap">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bebas-neue-normal-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/manrope-normal-latin.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 {extra}
 </head>
@@ -87,11 +87,10 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
 </section>
 
 <section class="section intro">
-  <p class="lead fade-up lead-mobile">A visual diary of fashion, elevated everyday moments, and the art of making the ordinary feel extraordinary.</p>
-  <p class="lead fade-up lead-desktop">Based in Italy, I&#39;m a fashion &amp; lifestyle creator with a passion for personal style, statement pieces, and the art of everyday living. My content blends modern femininity with a confident, playful edge, capturing fashion, travel, and curated lifestyle moments through my own distinctive lens. I love bringing brands to life through visually compelling storytelling that feels both aspirational and authentic.</p>
+  <p class="lead fade-up">Based in Italy, I&#39;m a fashion &amp; lifestyle creator with a passion for personal style, statement pieces, and the art of everyday living. My content blends modern femininity with a confident, playful edge, capturing fashion, travel, and curated lifestyle moments through my own distinctive lens. I love bringing brands to life through visually compelling storytelling that feels both aspirational and authentic.</p>
   <dl class="meta fade-up">
     <div><dt>@lelusham</dt><dd><a class="link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a class="link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a></dd></div>
-    <div><dt>Based in</dt><dd>Milan, Italy</dd></div>
+    <div><dt>Location</dt><dd>Based in Milan, Italy<br>Available Worldwide</dd></div>
     <div><dt>Content</dt><dd>Fashion &amp; lifestyle</dd></div>
     <div><dt>Collab</dt><dd><a class="link" data-email href="#">leliamoroz.pr@gmail.com</a></dd></div>
   </dl>
@@ -131,7 +130,7 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
   <a class="btn btn-primary" href="connect.html">Work with me</a>
 </section>
 """, scripts='<script src="assets/js/slider.js"></script>\n<script src="assets/js/main.js"></script>',
-extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.jpg" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
+extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.webp" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
 
 # ---------------- SOCIAL KIT ----------------
 page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Instagram reels and TikTok videos organised by try-on & boutique, street style, events & travel, lifestyle. Every item links to the original.",f"""
@@ -183,7 +182,7 @@ page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, fashio
     <p>Lelia M publishes as <a class="link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>@lelusham</a>, a fashion &amp; lifestyle account based in Milan, with the same handle on <a class="link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a>. The feed is built on short-form video: outfit try-ons in boutiques, unboxings, fashion week moments and walks through the city.</p>
     <p>The captions are brief and bilingual, Italian and English, often a single question thrown to the audience: <em>Which bag? Is it better?</em></p>
   </div>
-  <figure class="ed-figure fade-up"><img src="assets/img/reels/stone-columns.jpg" alt="Lelia in a grey hooded dress and white sunglasses leans on a stone column in Milan" width="720" height="1280" loading="lazy"></figure>
+  <figure class="ed-figure fade-up"><img src="assets/img/reels/stone-columns.webp" alt="Lelia in a grey hooded dress and white sunglasses leans on a stone column in Milan" width="720" height="1280" loading="lazy"></figure>
 </section>
 
 <section class="statement">
@@ -196,7 +195,7 @@ page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, fashio
     <p>Vertical video, natural light, mostly handheld. The backdrops are Milanese: travertine steps, marble facades, boutique interiors. Against that neutral base, colour arrives through the clothes: a violet dress, a blue croc bag, an orange knit.</p>
     <p>Text overlays are big, bold and uppercase. This site borrows that voice for its headlines and keeps the stone palette as the backdrop.</p>
   </div>
-  <figure class="ed-figure fade-up"><img src="assets/img/reels/attico-passeggiata.jpg" alt="Lelia in a long violet dress beside shelves of handbags in a boutique" width="720" height="1280" loading="lazy"></figure>
+  <figure class="ed-figure fade-up"><img src="assets/img/reels/attico-passeggiata.webp" alt="Lelia in a long violet dress beside shelves of handbags in a boutique" width="720" height="1280" loading="lazy"></figure>
 </section>
 
 <section class="cta-band">
@@ -221,7 +220,7 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
   </div>
   <aside class="c-side fade-up">
     <dl>
-      <dt class="eyebrow">Based in</dt><dd>Milan, Italy</dd>
+      <dt class="eyebrow">Location</dt><dd>Based in Milan, Italy<br>Available Worldwide</dd>
       <dt class="eyebrow">Content</dt><dd>Fashion &amp; lifestyle<br>Reels · TikTok · try-ons · events</dd>
       <dt class="eyebrow">Audience</dt><dd>TikTok 7.7K followers · 2.2M likes<br>Instagram 3.0K followers</dd>
       <dt class="eyebrow">Collab</dt><dd><a class="link" data-email data-keep href="#">Write an email</a></dd>
