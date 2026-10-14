@@ -36,7 +36,6 @@ HEAD = """<!doctype html>
     <li><a href="social-kit.html">Social Kit <small>02</small></a></li>
     <li><a href="about.html">About <small>03</small></a></li>
     <li><a href="connect.html">Connect <small>04</small></a></li>
-    <li><a href="brand.html">Brand <small>05</small></a></li>
   </ol>
   <div class="nav-foot">
     <span><a href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a> &nbsp;·&nbsp; @lelusham</span>
@@ -162,17 +161,13 @@ page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Insta
   </div>
   <button class="detail-close" type="button" data-d-close aria-label="Close"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
 </dialog>
-<section class="cta-band">
-  <h2 class="display">Approved <span class="serif-i">assets</span></h2>
-  <a class="btn btn-primary" href="brand.html">Brand library</a>
-</section>
 """)
 
 # ---------------- ABOUT ----------------
 page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, fashion & lifestyle creator in Milan. The tone, the visual language, the content.","""
 <section class="page-hero">
   <p class="eyebrow">03 — About</p>
-  <h1 class="display">Full-time <span class="serif-i" style="color:var(--magenta)">diva</span></h1>
+  <h1 class="display">Full-time <span class="serif-i" style="color:var(--violet)">diva</span></h1>
   <p class="lead">Three words from her bio. They set the tone for everything that follows.</p>
 </section>
 
@@ -211,7 +206,7 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
 </section>
 <section class="section connect" style="padding-top:1rem">
   <div class="c-main">
-    <h1 class="display fade-up">Let's <span class="serif-i" style="color:var(--magenta)">talk</span></h1>
+    <h1 class="display fade-up">Let's <span class="serif-i" style="color:var(--violet)">talk</span></h1>
     <p class="lead fade-up">For collaborations, boutique visits and fashion week coverage.</p>
     <p class="fade-up" style="margin-top:2.5rem"><a class="big-link" data-email href="#">leliamoroz.pr@gmail.com</a></p>
     <p class="fade-up"><a class="big-link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram → @lelusham</a></p>
@@ -236,52 +231,4 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
 </section>
 """)
 
-# ---------------- BRAND ----------------
-page("brand.html","Brand library — LELUSHAM","Approved LELUSHAM brand materials: wordmark, colour palette, typography and imagery guidelines.","""
-<section class="page-hero">
-  <p class="eyebrow">05 — Brand library</p>
-  <h1 class="display">Brand <span class="serif-i" style="color:var(--violet)">kit</span></h1>
-  <p class="lead">Wordmark, palette and type. Everything derived from the reels, nothing invented.</p>
-</section>
-
-<section class="section" style="padding-top:0" aria-labelledby="h-logo">
-  <h2 id="h-logo" class="eyebrow" style="margin-bottom:1.2rem">Wordmark · placeholder until the official logo is supplied</h2>
-  <div class="grid" style="grid-template-columns:1fr 1fr;gap:12px">
-    <div class="logo-box"><svg viewBox="0 0 520 90" role="img" aria-label="LELUSHAM wordmark, dark on stone"><text x="0" y="78" font-family="'Bebas Neue','Arial Narrow',Impact,sans-serif" font-size="96" letter-spacing="6" fill="currentColor">LELUSHAM</text></svg></div>
-    <div class="logo-box dark"><svg viewBox="0 0 520 90" role="img" aria-label="LELUSHAM wordmark, stone on dark"><text x="0" y="78" font-family="'Bebas Neue','Arial Narrow',Impact,sans-serif" font-size="96" letter-spacing="6" fill="currentColor">LELUSHAM</text></svg></div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0" aria-labelledby="h-col">
-  <h2 id="h-col" class="eyebrow" style="margin-bottom:1.2rem">Colour palette</h2>
-  <div class="swatches">
-    <div class="swatch" style="background:#EDE8E1"><strong>Stone</strong><code>#EDE8E1</code><small>Background</small></div>
-    <div class="swatch" style="background:#F7F4EF"><strong>Ivory</strong><code>#F7F4EF</code><small>Surfaces</small></div>
-    <div class="swatch" style="background:#C9C4BC"><strong>Marble</strong><code>#C9C4BC</code><small>Lines, borders</small></div>
-    <div class="swatch" style="background:#8A7F72;color:#fff"><strong>Taupe</strong><code>#8A7F72</code><small>Secondary text</small></div>
-    <div class="swatch" style="background:#1E1C1A;color:#EDE8E1"><strong>Ink</strong><code>#1E1C1A</code><small>Text, dark surfaces</small></div>
-    <div class="swatch" style="background:#E8307F;color:#fff"><strong>Magenta</strong><code>#E8307F</code><small>Primary accent, hover</small></div>
-    <div class="swatch" style="background:#5E2B7A;color:#fff"><strong>Violet</strong><code>#5E2B7A</code><small>Secondary accent</small></div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0" aria-labelledby="h-type">
-  <h2 id="h-type" class="eyebrow" style="margin-bottom:1.2rem">Typography</h2>
-  <div class="type-specimen">
-    <div><span class="eyebrow">Display · Bebas Neue</span><p class="display spec-display">Full-time diva</p></div>
-    <div><span class="eyebrow">Accent · Instrument Serif Italic</span><p class="serif-i spec-serif">Which Passeggiata bag?</p></div>
-    <div><span class="eyebrow">Body · Manrope 400/600/700</span><p>Short, candid captions in Italian and English. Body text stays at 16–18px with generous line height; labels are uppercase, letter-spaced, 11–12px.</p></div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0" aria-labelledby="h-assets">
-  <h2 id="h-assets" class="eyebrow" style="margin-bottom:1.2rem">Downloadable assets</h2>
-  <ul class="asset-list">
-    <li><div>Wordmark SVG<small>Vector text, needs Bebas Neue installed · placeholder</small></div><a class="btn btn-ghost" href="assets/img/lelusham-wordmark.svg" download>Download</a></li>
-    <li><div>Open Graph image<small>1200×630 JPG · placeholder</small></div><a class="btn btn-ghost" href="assets/img/og.jpg" download>Download</a></li>
-    <li><div>Brand guidelines PDF<small>Not yet available · to be supplied</small></div><span class="eyebrow">Pending</span></li>
-    <li><div>Approved photography<small>Original 1080×1920 exports · to be supplied</small></div><span class="eyebrow">Pending</span></li>
-  </ul>
-</section>
-""")
 print("ok")

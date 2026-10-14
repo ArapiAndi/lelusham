@@ -9,7 +9,7 @@
   MEDIA KIT · A4 portrait, 4 pagine. Esporta in PDF:
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
     --print-to-pdf=docs/media-kit/LELUSHAM-media-kit.pdf docs/media-kit/media-kit.html
-  I campi con bordo tratteggiato magenta (.ph) sono SEGNAPOSTO: vanno compilati con i dati di Instagram Insights
+  I campi con bordo tratteggiato viola (.ph) sono SEGNAPOSTO: vanno compilati con i dati di Instagram Insights
   prima di inviare il kit. Nessun numero è stato stimato.
   Griglia: 12 colonne, margini 14 mm, gutter 5 mm, baseline 4 mm.
 -->
@@ -18,7 +18,7 @@
 <style>
 :root {
   --stone: #EDE8E1; --ivory: #F7F4EF; --travertine: #D8CEC0; --marble: #C9C4BC;
-  --taupe: #7A6F63; --ink: #1E1C1A; --magenta: #E8307F;
+  --taupe: #7A6F63; --ink: #1E1C1A; --violet: #5E2B7A; --lilac: #B48AD1;
   --display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
   --serif: "Instrument Serif", Georgia, serif;
   --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -39,7 +39,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .label { font-size: 7pt; letter-spacing: .22em; text-transform: uppercase; font-weight: 700; color: var(--taupe); }
 .display { font-family: var(--display); font-weight: 400; text-transform: uppercase; line-height: .86; letter-spacing: .01em; }
 .serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
-.ph { border: 1px dashed var(--magenta); color: var(--magenta); padding: .6mm 1.6mm; border-radius: 1mm; font-weight: 600; font-size: 7.5pt; letter-spacing: .02em; display: inline-block; line-height: 1.35; }
+.ph { border: 1px dashed var(--violet); color: var(--violet); padding: .6mm 1.6mm; border-radius: 1mm; font-weight: 600; font-size: 7.5pt; letter-spacing: .02em; display: inline-block; line-height: 1.35; }
 .rule { height: 1px; background: var(--ink); opacity: .9; }
 
 /* P1 — Cover */
@@ -57,7 +57,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* P2 — Profilo e numeri */
 .p2 .head { position: absolute; left: var(--m); right: var(--m); top: 22mm; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--g); }
 .p2 h2 { grid-column: 1 / span 7; font-size: 64pt; }
-.p2 h2 .serif { text-transform: none; font-size: .62em; color: var(--magenta); letter-spacing: 0; }
+.p2 h2 .serif { text-transform: none; font-size: .62em; color: var(--violet); letter-spacing: 0; }
 .p2 .intro { grid-column: 8 / span 5; align-self: end; font-size: 9.5pt; }
 .p2 .portrait { position: absolute; left: var(--m); top: 62mm; width: 66mm; height: 117mm; }
 .p2 .portrait figcaption { position: absolute; left: 0; bottom: -6mm; font-size: 7pt; color: var(--taupe); }
@@ -87,20 +87,20 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .p4 { background: var(--ink); color: var(--stone); }
 .p4 .run { color: #a39a8f; }
 .p4 h2 { position: absolute; left: var(--m); top: 22mm; font-size: 64pt; }
-.p4 h2 .serif { text-transform: none; color: var(--magenta); font-size: .62em; letter-spacing: 0; }
+.p4 h2 .serif { text-transform: none; color: var(--lilac); font-size: .62em; letter-spacing: 0; }
 .p4 .services { position: absolute; left: var(--m); right: var(--m); top: 56mm; display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; }
 .svc { border-top: 1px solid #4a4541; padding: 2.6mm 0 3.4mm; display: grid; grid-template-columns: 1fr auto; gap: 1mm 4mm; }
 .svc b { font-family: var(--display); font-size: 15pt; font-weight: 400; letter-spacing: .03em; line-height: 1.05; }
 .svc p { grid-column: 1 / -1; font-size: 8pt; color: #cfc7bd; }
-.p4 .ph { border-color: var(--magenta); color: #ff7fb4; }
+.p4 .ph { border-color: var(--lilac); color: var(--lilac); }
 .p4 .why { position: absolute; left: var(--m); right: var(--m); top: 124mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--g); }
-.p4 .why div { border-top: 2px solid var(--magenta); padding-top: 2.4mm; font-size: 8.5pt; color: #e7e1d9; }
+.p4 .why div { border-top: 2px solid var(--lilac); padding-top: 2.4mm; font-size: 8.5pt; color: #e7e1d9; }
 .p4 .why b { display: block; color: var(--stone); font-size: 9.5pt; margin-bottom: 1mm; }
 .p4 .cta { position: absolute; left: var(--m); right: var(--m); top: 158mm; display: grid; grid-template-columns: 62mm 1fr; gap: 10mm; align-items: end; }
 .p4 .cta .img { height: 110mm; overflow: hidden; }
 .p4 .cta .txt { display: grid; gap: 10mm; }
 .p4 .cta .display { font-size: 84pt; }
-.p4 .cta .display .serif { text-transform: none; color: var(--magenta); letter-spacing: 0; }
+.p4 .cta .display .serif { text-transform: none; color: var(--lilac); letter-spacing: 0; }
 .p4 .cta dl { display: grid; gap: 2.4mm; font-size: 9pt; }
 .p4 .cta dl div { display: grid; grid-template-columns: 20mm 1fr; border-top: 1px solid #4a4541; padding-top: 1.6mm; }
 .p4 .cta dt { color: #a39a8f; font-size: 7pt; letter-spacing: .2em; text-transform: uppercase; font-weight: 700; padding-top: .6mm; }

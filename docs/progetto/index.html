@@ -9,16 +9,16 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;600;700&display=swap">
 <style>
 /* Layout: documento editoriale a colonna singola (68ch), con sezioni numerate perché il brief è una sequenza di 8 punti.
-   Palette = design system del sito (stone/ink/magenta/violet) così il documento è esso stesso un esempio del sistema. */
+   Palette = design system del sito (stone/ink/violet) così il documento è esso stesso un esempio del sistema. */
 :root {
   --bg: #EDE8E1; --surface: #F7F4EF; --line: #C9C4BC; --muted: #7A6F63; --fg: #1E1C1A; --fg-soft: #3A3633;
-  --accent: #E8307F; --accent-2: #5E2B7A; --ok: #2F6B4F; --warn: #B4621C; --bad: #B4262E;
+  --accent: #5E2B7A; --accent-2: #5E2B7A; --ok: #2F6B4F; --warn: #B4621C; --bad: #B4262E;
   --display: "Bebas Neue", "Arial Narrow", Impact, sans-serif;
   --serif: "Instrument Serif", Georgia, serif;
   --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #1E1C1A; --surface: #272421; --line: #44403B; --muted: #A39A8F; --fg: #EDE8E1; --fg-soft: #CFC7BD; --accent: #F2559A; --accent-2: #B48AD1; --ok: #7CC29F; --warn: #E9A25B; --bad: #F08A8F; color-scheme: dark; } }
-:root[data-theme="dark"] { --bg: #1E1C1A; --surface: #272421; --line: #44403B; --muted: #A39A8F; --fg: #EDE8E1; --fg-soft: #CFC7BD; --accent: #F2559A; --accent-2: #B48AD1; --ok: #7CC29F; --warn: #E9A25B; --bad: #F08A8F; color-scheme: dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #1E1C1A; --surface: #272421; --line: #44403B; --muted: #A39A8F; --fg: #EDE8E1; --fg-soft: #CFC7BD; --accent: #B48AD1; --accent-2: #B48AD1; --ok: #7CC29F; --warn: #E9A25B; --bad: #F08A8F; color-scheme: dark; } }
+:root[data-theme="dark"] { --bg: #1E1C1A; --surface: #272421; --line: #44403B; --muted: #A39A8F; --fg: #EDE8E1; --fg-soft: #CFC7BD; --accent: #B48AD1; --accent-2: #B48AD1; --ok: #7CC29F; --warn: #E9A25B; --bad: #F08A8F; color-scheme: dark; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; padding-block: 0 80px; padding-inline: clamp(16px, 4vw, 48px); }
 .wrap { max-width: 920px; margin: 0 auto; }
@@ -75,7 +75,7 @@ img { max-width: 100%; display: block; }
 .phone { max-width: 390px; width: 100%; margin: 0 auto; background: #fff; color: #111; border: 1px solid var(--line); border-radius: 22px; padding: 14px 14px 10px; font-family: -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 13px; line-height: 1.35; box-shadow: 0 30px 60px -40px rgba(0,0,0,.5); }
 .phone .bar { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; padding: 2px 2px 10px; }
 .phone .top { display: grid; grid-template-columns: 78px 1fr; gap: 14px; align-items: center; }
-.phone .av { width: 78px; height: 78px; border-radius: 50%; overflow: hidden; border: 2px solid #E8307F; padding: 2px; background: #fff; }
+.phone .av { width: 78px; height: 78px; border-radius: 50%; overflow: hidden; border: 2px solid #5E2B7A; padding: 2px; background: #fff; }
 .phone .av img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
 .phone .nums { display: flex; justify-content: space-around; text-align: center; }
 .phone .nums b { display: block; font-size: 15px; } .phone .nums span { font-size: 12px; color: #555; }
@@ -231,10 +231,10 @@ html, body { overflow-x: hidden; }
     <div class="sw"><i style="background:#C9C4BC"></i><div><b>Marble</b><code>#C9C4BC</code> linee</div></div>
     <div class="sw"><i style="background:#8A7F72"></i><div><b>Taupe</b><code>#8A7F72</code> testo secondario</div></div>
     <div class="sw"><i style="background:#1E1C1A"></i><div><b>Ink</b><code>#1E1C1A</code> testo, fondi scuri</div></div>
-    <div class="sw"><i style="background:#E8307F"></i><div><b>Magenta</b><code>#E8307F</code> accento, una volta per pagina</div></div>
-    <div class="sw"><i style="background:#5E2B7A"></i><div><b>Violet</b><code>#5E2B7A</code> accento secondario</div></div>
+    <div class="sw"><i style="background:#5E2B7A"></i><div><b>Violet</b><code>#5E2B7A</code> accento, una volta per pagina</div></div>
+    <div class="sw"><i style="background:#B48AD1"></i><div><b>Lilac</b><code>#B48AD1</code> accento su fondi scuri</div></div>
   </div>
-  <p>Regola: il magenta compare una volta per superficie (una parola, un bottone, un bordo). Mai come sfondo pieno, mai su foto. Il colore nelle immagini arriva dai capi.</p>
+  <p>Regola: il viola compare una volta per superficie (una parola, un bottone, un bordo). Mai come sfondo pieno, mai su foto. Il colore nelle immagini arriva dai capi.</p>
 
   <h3>Tipografia</h3>
   <div class="spec">
@@ -273,7 +273,7 @@ html, body { overflow-x: hidden; }
     <li>Una riga in Instrument Serif italic come sottotitolo o firma.</li>
     <li>Una foto o un video, sempre 9:16 o 4:5, mai quadrato.</li>
     <li>Numeri in Bebas con etichetta maiuscola sopra e fonte sotto.</li>
-    <li>Un solo bottone primario (Ink, hover Magenta) e un bottone secondario a contorno.</li>
+    <li>Un solo bottone primario (Ink, hover Violet) e un bottone secondario a contorno.</li>
   </ol>
 
   <h3>Template coordinati</h3>
@@ -366,7 +366,7 @@ Full-time diva.
     <tr><td>2</td><td>MFW</td><td>Stone, Bebas Ink</td><td>Show e showroom della settimana della moda, per stagione</td></tr>
     <tr><td>3</td><td>MILANO</td><td>Stone, Bebas Ink</td><td>Street, luoghi, pietra e marmo. Il "set"</td></tr>
     <tr><td>4</td><td>TRAVEL</td><td>Stone, Bebas Ink</td><td>Yacht, hotel, viaggi</td></tr>
-    <tr><td>5</td><td>COLLAB</td><td>Stone, Bebas <span class="acc">Magenta</span></td><td>Cosa si può fare insieme: 3 stories con i servizi del kit e il link a lelusham.com/connect.html. L'unica copertina con l'accento</td></tr>
+    <tr><td>5</td><td>COLLAB</td><td>Stone, Bebas <span class="acc">Violet</span></td><td>Cosa si può fare insieme: 3 stories con i servizi del kit e il link a lelusham.com/connect.html. L'unica copertina con l'accento</td></tr>
   </table></div>
   <p>Da eliminare: qualsiasi Story in evidenza con nome generico o emoji come copertina. Massimo 5 cerchi: tutti visibili senza scorrere.</p>
 
@@ -415,7 +415,7 @@ Shoes make the fit. Unboxing the @coperni pair I'm wearing to MFW. Grey or viole
     <tr><td>01 Cover</td><td>Foto delle colonne in pietra a sangue per 196 mm; LELUSHAM a 116 pt a cavallo del bordo foto; claim e descrizione in basso a sinistra (110 mm); contatti in griglia a destra (62 mm).</td><td>Nulla</td></tr>
     <tr><td>02 Profilo</td><td>Titolo e intro su 12 colonne; ritratto 66×117 mm a sinistra; 6 statistiche su 2 colonne con etichetta, valore Bebas 40 pt e fonte; sotto, pillar e dati del pubblico.</td><td>Visualizzazioni medie, engagement, reach, reach non follower, città, paesi, età, genere</td></tr>
     <tr><td>03 Portfolio</td><td>6 reel su 3 colonne, 82 mm di altezza, titolo Bebas 14 pt e riga con categoria, brand e data; nota legale sui brand in basso.</td><td>Visualizzazioni per reel; collaborazioni confermate, se esistono</td></tr>
-    <tr><td>04 Partnership</td><td>Fondo Ink. 6 servizi su 2 colonne con tariffa a destra; 3 argomenti con bordo magenta; immagine 62 mm e "Let's talk" a 84 pt con contatti.</td><td>Tariffe o "su richiesta"; termini affiliazione</td></tr>
+    <tr><td>04 Partnership</td><td>Fondo Ink. 6 servizi su 2 colonne con tariffa a destra; 3 argomenti con bordo lilla; immagine 62 mm e "Let's talk" a 84 pt con contatti.</td><td>Tariffe o "su richiesta"; termini affiliazione</td></tr>
   </table></div>
   <p>Come compilare: Instagram → Insights → ultimi 30 giorni per reach, account raggiunti e demografia; per le visualizzazioni medie, aprire gli ultimi 20 reel e prendere il valore mediano. Aggiornare il kit ogni trimestre e indicare sempre la data.</p>
 </section>
@@ -538,7 +538,7 @@ Shoes make the fit. Unboxing the @coperni pair I'm wearing to MFW. Grey or viole
     <tr><td>Formato domanda</td><td>Presente</td><td>Presente, con sondaggio in stories</td><td><span class="tag ok">Mantenere</span></td></tr>
     <tr><td>Luce e luoghi</td><td>Naturale, Milano</td><td>Uguale, con regole di inquadratura</td><td><span class="tag ok">Mantenere</span></td></tr>
     <tr><td>Copertine reel</td><td>Testo casuale, letterbox</td><td>Template: titolo nel terzo inferiore</td><td><span class="tag warn">Riprogettare</span></td></tr>
-    <tr><td>Overlay rosa pieno</td><td>In un reel</td><td>Assente: il magenta vive solo nel sistema grafico</td><td><span class="tag bad">Eliminare</span></td></tr>
+    <tr><td>Overlay rosa pieno</td><td>In un reel</td><td>Assente: il viola vive solo nel sistema grafico</td><td><span class="tag bad">Eliminare</span></td></tr>
     <tr><td>Stories in evidenza</td><td>Non verificabili</td><td>5, con copertine Stone</td><td><span class="tag acc">Aggiungere</span></td></tr>
     <tr><td>Media kit</td><td>Assente</td><td>4 pagine, con dati da Insights</td><td><span class="tag acc">Aggiungere</span></td></tr>
     <tr><td>Sito</td><td>Online, HTTPS rotto, Gmail</td><td>HTTPS attivo, hello@lelusham.com, pagina Collab con PDF</td><td><span class="tag warn">Riprogettare</span></td></tr>

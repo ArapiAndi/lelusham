@@ -13,7 +13,6 @@ index.html            Home (fullscreen slider)
 social-kit.html       Gallery with filters + detail dialog
 about.html            Editorial about page
 connect.html          Contact
-brand.html            Brand library (wordmark, palette, type, downloads)
 assets/css/style.css  Design tokens + all styles
 assets/js/content.js  ALL editable content (slides, gallery items, categories, brand data)
 assets/js/slider.js   Fullscreen slider
@@ -32,7 +31,7 @@ docs/build-pages.py   Optional: regenerates the 5 HTML pages (shared header/foot
 
 **Colours / fonts** → tokens at the top of `assets/css/style.css` (`:root`).
 
-**Logo** → replace the inline SVG `<text>` in the header of each HTML page (search `wordmark`) and `assets/img/lelusham-wordmark.svg`, plus the two boxes on `brand.html`.
+**Logo** → replace the inline SVG `<text>` in the header of each HTML page (search `wordmark`) and `assets/img/lelusham-wordmark.svg`.
 
 **Domain** → search and replace `https://lelusham.com/` in the HTML `<head>` sections.
 
