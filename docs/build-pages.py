@@ -70,7 +70,7 @@ SVG_PAUSE='<svg class="ico-pause" viewBox="0 0 24 24" fill="currentColor" aria-h
 SVG_PLAY='<svg class="ico-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5l12 7-12 7z"/></svg>'
 
 # ---------------- HOME ----------------
-page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham): fashion and lifestyle reels from Milan. Explore the Social Kit, the highlights and how to get in touch.",f"""
+page("index.html","LELUSHAM — Fashion & Lifestyle, Milan","Lelia M (@lelusham): fashion and lifestyle reels from Milan. Explore the Social Kit, the highlights and how to get in touch.",f"""
 <section class="hero" data-slider>
   <div class="slides"></div>
   <p class="visually-hidden" aria-live="polite" data-live></p>
@@ -129,7 +129,7 @@ page("index.html","LELUSHAM — Fashion & lifestyle, Milan","Lelia M (@lelusham)
   <a class="btn btn-primary" href="connect.html">Work with me</a>
 </section>
 """, scripts='<script src="assets/js/slider.js"></script>\n<script src="assets/js/main.js"></script>',
-extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.webp" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & lifestyle creator"}</script>')
+extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.webp" fetchpriority="high">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & Lifestyle creator"}</script>')
 
 # ---------------- SOCIAL KIT ----------------
 page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Instagram reels and TikTok videos organised by try-on & boutique, street style, events & travel, lifestyle. Every item links to the original.",f"""
@@ -164,7 +164,7 @@ page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Insta
 """)
 
 # ---------------- ABOUT ----------------
-page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, fashion & lifestyle creator in Milan. The tone, the visual language, the content.","""
+page("about.html","About — LELUSHAM","Who is behind @lelusham: Lelia M, Fashion & Lifestyle creator in Milan. The tone, the visual language, the content.","""
 <section class="page-hero">
   <p class="eyebrow">03 — About</p>
   <h1 class="display">Full-time <span class="serif-i" style="color:var(--violet)">diva</span></h1>

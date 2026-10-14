@@ -6,7 +6,7 @@ Date: 12 Oct 2026. Sources: public Instagram profile metadata of @lelusham and t
 
 **Profile (public metadata)**
 - Display name: LELIA M · handle @lelusham
-- Bio: "Full-time diva 💅🏻 / [Fashion & lifestyle] / 📍Milan, Italy / Collab: leliamoroz.pr@gmail.com"
+- Bio: "Full-time diva 💅🏻 / [Fashion & Lifestyle] / 📍Milan, Italy / Collab: leliamoroz.pr@gmail.com"
 - Public counts on 12 Oct 2026: 337 posts. Follower numbers were deliberately left off the site.
 - Logo / wordmark: **[missing]**. A typographic placeholder wordmark is used.
 

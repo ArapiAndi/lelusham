@@ -13,7 +13,7 @@ window.LELUSHAM = {
     tiktok: "https://www.tiktok.com/@lelusham",
     email: "leliamoroz.pr@gmail.com",
     tagline: "Full-time diva",
-    descriptor: "Fashion & lifestyle",
+    descriptor: "Fashion & Lifestyle",
     city: "Milan, Italy",
     mediaKit: "docs/media-kit/LELUSHAM-media-kit.pdf"
   },
@@ -55,7 +55,7 @@ window.LELUSHAM = {
       video: { mp4: "assets/video/lelusham-hero-1080.mp4", webm: "assets/video/lelusham-hero-1080.webm" },
       image: "assets/video/lelusham-hero-poster.webp",
       alt: "Lelia in a grey hooded dress with a black bag, posing by a stone statue under a cloudy blue sky in Milan",
-      eyebrow: "Fashion & lifestyle",
+      eyebrow: "Fashion & Lifestyle",
       title: "LELUSHAM",
       sub: "A visual diary of fashion, elevated everyday moments, and the art of making the ordinary feel extraordinary.",
       duration: 8400 /* due loop del video (4,2 s) */
