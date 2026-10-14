@@ -31,7 +31,7 @@
   const actions = `
     <div class="slide-actions reveal on-dark">
       <a class="btn btn-primary" href="connect.html">Work with me</a>
-      <a class="btn btn-ghost" href="social-kit.html">Explore the Social Kit</a>
+      <a class="btn btn-ghost" href="social-kit.html">Social Kit</a>
     </div>`;
 
   /* --- Template --- */
@@ -55,7 +55,7 @@
   }
   function imageSlide(s, i) {
     const h = i === 0 ? "h1" : "h2";
-    const clip = s.clip; // animazione breve del reel (4 s, 360×640), se c'è
+    const clip = s.clip; // clip breve del reel (4 s, 720×1280 ad alta qualità: il massimo che Instagram pubblica)
     return `
       <div class="slide-bg" data-bg="${s.image}" aria-hidden="true"></div>
       <div class="slide-grid">
@@ -68,7 +68,7 @@
         </div>
         <figure class="slide-figure">
           <img data-src="${s.image}" alt="${s.alt}" decoding="async" width="720" height="1280">
-          ${clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="360" height="640"><source src="${clip}" type="video/mp4"></video>` : ""}
+          ${clip ? `<video class="clip" muted playsinline loop preload="none" aria-hidden="true" width="720" height="1280"><source src="${clip}" type="video/mp4"></video>` : ""}
         </figure>
       </div>`;
   }
@@ -106,8 +106,10 @@
     el.dataset.ready = "1";
     const bg = el.querySelector("[data-bg]"); if (bg) bg.style.backgroundImage = `url('${bg.dataset.bg}')`;
     const img = el.querySelector("img[data-src]"); if (img) img.src = img.dataset.src;
+    const clip = el.querySelector("video.clip"); if (clip && !reduceMotion) { clip.preload = "auto"; clip.load(); } // buffer HD prima che la slide arrivi
   }
-  if (!ready) window.addEventListener("load", () => { ready = true; hydrate((index + 1) % data.length); syncVideos(); }, { once: true });
+  const hydrateAhead = () => { hydrate((index + 1) % data.length); hydrate((index + 2) % data.length); }; // prossime 2 slide
+  if (!ready) window.addEventListener("load", () => { ready = true; hydrateAhead(); syncVideos(); }, { once: true });
 
   function pad(n) { return String(n).padStart(2, "0"); }
 
@@ -124,7 +126,7 @@
   function go(i, byUser) {
     index = (i + data.length) % data.length;
     hydrate(index);
-    if (ready) hydrate((index + 1) % data.length);
+    if (ready) hydrateAhead();
     slides.forEach((el, k) => {
       const active = k === index;
       el.classList.toggle("is-active", active);
