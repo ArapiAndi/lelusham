@@ -388,9 +388,10 @@ body.menu-open { overflow: hidden; }
   .site-nav { padding-top: 90px; }
 }
 
-/* Telefoni bassi: via la descrizione lunga, così il testo resta sotto il volto */
+/* Telefoni bassi: descrizione più compatta, ma sempre visibile */
 @media (max-width: 768px) and (max-height: 760px) {
-  .intro-sub { display: none; }
+  .intro-sub { font-size: .8rem; line-height: 1.4; max-width: 34ch; margin-top: .4rem; }
+  .intro-text { margin: .6rem 0 .9rem; }
 }
 
 @media (max-width: 420px) {
