@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LELUSHAM Brand Project 2026</title>
 <meta name="description" content="Analisi, strategia, restyling, Instagram, media kit e piano operativo per LELUSHAM">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +71,7 @@ img { max-width: 100%; display: block; }
 .spec .b { font-size: 1rem; max-width: 60ch; }
 
 /* Mock profilo Instagram */
-.phones { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.6rem; margin: 1.2rem 0; }
+.phones { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(290px, 100%), 1fr)); gap: 1.6rem; margin: 1.2rem 0; }
 .phone { max-width: 390px; width: 100%; margin: 0 auto; background: #fff; color: #111; border: 1px solid var(--line); border-radius: 22px; padding: 14px 14px 10px; font-family: -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 13px; line-height: 1.35; box-shadow: 0 30px 60px -40px rgba(0,0,0,.5); }
 .phone .bar { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; padding: 2px 2px 10px; }
 .phone .top { display: grid; grid-template-columns: 78px 1fr; gap: 14px; align-items: center; }
@@ -91,7 +96,8 @@ img { max-width: 100%; display: block; }
 .phone .grid .pin { position: absolute; top: 5px; right: 5px; width: 16px; height: 16px; border-radius: 50%; background: rgba(0,0,0,.55); }
 .phone .grid .pin::after { content: ""; position: absolute; left: 5px; top: 4px; width: 0; height: 0; border-left: 6px solid #fff; border-top: 4px solid transparent; border-bottom: 4px solid transparent; }
 .phone .grid .cov { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px 6px 5px; background: linear-gradient(to top, rgba(0,0,0,.7), transparent); color: #fff; font-family: var(--display); font-size: 13px; letter-spacing: .04em; line-height: 1; }
-.phones > div { display: grid; justify-items: center; }
+.phones > div { display: grid; justify-items: center; min-width: 0; }
+.phone { min-width: 0; max-width: min(390px, 100%); overflow: hidden; }
 .phone .label { text-align: center; font-size: 11px; color: #666; margin-top: 8px; letter-spacing: .14em; text-transform: uppercase; font-weight: 700; }
 
 /* Media kit pagine */
@@ -106,6 +112,14 @@ img { max-width: 100%; display: block; }
 .step p { margin: .3rem 0; font-size: .92rem; }
 footer { padding-top: 2rem; font-size: .8rem; color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+/* Mobile: tabelle scorrevoli in orizzontale invece di sfondare la pagina */
+@media (max-width: 640px) {
+  table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: normal; }
+  table th, table td { min-width: 9rem; }
+  pre.copy { overflow-x: auto; }
+  .phone .btns { grid-template-columns: 1fr 1fr; }
+}
+html, body { overflow-x: hidden; }
 </style>
 
 <div class="wrap">
@@ -142,7 +156,7 @@ footer { padding-top: 2rem; font-size: .8rem; color: var(--muted); }
     <tr><td>Foto profilo</td><td>Ritratto su fondo magenta, 100×100 px la versione pubblica</td><td>og:image del profilo</td></tr>
     <tr><td>Reel analizzati</td><td>8, pubblicati tra il 18 lug e il 27 set 2026. Brand taggati: The Attico (3), Coperni (1), Giuseppe Di Morabito (1)</td><td>Pagine pubbliche dei reel</td></tr>
     <tr><td>Sito</td><td>lelusham.com online su GitHub Pages, 5 pagine, hero video, Social Kit con 8 reel, pagina Brand</td><td>Repository e richiesta HTTP</td></tr>
-    <tr><td>HTTPS</td><td><span class="bad">Non funziona</span>: il certificato servito è quello generico di GitHub (*.github.io). Chrome e Safari mostrano un avviso di sicurezza su https://lelusham.com</td><td>Verifica TLS, 13 ott 2026</td></tr>
+    <tr><td>HTTPS</td><td><span class="ok">Attivo</span>: certificato Let's Encrypt intestato a lelusham.com, redirect forzato a HTTPS. Manca ancora il CNAME <code>www</code> su IONOS</td><td>Verifica TLS, 14 ott 2026</td></tr>
   </table></div>
 
   <h3>Non accessibile senza login</h3>
