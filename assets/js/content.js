@@ -41,7 +41,7 @@ window.LELUSHAM = {
   value: [
     { title: "Shot on location in Milan & Worldwide", text: "Boutiques, showrooms, hotel rooms and the city's stone and marble: the set is already there. No studio, no set-up cost, delivery in days." },
     { title: "Made for the feed", text: "Vertical, handheld, natural light. It reads as my own post, not as an ad, so it gets watched to the end. Across TikTok and Instagram the profiles count 2.2M likes and a single video at 5.5M views." },
-    { title: "Two languages, two audiences", text: "Captions in Italian and English: Milan and an international audience with a single piece of content." },
+    { title: "Two languages, two audiences", text: "Captions in English and Italian: Milan and an international audience with a single piece of content." },
     { title: "A concept, not a placement", text: "Every piece opens with a question to the audience: Which bag? Is it better? Your product is the answer, and the reason to keep watching. The format already runs across The Attico, Coperni, GCDS, Comme des Garçons, Meder and iS Clinical." }
   ],
 

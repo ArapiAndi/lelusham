@@ -142,7 +142,7 @@ a { color: inherit; text-decoration: none; }
       <span class="label">Brands featured in organic content</span>
       <p class="brands" data-brands></p>
       <div class="aud" style="margin-top:5mm">
-        <div><span>Languages</span><span>Content in Italian &amp; English</span></div>
+        <div><span>Languages</span><span>Content in English &amp; Italian</span></div>
         <div><span>Platforms</span><span>Instagram · TikTok</span></div>
         <div><span>Location</span><span>Based in Milan, Italy · Available Worldwide</span></div>
       </div>
@@ -213,7 +213,7 @@ a { color: inherit; text-decoration: none; }
   /* P3 — sei pezzi: i primi con brand, poi gli altri, Instagram e TikTok */
   const ig = kit.filter(k => k.brand && k.platform !== "tiktok"), tk = kit.filter(k => k.brand && k.platform === "tiktok");
   const pick = [...ig.slice(0, 4), ...tk.slice(0, 2), ...kit.filter(k => !k.brand)].slice(0, 6);
-  $("[data-portfolio-sub]").textContent = `${pick.length} of ${kit.length} pieces in the Social Kit, ${brands.length} brands featured. Vertical video, filmed on location, captions in Italian and English.`;
+  $("[data-portfolio-sub]").textContent = `${pick.length} of ${kit.length} pieces in the Social Kit, ${brands.length} brands featured. Vertical video, filmed on location, captions in English and Italian.`;
   $("[data-portfolio]").innerHTML = pick.map(k => `<figure><div class="img"><img src="${src(k.image)}" alt="${esc(k.alt)}"></div><figcaption><b>${esc(k.title)}</b><span>${[cat[k.cat], k.brand, plat(k), k.date, k.views ? fmt(k.views) + " views" : ""].filter(Boolean).map(esc).join(" · ")}</span></figcaption></figure>`).join("");
   const tt = kit.filter(k => k.views); $("[data-portfolio-foot]").textContent = tt.length ? `Public TikTok views where shown, ${C.statsNote.match(/as of ([^.]+)/)?.[1] || ""}` : "";
 
