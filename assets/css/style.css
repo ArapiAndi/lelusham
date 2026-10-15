@@ -340,6 +340,8 @@ body.menu-open { overflow: hidden; }
 .section-title { font-size: clamp(3rem, 8vw, 7rem); }
 .section-title .serif-i { color: var(--violet); }
 .lead { font-size: clamp(1.1rem, 1.6vw, 1.4rem); line-height: 1.45; max-width: 34ch; color: var(--ink-soft); }
+.intro .lead { max-width: 42ch; }
+.intro .lead p { margin: 0 0 1.1em; } .intro .lead p:last-child { margin-bottom: 0; }
 
 /* Intro strip (home, sotto slider) */
 .intro { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); align-items: start; }

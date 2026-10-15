@@ -37,8 +37,6 @@ window.LELUSHAM = {
     { title: "Hotel & Restaurant Stay", text: "Milan or any other location as the setting: one reel and stories, with a location tag and link sticker." },
     { title: "Affiliate & Launch", text: "Tracked link or code in stories and bio during a launch or sale period." }
   ],
-  servicesNote: "Organic collaborations go live on @lelusham, in Italian and English. Production work stays on your channels. Extended usage, paid-ad whitelisting, exclusivity and extra Stories are available as add-ons. Rates available upon request.",
-
   /* MY VALUE — vantaggi concreti per il brand, basati sui contenuti pubblicati (Social Kit) e sui numeri pubblici in stats. */
   value: [
     { title: "Shot on location in Milan & Worldwide", text: "Boutiques, showrooms, hotel rooms and the city's stone and marble: the set is already there. No studio, no set-up cost, delivery in days." },
