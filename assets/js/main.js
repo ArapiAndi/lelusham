@@ -56,7 +56,7 @@
 
   /* --- Preview galleria in home --- */
   const preview = $("[data-kit-preview]");
-  if (preview) { const ig = C.kit.filter(k => k.platform !== "tiktok").slice(0, 2), tt = C.kit.filter(k => k.platform === "tiktok").slice(0, 2); preview.innerHTML = [ig[0], tt[0], ig[1], tt[1]].filter(Boolean).map((it, i) => card(it, i, false)).join(""); }
+  if (preview) { const ids = C.homePreview || []; const picks = ids.length ? ids.map(id => C.kit.find(k => k.id === id)).filter(Boolean) : C.kit.slice(0, 4); preview.innerHTML = picks.map((it, i) => card(it, i, false)).join(""); }
 
   /* --- Social Kit: filtri + griglia + dettaglio --- */
   const grid = $("[data-kit-grid]");

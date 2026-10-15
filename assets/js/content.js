@@ -145,6 +145,9 @@ window.LELUSHAM = {
     { id: "tiktok", label: "TikTok" }
   ],
 
+  /* HOME — "Selected work": id degli elementi del kit, in ordine */
+  homePreview: ["DdwkQOXqUhA", "DbF9tHPtjKu", "Dc5xoWrNwL2", "Dc6wd6wNgIu"],
+
   /* SOCIAL KIT — elementi della galleria */
   kit: [
     { id: "DdwkQOXqUhA", platform: "instagram", cat: "tryon", clip: "assets/video/reels/DdwkQOXqUhA.mp4", image: "assets/img/reels/attico-croc-bag.webp", title: "Wishlist try-on", brand: "The Attico", caption: "Trying on my wishlist items from @theattico boutique 💜", alt: "Lelia lifts a glossy blue crocodile-embossed bag in front of a green marble wall", reel: "https://www.instagram.com/reel/DdwkQOXqUhA/", date: "2026" },
