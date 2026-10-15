@@ -92,7 +92,7 @@ page("index.html","LELUSHAM — Fashion & Lifestyle, Milan","Lelia M (@lelusham)
   <dl class="meta fade-up">
     <div><dt>@lelusham</dt><dd><a class="link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a class="link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a></dd></div>
     <div><dt>Location</dt><dd>Based in Milan, Italy<br>Available Worldwide</dd></div>
-    <div><dt>Content</dt><dd>Fashion &amp; lifestyle</dd></div>
+    <div><dt>Content</dt><dd>Fashion &amp; Lifestyle</dd></div>
     <div><dt>Collab</dt><dd><a class="link" data-email href="#">leliamoroz.pr@gmail.com</a></dd></div>
   </dl>
 </section>
