@@ -568,6 +568,7 @@ body.menu-open { overflow: hidden; }
 .offer-list, .value-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); counter-reset: offer; }
 .offer-list li { border-top: 1px solid var(--marble); padding-top: 1rem; counter-increment: offer; }
 .offer-list li::before { content: "0" counter(offer); display: block; font-size: .7rem; letter-spacing: .2em; color: var(--taupe); font-weight: 600; margin-bottom: .8rem; }
+.offer-note { max-width: 62ch; margin: 2.5rem 0 0; font-size: .9rem; line-height: 1.6; color: var(--taupe); }
 .offer-list h3, .value-list h3 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing: .02em; line-height: 1; margin: 0 0 .5rem; }
 .offer-list p, .value-list p { margin: 0; color: var(--ink-soft); line-height: 1.5; }
 .value-sec { background: var(--ink); color: var(--stone); }

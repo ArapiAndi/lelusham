@@ -28,22 +28,23 @@ window.LELUSHAM = {
   ],
   statsNote: "Public profile figures as of 13 Oct 2026. Full Insights data (reach, audience split), on request.",
 
-  /* WHAT I OFFER — formati proposti (stessa lista del media kit). Da confermare con Lelia. */
+  /* WHAT I OFFER — sei formati, deliverable confermati. Titoli editoriali, valore per il brand prima dei deliverable. Da confermare con Lelia. */
   services: [
-    { title: "Boutique try-on reel", text: "One 9:16 reel filmed on location in your store: try-on, styling, an honest question to the audience. Three stories on the day." },
-    { title: "Fashion week coverage", text: "Show or showroom visit during MFW: one reel plus a story sequence posted in real time." },
-    { title: "Unboxing & first look", text: "Product received, opened and worn on camera. One reel, one carousel or three stories." },
-    { title: "UGC for your channels", text: "Vertical videos and stills delivered for your own feed and ads, without posting on @lelusham. Usage rights agreed per project." },
-    { title: "Hotel & restaurant stay", text: "A Milan or travel location as the set: one reel and stories, with location tag and link sticker." },
-    { title: "Affiliate & launch", text: "Tracked link or code in stories and bio during a launch or sale period." }
+    { title: "Styling & Try-On Reel", text: "One reel filmed at any location: try-on, styling, and an honest question to the audience." },
+    { title: "Event Coverage", text: "Event attendance and coverage: one reel plus a story sequence posted in real time." },
+    { title: "Unboxing & First Look", text: "Product unboxing and first look filmed in an interesting location: the product is received, opened and worn on camera. One reel, one carousel or three stories." },
+    { title: "UGC for Your Channels", text: "Videos and stills created for your own feed and ads, without posting on @lelusham. Usage rights agreed per project." },
+    { title: "Hotel & Restaurant Stay", text: "Milan or any other location as the setting: one reel and stories, with a location tag and link sticker." },
+    { title: "Affiliate & Launch", text: "Tracked link or code in stories and bio during a launch or sale period." }
   ],
+  servicesNote: "Organic collaborations go live on @lelusham, in Italian and English. Production work stays on your channels. Extended usage, paid-ad whitelisting, exclusivity and extra Stories are available as add-ons. Rates available upon request.",
 
-  /* MY VALUE — vantaggi concreti per il brand */
+  /* MY VALUE — vantaggi concreti per il brand, basati sui contenuti pubblicati (Social Kit) e sui numeri pubblici in stats. */
   value: [
-    { title: "Shot on location in Milan & Worldwide", text: "Boutiques, showrooms and the city's stone and marble: the set is already there. No studio, no set-up cost, delivery in days." },
-    { title: "Made for the feed", text: "Vertical, handheld, natural light. It reads as my own post, not as an ad, so it gets watched to the end." },
+    { title: "Shot on location in Milan & Worldwide", text: "Boutiques, showrooms, hotel rooms and the city's stone and marble: the set is already there. No studio, no set-up cost, delivery in days." },
+    { title: "Made for the feed", text: "Vertical, handheld, natural light. It reads as my own post, not as an ad, so it gets watched to the end. Across TikTok and Instagram the profiles count 2.2M likes and a single video at 5.5M views." },
     { title: "Two languages, two audiences", text: "Captions in Italian and English: Milan and an international audience with a single piece of content." },
-    { title: "A concept, not a placement", text: "Every piece opens with a question to the audience: Which bag? Is it better? Your product is the answer, and the reason to keep watching." }
+    { title: "A concept, not a placement", text: "Every piece opens with a question to the audience: Which bag? Is it better? Your product is the answer, and the reason to keep watching. The format already runs across The Attico, Coperni, GCDS, Comme des Garçons, Meder and iS Clinical." }
   ],
 
   /* HOME — slide del fullscreen slider (ordine = ordine di visualizzazione) */

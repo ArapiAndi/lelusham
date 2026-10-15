@@ -38,7 +38,6 @@ HEAD = """<!doctype html>
   </ol>
   <div class="nav-foot">
     <span><a href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a> &nbsp;·&nbsp; @lelusham</span>
-    <span>Milan, Italy</span>
   </div>
 </nav>
 <main id="main">
@@ -115,6 +114,7 @@ page("index.html","LELUSHAM — Fashion & Lifestyle, Milan","Lelia M (@lelusham)
     <a class="btn btn-ghost fade-up" href="connect.html">Rates on request</a>
   </div>
   <ol class="offer-list" data-services></ol>
+  <p class="offer-note fade-up" data-services-note></p>
 </section>
 
 <section class="section value-sec on-dark" aria-labelledby="val-h">
@@ -170,7 +170,7 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
 <section class="section connect" style="padding-top:1rem">
   <div class="c-main">
     <h1 class="display fade-up">Let's <span class="serif-i" style="color:var(--violet)">talk</span></h1>
-    <p class="lead fade-up">For collaborations:</p>
+    <p class="lead fade-up">Boutiques, labels, PR agencies, hotels and beauty brands: send a brief, a date or just an idea. Replies from Milan, in Italian or English.</p>
     <p class="fade-up" style="margin-top:2.5rem"><a class="big-link" data-email href="#">leliamoroz.pr@gmail.com</a></p>
     <p class="fade-up"><a class="big-link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram → @lelusham</a></p>
     <p class="fade-up"><a class="big-link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok → @lelusham</a></p>
@@ -179,8 +179,8 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
   <aside class="c-side fade-up">
     <dl>
       <dt class="eyebrow">Location</dt><dd>Based in Milan, Italy<br>Available Worldwide</dd>
-      <dt class="eyebrow">Content</dt><dd>Fashion &amp; lifestyle<br>Reels · TikTok · try-ons · events</dd>
-      <dt class="eyebrow">Audience</dt><dd>TikTok 7.7K followers · 2.2M likes<br>Instagram 3.0K followers</dd>
+      <dt class="eyebrow">Content</dt><dd>Fashion, beauty &amp; lifestyle<br>Boutique try-ons · unboxings · MFW · hotels &amp; dining</dd>
+      <dt class="eyebrow">Audience</dt><dd>TikTok 7.7K followers · 2.2M likes · top video 5.5M<br>Instagram 3.0K followers · IT/EN</dd>
       <dt class="eyebrow">Collab</dt><dd><a class="link" data-email data-keep href="#">Write an email</a></dd>
     </dl>
   </aside>
@@ -191,6 +191,7 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
     <span class="eyebrow fade-up">Rates and availability on request</span>
   </div>
   <ol class="offer-list" data-services></ol>
+  <p class="offer-note fade-up" data-services-note></p>
 </section>
 """)
 

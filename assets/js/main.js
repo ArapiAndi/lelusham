@@ -37,6 +37,7 @@
   const list = (sel, items, cls) => { const el = $(sel); if (el) el.innerHTML = items.map((x, i) => `<li class="${cls} fade-up" style="transition-delay:${(i % 3) * 70}ms"><h3>${x.title}</h3><p>${x.text}</p></li>`).join(""); };
   list("[data-services]", C.services, "offer");
   list("[data-value]", C.value, "val");
+  $$("[data-services-note]").forEach(el => el.textContent = C.servicesNote || "");
   $$("[data-media-kit]").forEach(a => a.href = C.brand.mediaKit);
 
   /* --- Card helper --- */
