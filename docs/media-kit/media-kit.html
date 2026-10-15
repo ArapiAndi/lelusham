@@ -101,10 +101,10 @@ a { color: inherit; text-decoration: none; }
 .p4 .why div { border-top: 1px solid #4a4541; padding-top: 2.4mm; font-size: 8.5pt; color: #e7e1d9; }
 .p4 .why b { display: block; color: var(--stone); font-size: 9.5pt; margin-bottom: 1mm; }
 .p4 .svcnote { position: absolute; left: var(--m); right: var(--m); top: 124mm; font-size: 7.5pt; color: #a39a8f; border-top: 1px solid #4a4541; padding-top: 1.6mm; }
-.p4 .cta { position: absolute; left: var(--m); right: var(--m); top: 176mm; display: grid; grid-template-columns: 62mm 1fr; gap: 10mm; align-items: end; }
-.p4 .cta .img { height: 100mm; overflow: hidden; }
-.p4 .cta .txt { display: grid; gap: 7mm; }
-.p4 .cta .display { font-size: 72pt; }
+.p4 .cta { position: absolute; left: var(--m); right: var(--m); top: 136mm; display: grid; grid-template-columns: 62mm 1fr; gap: 10mm; align-items: end; }
+.p4 .cta .img { height: 128mm; overflow: hidden; }
+.p4 .cta .txt { display: grid; gap: 12mm; }
+.p4 .cta .display { font-size: 84pt; }
 .p4 .cta .display .serif { text-transform: none; color: var(--lilac); letter-spacing: 0; }
 .p4 .cta dl { display: grid; gap: 2.4mm; font-size: 9pt; }
 .p4 .cta dl div { display: grid; grid-template-columns: 20mm 1fr; border-top: 1px solid #4a4541; padding-top: 1.6mm; }
@@ -166,7 +166,6 @@ a { color: inherit; text-decoration: none; }
   <h2 class="display">What I <span class="serif">offer</span></h2>
   <div class="services" data-services></div>
   <p class="svcnote" data-services-note></p>
-  <div class="why" data-why></div>
   <div class="cta">
     <div class="img"><img data-cta-img alt=""></div>
     <div class="txt">
@@ -218,7 +217,6 @@ a { color: inherit; text-decoration: none; }
   /* P4 */
   $("[data-services]").innerHTML = C.services.map(s => `<div class="svc"><b>${esc(s.title)}</b><p>${esc(s.text)}</p></div>`).join("");
   { const n = $("[data-services-note]"); if (C.servicesNote) n.textContent = C.servicesNote; else n.remove(); }
-  $("[data-why]").innerHTML = C.value.slice(0, 3).map(v => `<div><b>${esc(v.title)}</b>${esc(v.text)}</div>`).join("");
   const cim = $("[data-cta-img]"); cim.src = "../../assets/img/media-kit/cta.jpg"; cim.alt = "Lelia";
   $("[data-cta]").innerHTML = [["Email", `<a href="mailto:${B.email}">${B.email}</a>`], ["Instagram", `<a href="${B.instagram}">${B.handle}</a>`], ["TikTok", `<a href="${B.tiktok}">${B.handle}</a>`], ["Web", `<a href="https://lelusham.com/connect.html">lelusham.com/connect.html</a>`], ["Location", `${B.city}<br>Available Worldwide`]]
     .map(([l, v]) => `<div><dt>${l}</dt><dd>${v}</dd></div>`).join("");
