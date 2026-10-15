@@ -138,6 +138,29 @@
     targets.forEach(t => io.observe(t));
   }
 
+  /* --- Count-up numeri audience (7.7K, 2.2M...) --- */
+  const nums = $$("[data-stats] dd");
+  if (nums.length && !reduce && "IntersectionObserver" in window) {
+    const run = (el) => {
+      const [, n, suf] = el.dataset.final.match(/^([\d.]+)(.*)$/) || [];
+      if (!n) { el.textContent = el.dataset.final; return; }
+      const dec = (n.split(".")[1] || "").length, end = +n, t0 = performance.now(), dur = 1600;
+      const tick = (t) => {
+        const p = Math.min((t - t0) / dur, 1);
+        el.textContent = (end * (1 - (1 - p) ** 3)).toFixed(dec) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    const cio = new IntersectionObserver((entries) => entries.forEach(en => { if (en.isIntersecting) { run(en.target); cio.unobserve(en.target); } }), { threshold: .5 });
+    nums.forEach(el => {
+      el.dataset.final = el.textContent;
+      el.setAttribute("aria-label", el.textContent);
+      el.textContent = el.textContent.replace(/[\d.]+/, m => (0).toFixed((m.split(".")[1] || "").length));
+      cio.observe(el);
+    });
+  }
+
   /* --- Anno footer --- */
   $$("[data-year]").forEach(el => el.textContent = new Date().getFullYear());
 })();
