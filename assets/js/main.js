@@ -92,7 +92,11 @@
         $("[data-d-img]", dlg).alt = it.alt;
         const fr = $("[data-d-frame]", dlg);
         if (fr) { fr.classList.remove("is-ready"); fr.src = it.reel.replace(/\/?$/, "/") + "embed/"; }
-        $("[data-d-eyebrow]", dlg).textContent = [platformName(it), it.brand, C.categories.find(c => c.id === it.cat).label, it.views ? fmt(it.views) + " views" : "", it.date].filter(Boolean).join(" · ");
+        $("[data-d-platform]", dlg).textContent = platformName(it);
+        $("[data-d-cat]", dlg).textContent = C.categories.find(c => c.id === it.cat).label;
+        $("[data-d-brand]", dlg).textContent = it.brand ? "for " + it.brand : "";
+        $("[data-d-date]", dlg).textContent = it.date || "";
+        $("[data-d-views]", dlg).textContent = it.views ? fmt(it.views) + " views" : "";
         $("[data-d-link]", dlg).textContent = "Watch on " + platformName(it);
         $("[data-d-title]", dlg).textContent = it.title;
         $("[data-d-link]", dlg).href = it.reel;

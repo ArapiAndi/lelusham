@@ -147,13 +147,14 @@ page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Insta
   <div class="detail-inner">
     <div class="detail-media"><img data-d-img src="" alt="" width="720" height="1280"><iframe data-d-frame title="Instagram reel" loading="lazy" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
     <div class="detail-body">
-      <p class="eyebrow" data-d-eyebrow></p>
+      <p class="detail-tags"><span class="tag is-platform" data-d-platform></span><span class="tag" data-d-cat></span></p>
       <h2 class="display" data-d-title></h2>
+      <p class="detail-meta"><b data-d-brand></b><span data-d-date></span><span data-d-views></span></p>
       <a class="btn btn-primary" data-d-link href="#" target="_blank" rel="noopener">Watch on Instagram</a>
       <div class="detail-nav">
         <button class="ctrl" type="button" data-d-prev aria-label="Previous">{SVG_PREV}</button>
         <button class="ctrl" type="button" data-d-next aria-label="Next">{SVG_NEXT}</button>
-        <span class="eyebrow" style="align-self:center;margin-left:.6rem" data-d-counter></span>
+        <span class="eyebrow counter" data-d-counter></span>
       </div>
     </div>
   </div>
