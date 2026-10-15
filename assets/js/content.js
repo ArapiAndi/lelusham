@@ -40,10 +40,10 @@ window.LELUSHAM = {
 
   /* MY VALUE — vantaggi concreti per il brand */
   value: [
-    { title: "On location in Milan", text: "Boutiques, showrooms and the city's stone and marble are already the setting of the feed. No studio, no set-up cost." },
-    { title: "Native to the reel", text: "Vertical, handheld, daylight. Content reads as a creator's own post, not as an ad." },
-    { title: "Two languages", text: "Captions in Italian and English, for a Milan and an international audience." },
-    { title: "A concept for each brand", text: "Every piece starts from a question to the audience: Which bag? Is it better? The product is the answer, not a banner." }
+    { title: "Shot on location in Milan", text: "Boutiques, showrooms and the city's stone and marble: the set is already there. No studio, no set-up cost, delivery in days." },
+    { title: "Made for the feed", text: "Vertical, handheld, natural light. It reads as my own post, not as an ad, so it gets watched to the end." },
+    { title: "Two languages, two audiences", text: "Captions in Italian and English: Milan and an international audience with a single piece of content." },
+    { title: "A concept, not a placement", text: "Every piece opens with a question to the audience: Which bag? Is it better? Your product is the answer, and the reason to keep watching." }
   ],
 
   /* HOME — slide del fullscreen slider (ordine = ordine di visualizzazione) */
