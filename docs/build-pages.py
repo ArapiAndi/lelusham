@@ -36,7 +36,7 @@ HEAD = """<!doctype html>
     <li><a href="social-kit.html">Social Kit <small>02</small></a></li>
     <li><a href="connect.html">Connect <small>03</small></a></li>
   </ol>
-  <p class="nav-cta"><a class="btn btn-primary" data-media-kit href="docs/media-kit/LELUSHAM-media-kit.pdf" download><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M3 13h10"/></svg>Download Media Kit</a><small>PDF · 4 pages</small></p>
+  <p class="nav-cta"><a class="btn btn-primary" data-media-kit href="docs/media-kit/LELUSHAM-media-kit.pdf" download><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M3 13h10"/></svg>Download Media Kit</a></p>
   <div class="nav-foot">
     <span><a href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok</a> &nbsp;·&nbsp; @lelusham</span>
   </div>
@@ -179,7 +179,7 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
     <p class="fade-up" style="margin-top:2.5rem"><a class="big-link" data-email href="#">leliamoroz.pr@gmail.com</a></p>
     <p class="fade-up"><a class="big-link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram → @lelusham</a></p>
     <p class="fade-up"><a class="big-link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok → @lelusham</a></p>Download Media Kit
-    <p class="fade-up c-actions"><a class="btn btn-primary" data-email data-keep href="#">Contact me</a></p>
+    <p class="fade-up c-actions"><a class="btn btn-primary" data-email data-keep href="#">Contact me</a><a class="btn btn-ghost" data-media-kit href="docs/media-kit/LELUSHAM-media-kit.pdf" download>Download Media Kit</a></p>
   </div>
   <aside class="c-side fade-up">
     <dl>
