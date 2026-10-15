@@ -131,7 +131,7 @@ extra='<link rel="preload" as="image" href="assets/video/lelusham-hero-poster.we
 <link rel="preload" as="video" href="assets/video/lelusham-hero-1080.mp4" type="video/mp4">\n<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lelia M","alternateName":"LELUSHAM","url":"https://lelusham.com/","sameAs":["https://www.instagram.com/lelusham/","https://www.tiktok.com/@lelusham"],"email":"mailto:leliamoroz.pr@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Milan","addressCountry":"IT"},"jobTitle":"Fashion & Lifestyle creator"}</script>')
 
 # ---------------- SOCIAL KIT ----------------
-page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Instagram reels and TikTok videos organised by try-on & boutique, street style, events & travel, lifestyle. Every item links to the original.",f"""
+page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Instagram reels and TikTok videos organised by try-on & boutique, street style, events, lifestyle & travel, unboxing and beauty. Every item links to the original.",f"""
 <section class="page-hero">
   <p class="eyebrow">02 — Social Kit</p>
   <h1 class="display">Social <span class="serif-i" style="color:var(--violet)">Kit</span></h1>
