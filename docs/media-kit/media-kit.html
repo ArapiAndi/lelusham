@@ -219,7 +219,7 @@ a { color: inherit; text-decoration: none; }
   $("[data-services]").innerHTML = C.services.map(s => `<div class="svc"><b>${esc(s.title)}</b><p>${esc(s.text)}</p></div>`).join("");
   { const n = $("[data-services-note]"); if (C.servicesNote) n.textContent = C.servicesNote; else n.remove(); }
   $("[data-why]").innerHTML = C.value.slice(0, 3).map(v => `<div><b>${esc(v.title)}</b>${esc(v.text)}</div>`).join("");
-  const cta = by("Dc6XpeTNbOf") || kit[0]; const cim = $("[data-cta-img]"); cim.src = src(cta.image); cim.alt = cta.alt;
+  const cim = $("[data-cta-img]"); cim.src = "../../assets/img/media-kit/cta.jpg"; cim.alt = "Lelia";
   $("[data-cta]").innerHTML = [["Email", `<a href="mailto:${B.email}">${B.email}</a>`], ["Instagram", `<a href="${B.instagram}">${B.handle}</a>`], ["TikTok", `<a href="${B.tiktok}">${B.handle}</a>`], ["Web", `<a href="https://lelusham.com/connect.html">lelusham.com/connect.html</a>`], ["Location", `${B.city}<br>Available Worldwide`]]
     .map(([l, v]) => `<div><dt>${l}</dt><dd>${v}</dd></div>`).join("");
 })();
