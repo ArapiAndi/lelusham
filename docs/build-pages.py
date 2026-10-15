@@ -175,7 +175,7 @@ page("connect.html","Connect — LELUSHAM","Get in touch with Lelia M (@lelusham
 <section class="section connect" style="padding-top:1rem">
   <div class="c-main">
     <h1 class="display fade-up">Let's <span class="serif-i" style="color:var(--violet)">talk</span></h1>
-    <p class="lead fade-up">Boutiques, labels, PR agencies, hotels and beauty brands: send a brief, a date or just an idea. Replies from Milan, in Italian or English.</p>
+    <p class="lead fade-up">Boutiques, labels, PR agencies, hotels and beauty brands: send a brief, a date or just an idea. Replies from Milan, in English or Italian.</p>
     <p class="fade-up" style="margin-top:2.5rem"><a class="big-link" data-email href="#">leliamoroz.pr@gmail.com</a></p>
     <p class="fade-up"><a class="big-link" href="https://www.instagram.com/lelusham/" target="_blank" rel="noopener" data-ig>Instagram → @lelusham</a></p>
     <p class="fade-up"><a class="big-link" href="https://www.tiktok.com/@lelusham" target="_blank" rel="noopener" data-tt>TikTok → @lelusham</a></p>Download Media Kit
