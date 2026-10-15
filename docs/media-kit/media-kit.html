@@ -6,11 +6,11 @@
 <meta name="robots" content="noindex">
 <title>LELUSHAM — Media Kit 2026</title>
 <!--
-  MEDIA KIT · A4 portrait, 4 pagine. Esporta in PDF:
+  MEDIA KIT · A4 portrait, 4 pagine. Tutti i testi, i numeri e le immagini vengono letti da assets/js/content.js
+  (stessa fonte del sito): per aggiornare il kit basta aggiornare content.js e rigenerare il PDF con:
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --no-pdf-header-footer \
     --print-to-pdf=docs/media-kit/LELUSHAM-media-kit.pdf docs/media-kit/media-kit.html
-  I campi con bordo tratteggiato viola (.ph) sono SEGNAPOSTO: vanno compilati con i dati di Instagram Insights
-  prima di inviare il kit. Nessun numero è stato stimato.
+  Aggiungere --virtual-time-budget=8000 per lasciare caricare font e immagini. Nessun numero è stimato: solo C.stats.
   Griglia: 12 colonne, margini 14 mm, gutter 5 mm, baseline 4 mm.
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,6 +40,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .display { font-family: var(--display); font-weight: 400; text-transform: uppercase; line-height: .86; letter-spacing: .01em; }
 .serif { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .ph { border: 1px dashed var(--violet); color: var(--violet); padding: .6mm 1.6mm; border-radius: 1mm; font-weight: 600; font-size: 7.5pt; letter-spacing: .02em; display: inline-block; line-height: 1.35; }
+a { color: inherit; text-decoration: none; }
 .rule { height: 1px; background: var(--ink); opacity: .9; }
 
 /* P1 — Cover */
@@ -62,6 +63,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .p2 .portrait { position: absolute; left: var(--m); top: 62mm; width: 66mm; height: 117mm; }
 .p2 .portrait figcaption { position: absolute; left: 0; bottom: -6mm; font-size: 7pt; color: var(--taupe); }
 .p2 .stats { position: absolute; left: 89mm; right: var(--m); top: 62mm; display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--g); }
+.p2 .statsnote { position: absolute; left: 89mm; right: var(--m); top: 176mm; font-size: 7.5pt; color: var(--taupe); }
 .stat { border-top: 1px solid var(--ink); padding: 2.2mm 0 4mm; min-height: 27mm; }
 .stat .v { font-family: var(--display); font-size: 40pt; line-height: 1; margin-top: 1mm; font-variant-numeric: tabular-nums; }
 .stat .n { font-size: 7pt; color: var(--taupe); margin-top: 1mm; }
@@ -72,6 +74,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .pillar small { color: var(--taupe); font-size: 7.5pt; display: block; font-weight: 400; }
 .aud { display: grid; gap: 2.6mm; margin-top: 3mm; }
 .aud div { display: grid; grid-template-columns: 26mm 1fr; align-items: center; }
+.brands { margin-top: 3mm; font-size: 9.5pt; line-height: 1.7; }
+.brands span::after { content: " · "; color: var(--taupe); } .brands span:last-child::after { content: ""; }
 
 /* P3 — Portfolio */
 .p3 h2 { position: absolute; left: var(--m); top: 22mm; font-size: 64pt; }
@@ -93,13 +97,14 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .svc b { font-family: var(--display); font-size: 15pt; font-weight: 400; letter-spacing: .03em; line-height: 1.05; }
 .svc p { grid-column: 1 / -1; font-size: 8pt; color: #cfc7bd; }
 .p4 .ph { border-color: var(--lilac); color: var(--lilac); }
-.p4 .why { position: absolute; left: var(--m); right: var(--m); top: 124mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--g); }
-.p4 .why div { border-top: 2px solid var(--lilac); padding-top: 2.4mm; font-size: 8.5pt; color: #e7e1d9; }
+.p4 .why { position: absolute; left: var(--m); right: var(--m); top: 139mm; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--g); }
+.p4 .why div { border-top: 1px solid #4a4541; padding-top: 2.4mm; font-size: 8.5pt; color: #e7e1d9; }
 .p4 .why b { display: block; color: var(--stone); font-size: 9.5pt; margin-bottom: 1mm; }
-.p4 .cta { position: absolute; left: var(--m); right: var(--m); top: 158mm; display: grid; grid-template-columns: 62mm 1fr; gap: 10mm; align-items: end; }
-.p4 .cta .img { height: 110mm; overflow: hidden; }
-.p4 .cta .txt { display: grid; gap: 10mm; }
-.p4 .cta .display { font-size: 84pt; }
+.p4 .svcnote { position: absolute; left: var(--m); right: var(--m); top: 124mm; font-size: 7.5pt; color: #a39a8f; border-top: 1px solid #4a4541; padding-top: 1.6mm; }
+.p4 .cta { position: absolute; left: var(--m); right: var(--m); top: 176mm; display: grid; grid-template-columns: 62mm 1fr; gap: 10mm; align-items: end; }
+.p4 .cta .img { height: 100mm; overflow: hidden; }
+.p4 .cta .txt { display: grid; gap: 7mm; }
+.p4 .cta .display { font-size: 72pt; }
 .p4 .cta .display .serif { text-transform: none; color: var(--lilac); letter-spacing: 0; }
 .p4 .cta dl { display: grid; gap: 2.4mm; font-size: 9pt; }
 .p4 .cta dl div { display: grid; grid-template-columns: 20mm 1fr; border-top: 1px solid #4a4541; padding-top: 1.6mm; }
@@ -110,110 +115,116 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 <!-- ============ PAGINA 1 · COVER ============ -->
 <section class="page p1">
-  <div class="photo"><img src="../../assets/img/reels/stone-columns.jpg" alt="Lelia in a grey hooded dress and white sunglasses leaning on a stone column" style="object-position: 50% 30%"></div>
-  <div class="run top"><span>Media Kit 2026</span><span>Milan, Italy</span></div>
-  <h1 class="name display">LELUSHAM</h1>
-  <div class="claim">
-    <p>Fashion &amp; lifestyle reels from Milan: boutique try-ons, fashion week from the inside, the city as a set. Short, candid, shot in daylight, written in Italian and English.</p>
-  </div>
-  <div class="contacts">
-    <div><span class="label">Creator</span><span>Lelia M</span></div>
-    <div><span class="label">Instagram</span><span>@lelusham</span></div>
-    <div><span class="label">Email</span><span>leliamoroz.pr@gmail.com</span></div>
-    <div><span class="label">Web</span><span>lelusham.com</span></div>
-  </div>
-  <div class="run bot"><span>01 / 04</span><span>Fashion &amp; lifestyle creator</span></div>
+  <div class="photo"><img data-cover alt="" style="object-position: 50% 20%"></div>
+  <div class="run top"><span>Media Kit <span data-year></span></span><span></span></div>
+  <h1 class="name display" data-name></h1>
+  <div class="claim"><p data-claim></p></div>
+  <div class="contacts" data-contacts></div>
+  <div class="run bot"><span>01 / 04</span><span data-descriptor></span></div>
 </section>
 
 <!-- ============ PAGINA 2 · PROFILO E NUMERI ============ -->
 <section class="page p2">
-  <div class="run top"><span>LELUSHAM</span><span>Profile &amp; numbers</span></div>
+  <div class="run top"><span data-name></span><span>Profile &amp; numbers</span></div>
   <div class="head">
     <h2 class="display">The <span class="serif">profile</span></h2>
-    <p class="intro">Lelia M publishes as @lelusham from Milan. The feed is built on vertical video: outfit try-ons in boutiques, unboxings, fashion week showrooms and walks through the city. Colour comes from the clothes; the backdrop is stone, marble and daylight.</p>
+    <p class="intro" data-intro></p>
   </div>
-  <figure class="portrait"><img src="../../assets/video/lelusham-hero-poster.jpg" alt="Lelia in a grey hooded dress with a black bag under a cloudy sky in Milan" style="object-position: 50% 40%"><figcaption>Still from a 2026 reel</figcaption></figure>
-  <div class="stats">
-    <div class="stat"><span class="label">Followers</span><div class="v">3,014</div><div class="n">Instagram, public count, 13 Oct 2026</div></div>
-    <div class="stat"><span class="label">Posts</span><div class="v">338</div><div class="n">Instagram, public count, 13 Oct 2026</div></div>
-    <div class="stat"><span class="label">Avg. reel views</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">Median of the last 20 reels, from Insights</div></div>
-    <div class="stat"><span class="label">Engagement rate</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">(likes + comments + saves + shares) ÷ reach, last 30 days</div></div>
-    <div class="stat"><span class="label">Accounts reached</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">Last 30 days, from Insights</div></div>
-    <div class="stat"><span class="label">Non-follower reach</span><div class="v"><span class="ph">[TO ADD]</span></div><div class="n">Share of reach from non-followers, last 30 days</div></div>
-  </div>
+  <figure class="portrait"><img data-portrait alt="" style="object-position: 50% 30%"><figcaption data-portrait-cap></figcaption></figure>
+  <div class="stats" data-stats></div>
+  <p class="statsnote" data-stats-note></p>
   <div class="lower">
     <div>
-      <span class="label">Content pillars</span>
-      <div class="pillars">
-        <div class="pillar"><span><b>Try-on &amp; boutique</b><small>Wishlist try-ons, “which bag?” questions</small></span><span class="label">Core</span></div>
-        <div class="pillar"><span><b>Fashion week &amp; events</b><small>Shows and showrooms during MFW</small></span><span class="label">Seasonal</span></div>
-        <div class="pillar"><span><b>Unboxing &amp; first look</b><small>Shoes and accessories, product in hand</small></span><span class="label">Product</span></div>
-        <div class="pillar"><span><b>Milan street &amp; travel</b><small>The city as a set, trips and hotels</small></span><span class="label">Lifestyle</span></div>
-      </div>
+      <span class="label">Content pillars · pieces in the Social Kit</span>
+      <div class="pillars" data-pillars></div>
     </div>
     <div>
-      <span class="label">Audience · from Instagram Insights</span>
-      <div class="aud">
-        <div><span>Top cities</span><span class="ph">[TO ADD: top 3 cities, %]</span></div>
-        <div><span>Top countries</span><span class="ph">[TO ADD: top 3 countries, %]</span></div>
-        <div><span>Age range</span><span class="ph">[TO ADD: main age band, %]</span></div>
-        <div><span>Gender</span><span class="ph">[TO ADD: women / men, %]</span></div>
+      <span class="label">Brands featured in organic content</span>
+      <p class="brands" data-brands></p>
+      <div class="aud" style="margin-top:5mm">
         <div><span>Languages</span><span>Content in Italian &amp; English</span></div>
+        <div><span>Platforms</span><span>Instagram · TikTok</span></div>
+        <div><span>Location</span><span>Based in Milan, Italy · Available Worldwide</span></div>
       </div>
     </div>
   </div>
-  <div class="run bot"><span>02 / 04</span><span>Figures marked [TO ADD] are filled from Insights before sending</span></div>
+  <div class="run bot"><span>02 / 04</span><span data-stats-foot></span></div>
 </section>
 
 <!-- ============ PAGINA 3 · PORTFOLIO ============ -->
 <section class="page p3">
-  <div class="run top"><span>LELUSHAM</span><span>Portfolio</span></div>
-  <h2 class="display">Selected<br>reels</h2>
-  <p class="sub">Six reels from July–September 2026. Each one opens on Instagram from lelusham.com/social-kit.html.</p>
-  <div class="grid">
-    <figure><div class="img"><img src="../../assets/img/reels/attico-croc-bag.jpg" alt="Lelia holds up a blue crocodile-embossed bag in a boutique"></div><figcaption><b>Wishlist try-on</b><span>Boutique try-on · The Attico · 26 Sep 2026</span></figcaption></figure>
-    <figure><div class="img"><img src="../../assets/img/reels/mfw-attico-show.jpg" alt="Lelia in an orange knit in a showroom during Milan Fashion Week"></div><figcaption><b>MFW, remotely</b><span>Event coverage · The Attico · 27 Sep 2026</span></figcaption></figure>
-    <figure><div class="img"><img src="../../assets/img/reels/coperni-box.jpg" alt="Hands open a Coperni shoe box"></div><figcaption><b>Shoes make the fit</b><span>Unboxing · Coperni · 17 Sep 2026</span></figcaption></figure>
-    <figure><div class="img"><img src="../../assets/img/reels/attico-passeggiata.jpg" alt="Lelia in a violet dress in front of shelves of bags"></div><figcaption><b>Which Passeggiata bag?</b><span>Audience question · The Attico · 25 Sep 2026</span></figcaption></figure>
-    <figure><div class="img"><img src="../../assets/img/reels/suede-bag.jpg" alt="A tan suede bag held low in a boutique"></div><figcaption><b>Lo ascolto sempre</b><span>Boutique, Italian caption · 5 Sep 2026</span></figcaption></figure>
-    <figure><div class="img"><img src="../../assets/img/reels/yacht.jpg" alt="Lelia in a cabin with wood panelling"></div><figcaption><b>Is it better?</b><span>Travel · 18 Jul 2026</span></figcaption></figure>
-  </div>
-  <p class="note">Brands shown are featured in organic content; they are not paid partnerships. <span class="ph">[TO ADD: confirmed collaborations with brand, date and deliverable, if any]</span></p>
-  <div class="run bot"><span>03 / 04</span><span>Reel views per piece: <span class="ph" style="font-size:6.5pt;padding:.2mm 1mm">[TO ADD]</span></span></div>
+  <div class="run top"><span data-name></span><span>Portfolio</span></div>
+  <h2 class="display">Selected<br>pieces</h2>
+  <p class="sub" data-portfolio-sub></p>
+  <div class="grid" data-portfolio></div>
+  <p class="note">Brands shown are featured in organic content; they are not paid partnerships unless stated. Every piece opens on Instagram or TikTok from <a href="https://lelusham.com/social-kit.html">lelusham.com/social-kit.html</a>.</p>
+  <div class="run bot"><span>03 / 04</span><span data-portfolio-foot></span></div>
 </section>
 
 <!-- ============ PAGINA 4 · PARTNERSHIP E CONTATTI ============ -->
 <section class="page p4">
-  <div class="run top"><span>LELUSHAM</span><span>Partnerships</span></div>
-  <h2 class="display">Work <span class="serif">together</span></h2>
-  <div class="services">
-    <div class="svc"><b>Styling &amp; Try-On Reel</b><span class="ph">[RATE]</span><p>One reel filmed at any location: try-on, styling, and an honest question to the audience.</p></div>
-    <div class="svc"><b>Event Coverage</b><span class="ph">[RATE]</span><p>Event attendance and coverage: one reel plus a story sequence posted in real time.</p></div>
-    <div class="svc"><b>Unboxing &amp; First Look</b><span class="ph">[RATE]</span><p>Product unboxing and first look filmed in an interesting location: the product is received, opened and worn on camera. One reel, one carousel or three stories.</p></div>
-    <div class="svc"><b>UGC for Your Channels</b><span class="ph">[RATE]</span><p>Videos and stills created for your own feed and ads, without posting on @lelusham. Usage rights agreed per project.</p></div>
-    <div class="svc"><b>Hotel &amp; Restaurant Stay</b><span class="ph">[RATE]</span><p>Milan or any other location as the setting: one reel and stories, with a location tag and link sticker.</p></div>
-    <div class="svc"><b>Affiliate &amp; Launch</b><span class="ph">[TERMS]</span><p>Tracked link or code in stories and bio during a launch or sale period.</p></div>
-  </div>
-  <div class="why">
-    <div><b>On location in Milan</b>Boutiques, showrooms, hotel rooms and the city's stone and marble are already the setting of the feed. No studio, no set-up cost.</div>
-    <div><b>Native to the reel</b>Vertical, handheld, daylight, opened by a question to the audience. Content reads as a creator's own post, not as an ad.</div>
-    <div><b>Two languages</b>Captions in Italian and English, for a Milan and an international audience in one piece of content.</div>
-  </div>
+  <div class="run top"><span data-name></span><span>Partnerships</span></div>
+  <h2 class="display">What I <span class="serif">offer</span></h2>
+  <div class="services" data-services></div>
+  <p class="svcnote" data-services-note></p>
+  <div class="why" data-why></div>
   <div class="cta">
-    <div class="img"><img src="../../assets/img/reels/suede-bag.jpg" alt="A tan suede bag held low in a boutique"></div>
+    <div class="img"><img data-cta-img alt=""></div>
     <div class="txt">
     <p class="display">Let's<br><span class="serif">talk</span></p>
-    <dl>
-      <div><dt>Email</dt><dd>leliamoroz.pr@gmail.com</dd></div>
-      <div><dt>Instagram</dt><dd>@lelusham</dd></div>
-      <div><dt>TikTok</dt><dd>@lelusham</dd></div>
-      <div><dt>Web</dt><dd>lelusham.com/connect.html</dd></div>
-      <div><dt>Location</dt><dd>Based in Milan, Italy<br>Available Worldwide</dd></div>
-    </dl>
+    <dl data-cta></dl>
     </div>
   </div>
-  <div class="run bot"><span>04 / 04</span><span>Rates available upon request · Organic posts live on @lelusham, production work stays on your channels</span></div>
+  <div class="run bot"><span>04 / 04</span><span>Rates available upon request</span></div>
 </section>
 
+<script src="../../assets/js/content.js"></script>
+<script>
+(function () {
+  const C = window.LELUSHAM, B = C.brand, kit = C.kit;
+  const $ = (s) => document.querySelector(s), $$ = (s) => document.querySelectorAll(s);
+  const src = (p) => "../../" + p;
+  const esc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+  const cat = Object.fromEntries(C.categories.map(c => [c.id, c.label]));
+  const plat = (it) => it.platform === "tiktok" ? "TikTok" : "Instagram";
+  const fmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, "") + "M" : n >= 1e3 ? (n / 1e3).toFixed(n < 1e4 ? 1 : 0).replace(/\.0$/, "") + "K" : String(n);
+  const by = (id) => kit.find(k => k.id === id) || C.slides.find(s => s.id === id);
+
+  $$("[data-name]").forEach(e => e.textContent = B.name);
+  $$("[data-year]").forEach(e => e.textContent = new Date().getFullYear());
+  $("[data-descriptor]").textContent = B.descriptor + " creator";
+  $("[data-claim]").textContent = C.slides[0].sub;
+  const ci = $("[data-cover]"); ci.src = "../../assets/img/media-kit/cover.jpg"; ci.alt = "Lelia, media kit cover";
+  $("[data-contacts]").innerHTML = [["Creator", B.fullName], ["Instagram", `<a href="${B.instagram}">${B.handle}</a>`], ["TikTok", `<a href="${B.tiktok}">${B.handle}</a>`], ["Email", `<a href="mailto:${B.email}">${B.email}</a>`], ["Web", `<a href="https://lelusham.com/">lelusham.com</a>`]]
+    .map(([l, v]) => `<div><span class="label">${l}</span><span>${v}</span></div>`).join("");
+
+  /* P2 */
+  $("[data-intro]").textContent = `${B.fullName} publishes as ${B.handle} from ${B.city}. ` + C.value[0].text + " " + C.value[2].text;
+  const pi = $("[data-portrait]"); pi.src = "../../assets/img/media-kit/portrait.jpg"; pi.alt = "Lelia, portrait"; $("[data-portrait-cap]").textContent = "";
+  const stats = C.stats.filter(s => s.value != null);
+  $("[data-stats]").innerHTML = stats.map(s => `<div class="stat"><span class="label">${esc(s.label)}</span><div class="v">${esc(s.value)}</div><div class="n">${esc(s.note)}</div></div>`).join("");
+  $("[data-stats-note]").textContent = C.statsNote; $("[data-stats-foot]").textContent = C.statsNote.split(".")[0];
+  const counts = {}; kit.forEach(k => counts[k.cat] = (counts[k.cat] || 0) + 1);
+  $("[data-pillars]").innerHTML = C.categories.filter(c => c.id !== "all" && counts[c.id])
+    .map(c => `<div class="pillar"><span><b>${esc(c.label)}</b></span><span class="label">${counts[c.id]} ${counts[c.id] === 1 ? "piece" : "pieces"}</span></div>`).join("");
+  const brands = [...new Set(kit.map(k => k.brand).filter(Boolean))];
+  $("[data-brands]").innerHTML = brands.map(b => `<span>${esc(b)}</span>`).join("");
+
+  /* P3 — sei pezzi: i primi con brand, poi gli altri, Instagram e TikTok */
+  const ig = kit.filter(k => k.brand && k.platform !== "tiktok"), tk = kit.filter(k => k.brand && k.platform === "tiktok");
+  const pick = [...ig.slice(0, 4), ...tk.slice(0, 2), ...kit.filter(k => !k.brand)].slice(0, 6);
+  $("[data-portfolio-sub]").textContent = `${pick.length} of ${kit.length} pieces in the Social Kit, ${brands.length} brands featured. Vertical video, filmed on location, captions in Italian and English.`;
+  $("[data-portfolio]").innerHTML = pick.map(k => `<figure><div class="img"><img src="${src(k.image)}" alt="${esc(k.alt)}"></div><figcaption><b>${esc(k.title)}</b><span>${[cat[k.cat], k.brand, plat(k), k.date, k.views ? fmt(k.views) + " views" : ""].filter(Boolean).map(esc).join(" · ")}</span></figcaption></figure>`).join("");
+  const tt = kit.filter(k => k.views); $("[data-portfolio-foot]").textContent = tt.length ? `Public TikTok views where shown, ${C.statsNote.match(/as of ([^.]+)/)?.[1] || ""}` : "";
+
+  /* P4 */
+  $("[data-services]").innerHTML = C.services.map(s => `<div class="svc"><b>${esc(s.title)}</b><p>${esc(s.text)}</p></div>`).join("");
+  $("[data-services-note]").textContent = C.servicesNote || "";
+  $("[data-why]").innerHTML = C.value.slice(0, 3).map(v => `<div><b>${esc(v.title)}</b>${esc(v.text)}</div>`).join("");
+  const cta = by("Dc6XpeTNbOf") || kit[0]; const cim = $("[data-cta-img]"); cim.src = src(cta.image); cim.alt = cta.alt;
+  $("[data-cta]").innerHTML = [["Email", `<a href="mailto:${B.email}">${B.email}</a>`], ["Instagram", `<a href="${B.instagram}">${B.handle}</a>`], ["TikTok", `<a href="${B.tiktok}">${B.handle}</a>`], ["Web", `<a href="https://lelusham.com/connect.html">lelusham.com/connect.html</a>`], ["Location", `${B.city}<br>Available Worldwide`]]
+    .map(([l, v]) => `<div><dt>${l}</dt><dd>${v}</dd></div>`).join("");
+})();
+</script>
 </body>
 </html>

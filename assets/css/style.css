@@ -213,7 +213,7 @@ p { margin: 0 0 1rem; }
 .site-nav {
   position: fixed; inset: 0; z-index: 40;
   background: var(--ink); color: var(--stone);
-  display: grid; grid-template-rows: 1fr auto;
+  display: grid; grid-template-rows: 1fr auto auto 1fr auto;
   padding: 100px var(--gutter) 32px;
   transform: translateY(-100%);
   visibility: hidden;
@@ -221,7 +221,7 @@ p { margin: 0 0 1rem; }
   transition: transform .6s var(--ease), visibility 0s .6s;
 }
 .menu-open .site-nav { transform: translateY(0); visibility: visible; transition: transform .6s var(--ease), visibility 0s; }
-.site-nav ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .2em; align-self: center; }
+.site-nav ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .2em; grid-row: 2; align-self: end; }
 .site-nav li { overflow: hidden; }
 .site-nav ol a {
   display: inline-flex; align-items: baseline; gap: 1rem;
@@ -232,7 +232,13 @@ p { margin: 0 0 1rem; }
 .site-nav ol a:hover, .site-nav ol a[aria-current="page"] { color: var(--violet); }
 .menu-open .site-nav ol a { transform: translateY(0); }
 .menu-open .site-nav li:nth-child(1) a { transition-delay: .1s; } .menu-open .site-nav li:nth-child(2) a { transition-delay: .17s; } .menu-open .site-nav li:nth-child(3) a { transition-delay: .24s; } .menu-open .site-nav li:nth-child(4) a { transition-delay: .31s; } .menu-open .site-nav li:nth-child(5) a { transition-delay: .38s; }
-.site-nav .nav-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--taupe); }
+.site-nav .nav-cta { grid-row: 3; margin: 2.2rem 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.2rem; opacity: 0; transform: translateY(12px); transition: opacity .5s var(--ease) .4s, transform .5s var(--ease) .4s; }
+.menu-open .site-nav .nav-cta { opacity: 1; transform: none; }
+.site-nav .nav-cta .btn svg { width: 1em; height: 1em; }
+.site-nav .nav-cta small { font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--taupe); }
+.site-nav .nav-cta .btn-primary { background: var(--stone); color: var(--ink); border-color: var(--stone); }
+.site-nav .nav-cta .btn-primary:hover { background: var(--violet); border-color: var(--violet); color: var(--white); }
+.site-nav .nav-foot { grid-row: 5; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--taupe); }
 .site-nav .nav-foot a:hover { color: var(--stone); }
 body.menu-open { overflow: hidden; }
 
