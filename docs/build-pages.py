@@ -149,7 +149,6 @@ page("social-kit.html","Social Kit — LELUSHAM","The LELUSHAM Social Kit: Insta
     <div class="detail-body">
       <p class="eyebrow" data-d-eyebrow></p>
       <h2 class="display" data-d-title></h2>
-      <p class="caption" data-d-caption></p>
       <a class="btn btn-primary" data-d-link href="#" target="_blank" rel="noopener">Watch on Instagram</a>
       <div class="detail-nav">
         <button class="ctrl" type="button" data-d-prev aria-label="Previous">{SVG_PREV}</button>

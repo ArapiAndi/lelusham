@@ -95,7 +95,6 @@
         $("[data-d-eyebrow]", dlg).textContent = [platformName(it), it.brand, C.categories.find(c => c.id === it.cat).label, it.views ? fmt(it.views) + " views" : "", it.date].filter(Boolean).join(" · ");
         $("[data-d-link]", dlg).textContent = "Watch on " + platformName(it);
         $("[data-d-title]", dlg).textContent = it.title;
-        $("[data-d-caption]", dlg).textContent = it.caption ? "“" + it.caption + "”" : "";
         $("[data-d-link]", dlg).href = it.reel;
         const list = visible(); cur = list.indexOf(id);
         $("[data-d-counter]", dlg).textContent = `${cur + 1} / ${list.length}`;
@@ -145,10 +144,11 @@
       const [, n, suf] = el.dataset.final.match(/^([\d.]+)(.*)$/) || [];
       if (!n) { el.textContent = el.dataset.final; return; }
       const dec = (n.split(".")[1] || "").length, end = +n, t0 = performance.now(), dur = 1600;
+      el.classList.add("counting");
       const tick = (t) => {
         const p = Math.min((t - t0) / dur, 1);
         el.textContent = (end * (1 - (1 - p) ** 3)).toFixed(dec) + suf;
-        if (p < 1) requestAnimationFrame(tick);
+        if (p < 1) requestAnimationFrame(tick); else el.classList.remove("counting");
       };
       requestAnimationFrame(tick);
     };
